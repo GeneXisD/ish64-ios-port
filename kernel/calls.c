@@ -5,6 +5,7 @@
 #include "kernel/memory.h"
 #include "kernel/signal.h"
 #include "kernel/task.h"
+#include "util/sync.h"
 
 dword_t syscall_stub(void) {
     return _ENOSYS;
@@ -369,3 +370,4 @@ void dump_stack(int lines) {
 #ifdef LOG_OVERRIDE
 int log_override = 0;
 #endif
+

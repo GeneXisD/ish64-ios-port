@@ -137,7 +137,7 @@ static int file_lock_acquire(struct inode_data *inode, struct file_lock *request
 
 #define OFF_T_MAX ~(1l << (sizeof(off_t) * 8 - 1))
 
-static int file_lock_from_flock(struct fd *fd, struct flock_ *flock, struct file_lock *lock) {
+static int file_lock_from_flock(struct fd *fd, struct flock_ *flock, struct file_lock *out_lock) {
     off_t_ offset;
     switch (flock->whence) {
         case LSEEK_SET:
@@ -166,18 +166,18 @@ static int file_lock_from_flock(struct fd *fd, struct flock_ *flock, struct file
             return _EINVAL;
     }
 
-    lock->start = flock->start + offset;
+    out_lock->start = flock->start + offset;
     if (flock->len > 0) {
-        lock->end = lock->start + flock->len - 1;
+        out_lock->end = out_lock->start + flock->len - 1;
     } else if (flock->len < 0) {
-        lock->end = lock->start - 1;
-        lock->start = lock->end + flock->len + 1;
+        out_lock->end = out_lock->start - 1;
+        out_lock->start = out_lock->end + flock->len + 1;
     } else {
-        lock->end = OFF_T_MAX;
+        out_lock->end = OFF_T_MAX;
     }
-    lock->type = flock->type;
-    lock->owner = current->files;
-    lock->pid = current->pid;
+    out_lock->type = flock->type;
+    out_lock->owner = current->files;
+    out_lock->pid = current->pid;
     return 0;
 }
 

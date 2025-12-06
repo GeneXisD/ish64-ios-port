@@ -1,11 +1,25 @@
-#include "debug.h"
+#include <errno.h>
+extern int errno;
+
+
+ // tty-real.c – iOS/Clang needs explicit headers for errno/strerror/raise/etc.
+#include <signal.h>
+int raise(int sig);
 #include <string.h>
 #include <unistd.h>
 #include <termios.h>
+
+#ifndef ENOTTY
+// Fallback in case ENOTTY isn't defined by <errno.h> on this SDK.
+// Value 25 is the usual "Inappropriate ioctl for device".
+#define ENOTTY 25
+#endif
+
+#include "debug.h"
 #include <sys/ioctl.h>
 #include <pthread.h>
-#include <signal.h>
-
+#include "fs.h"
+#include "tty.h"
 #include "kernel/calls.h"
 #include "fs/tty.h"
 #include "fs/devices.h"
@@ -146,3 +160,4 @@ struct tty_driver_ops real_tty_ops = {
     .cleanup = real_tty_cleanup,
 };
 DEFINE_TTY_DRIVER(real_tty_driver, &real_tty_ops, TTY_CONSOLE_MAJOR, 64);
+

@@ -1,11 +1,20 @@
+#include <errno.h>
+
+#ifndef EBUSY
+// Fallback in case the SDK for some reason doesn't define it
+#define EBUSY 16   // standard "Device or resource busy"
+#endif
 #include "debug.h"
 #include <string.h>
-#include <signal.h>
+#include <pthread.h>
 #include "kernel/calls.h"
 #include "kernel/signal.h"
 #include "kernel/task.h"
 #include "kernel/vdso.h"
 #include "emu/interrupt.h"
+#include "util/sync.h"
+static inline int wait_for_ignore_signals(cond_t *cond, lock_t *lock, struct timespec *timeout);
+#include "lock.h"
 
 #if is_gcc(9)
 #pragma GCC diagnostic ignored "-Waddress-of-packed-member"
@@ -75,12 +84,14 @@ retry:
         if (task->waiting_cond != NULL) {
             bool mine = false;
             if (trylock(task->waiting_lock) == EBUSY) {
+#if !defined(__APPLE__)
                 if (pthread_equal(task->waiting_lock->owner, pthread_self()))
                     mine = true;
                 if (!mine) {
                     unlock(&task->waiting_cond_lock);
                     goto retry;
                 }
+#endif
             }
             notify(task->waiting_cond);
             if (!mine)
@@ -786,3 +797,4 @@ dword_t sys_tkill(pid_t_ tid, dword_t sig) {
         return _EINVAL;
     return do_kill(tid, sig, 0);
 }
+

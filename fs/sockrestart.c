@@ -1,12 +1,22 @@
+// sockrestart.c – ensure errno/strerror are declared
 #include <string.h>
 #include <signal.h>
 #include <pthread.h>
+#include <errno.h>
 #include "fs/sockrestart.h"
 #include "fs/fd.h"
 #include "fs/sock.h"
 #include "kernel/task.h"
 #include "util/list.h"
+#include "errno.h"
 extern const struct fd_ops socket_fdops;
+#include "lock.h"
+
+#ifndef LOCK_INITIALIZER
+#   include <pthread.h>
+    // fallback: assume lock_t is a pthread_mutex_t or struct wrapper
+#   define LOCK_INITIALIZER PTHREAD_MUTEX_INITIALIZER
+#endif
 
 static lock_t sockrestart_lock = LOCK_INITIALIZER;
 static struct list listen_fds = LIST_INITIALIZER(listen_fds);
@@ -120,3 +130,4 @@ thank_u_next:
     }
     unlock(&sockrestart_lock);
 }
+

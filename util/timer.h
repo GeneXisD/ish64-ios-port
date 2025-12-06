@@ -2,10 +2,14 @@
 #define UTIL_TIMER_H
 
 #include <stdbool.h>
+#pragma once
 #include <time.h>
 #include <pthread.h>
 #include <assert.h>
 #include "util/sync.h"
+#include <sys/time.h>  // if you use struct timeval_* helper stuff
+
+#include "kernel/time.h"  // if you need your guest<->host conversion helpers
 
 static inline struct timespec timespec_now(clockid_t clockid) {
     assert(clockid == CLOCK_MONOTONIC || clockid == CLOCK_REALTIME);

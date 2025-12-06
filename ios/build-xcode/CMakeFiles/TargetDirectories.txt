@@ -1,0 +1,4 @@
+/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/ishcore.dir
+/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/ish64_ios.dir
+/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/edit_cache.dir
+/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/rebuild_cache.dir

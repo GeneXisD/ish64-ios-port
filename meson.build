@@ -1,5 +1,13 @@
-project('ish', 'c',
-    default_options: ['default_library=static', 'c_std=gnu11', 'warning_level=2'])
+project(
+  'ish',
+  'c',
+  default_options: [
+    'default_library=static',
+    'c_std=gnu11',
+    'warning_level=2'
+  ]
+)
+
 cc = meson.get_compiler('c')
 
 if cc.get_id() == 'clang'
@@ -37,7 +45,29 @@ libdl = cc.find_library('dl', required: false)
 sqlite3 = cc.find_library('sqlite3')
 dependencies = [librt, libm, libdl, threads, sqlite3]
 
-subdir('vdso') # ish depends on the vdso
+# --- VDSO handling -------------------------------------------------
+
+vdso_sources = []
+
+vdso = []
+vdso_sources = []
+
+vdso_srcs = []
+
+if host_machine.system() == 'linux'
+    # existing real vdso logic goes here, e.g.:
+    # vdso_opt = get_option('vdso')
+    # if vdso_opt == 'real'
+    #   vdso_srcs += 'kernel/vdso.c'
+    # endif
+else
+    # Non-Linux (macOS/iOS): always use the stub implementation
+    message('Using VDSO stub on non-Linux host')
+    vdso_srcs += 'kernel/vdso_stub.c'
+endif
+
+
+
 
 offsets = custom_target('offsets',
     output: 'cpu-offsets.h', input: 'asbestos/offsets.c', depfile: 'cpu-offsets.h.d',
@@ -87,11 +117,9 @@ if get_option('kernel') == 'ish'
         'kernel/calls.c',
         'kernel/memory.c',
         'kernel/user.c',
-        'kernel/vdso.c', vdso,
         'kernel/task.c',
         'kernel/group.c',
         'kernel/log.c',
-
         'kernel/fork.c',
         'kernel/exec.c',
         'kernel/exit.c',
@@ -108,7 +136,7 @@ if get_option('kernel') == 'ish'
         'kernel/eventfd.c',
         'kernel/ipc.c',
         'kernel/ptrace.c',
-
+        vdso_srcs,
         'kernel/fs.c',
         'kernel/fs_info.c',
         'fs/mount.c',
@@ -153,7 +181,6 @@ if get_option('kernel') == 'ish'
 
         'platform/' + host_machine.system() + '.c',
     ]
-
     libish = library('ish', src,
         include_directories: includes)
     ish = declare_dependency(

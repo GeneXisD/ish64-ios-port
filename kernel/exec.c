@@ -17,6 +17,7 @@
 #include "kernel/elf.h"
 #include "kernel/vdso.h"
 #include "tools/ptraceomatic-config.h"
+#include "signal.h"
 
 #define ARGV_MAX 32 * PAGE_SIZE
 

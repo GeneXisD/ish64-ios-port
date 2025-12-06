@@ -1,5 +1,6 @@
 #include "kernel/fs.h"
 #include "fs/fd.h"
+#include "stdlib.h"
 
 struct fs_info *fs_info_new() {
     struct fs_info *fs = malloc(sizeof(struct fs_info));

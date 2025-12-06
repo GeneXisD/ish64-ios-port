@@ -6,6 +6,7 @@
 #include "fs/path.h"
 #include "util/refcount.h"
 #include "debug.h"
+#include "lock.h"
 
 // ========================
 // ======== INODES ========

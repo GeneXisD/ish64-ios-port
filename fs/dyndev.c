@@ -2,6 +2,7 @@
 #include "fs/dev.h"
 #include "fs/dyndev.h"
 #include "fs/devices.h"
+#include "util/sync.h"
 
 #define MAX_MINOR 255
 
@@ -13,7 +14,10 @@ struct dyn_dev_info {
     // table of dev_ops registered by minor number
     struct dev_ops *devs[MAX_MINOR+1];
 };
-
+#ifndef LOCK_INITIALIZER
+  #   include <pthread.h>
+  #   define LOCK_INITIALIZER PTHREAD_MUTEX_INITIALIZER
+  #endif
 struct dyn_dev_info dyn_info_char = {
     .devs_lock = LOCK_INITIALIZER,
     .devs = {},

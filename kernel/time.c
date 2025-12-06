@@ -1,3 +1,4 @@
+struct timer;
 #ifdef __linux__
 #define _GNU_SOURCE
 #include <sys/resource.h>

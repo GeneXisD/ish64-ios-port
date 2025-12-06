@@ -1,6 +1,7 @@
 #include "kernel/calls.h"
 #include "kernel/fs.h"
 #include "fs/poll.h"
+#include "util/sync.h"
 
 static struct fd_ops eventfd_ops;
 

@@ -3,6 +3,8 @@
 #include <poll.h>
 #include <fcntl.h>
 #include <limits.h>
+#include <stdlib.h>
+#include <errno.h>
 #include "misc.h"
 #include "util/list.h"
 #include "kernel/errno.h"
@@ -10,7 +12,7 @@
 #include "fs/fd.h"
 #include "fs/poll.h"
 #include "fs/real.h"
-
+#include "errno.h"
 #include "fs/sockrestart.h"
 
 #if defined(__linux__)

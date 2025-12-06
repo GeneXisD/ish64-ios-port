@@ -6,6 +6,17 @@
 #include "kernel/task.h"
 #include "kernel/memory.h"
 #include "emu/tlb.h"
+#include "debug.h"
+#include "task.h"
+#include "util/sync.h"   // <— add this line if it isn’t already here
+
+#include "lock.h"
+
+#ifndef LOCK_INITIALIZER
+#   include <pthread.h>
+    // fallback: assume lock_t is a pthread_mutex_t or struct wrapper
+#   define LOCK_INITIALIZER PTHREAD_MUTEX_INITIALIZER
+#endif
 
 __thread struct task *current;
 
@@ -143,3 +154,4 @@ void update_thread_name() {
     pthread_setname_np(pthread_self(), name);
 #endif
 }
+

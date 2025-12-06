@@ -7,6 +7,10 @@
 #include "emu/mmu.h"
 #include "util/list.h"
 #include "util/sync.h"
+#ifndef wrlock_t
+#include <pthread.h>
+typedef pthread_rwlock_t wrlock_t;
+#endif
 #include "misc.h"
 
 struct mem {
@@ -95,3 +99,4 @@ int mem_segv_reason(struct mem *mem, addr_t addr);
 extern size_t real_page_size;
 
 #endif
+

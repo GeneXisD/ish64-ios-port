@@ -1,4 +1,5 @@
 #include "kernel/calls.h"
+#include "lock.h"
 
 #define FUTEX_WAIT_ 0
 #define FUTEX_WAKE_ 1

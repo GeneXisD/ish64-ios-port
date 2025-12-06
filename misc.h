@@ -48,6 +48,7 @@
 #ifndef __KERNEL__
 #define unlikely(x) __builtin_expect((x), 0)
 #define typecheck(type, x) ({type _x = x; x;})
+#ifndef container_of
 #define container_of(ptr, type, member) \
     ((type *) ((char *) (ptr) - offsetof(type, member)))
 #if has_attribute(fallthrough)

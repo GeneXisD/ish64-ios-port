@@ -1,6 +1,28 @@
 #ifndef TIME_H
 #define TIME_H
-#include "misc.h"
+#pragma once
+
+// Important: make sure we get the real system <time.h> first, then add our stuff.
+// Because our kernel/ directory is in the include path, #include <time.h>
+// from system headers can land here, so we must forward to the SDK header.
+
+#ifdef __APPLE__
+    // Skip this directory in the search and include the next <time.h>,
+    // which will be the one from the iOS SDK.
+    #include_next <time.h>
+#else
+    #include <time.h>
+#endif
+
+#include <sys/time.h>  // for struct timeval, gettimeofday, etc.
+#include "misc.h"      // keep this if you already had it
+
+// iOS / Darwin: make sure struct timespec is fully defined
+// Fallback fd_t for non-Linux builds (CMake/iOS bridge)
+#ifndef ISH_FD_T_DEFINED
+typedef int fd_t;
+#define ISH_FD_T_DEFINED 1
+#endif
 
 dword_t sys_time(addr_t time_out);
 dword_t sys_stime(addr_t time);

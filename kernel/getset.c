@@ -1,6 +1,7 @@
 #include "kernel/calls.h"
 #include "kernel/task.h"
 #include "kernel/personality.h"
+#include "lock.h"
 
 pid_t_ sys_getpid() {
     STRACE("getpid()");

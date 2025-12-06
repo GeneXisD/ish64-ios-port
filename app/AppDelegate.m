@@ -8,6 +8,7 @@
 #include <resolv.h>
 #include <arpa/inet.h>
 #include <netdb.h>
+#import "emu/backend.h"
 #import <SystemConfiguration/SystemConfiguration.h>
 #import "AboutViewController.h"
 #import "AppDelegate.h"
@@ -253,6 +254,12 @@ void SyncHostname(void) {
         return YES;
 
     bootError = [self boot];
+
+    // 🔻 TinyEMU backend stub test
+    EmuBackend *be = backend_create("/tinyemu/rootfs.img");
+    backend_run(be);
+    backend_destroy(be);
+    // 🔺 TinyEMU backend stub test
 
 #if ISH_LINUX
     [NSNotificationCenter.defaultCenter addObserverForName:UIApplicationWillEnterForegroundNotification object:UIApplication.sharedApplication queue:nil usingBlock:^(NSNotification * _Nonnull note) {

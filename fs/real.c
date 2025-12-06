@@ -1,3 +1,9 @@
+#define _GNU_SOURCE
+
+#ifndef _POSIX_C_SOURCE
+#define _POSIX_C_SOURCE 200112L
+#endif
+
 #include <string.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -10,6 +16,21 @@
 #include <sys/file.h>
 #include <sys/statvfs.h>
 #include <poll.h>
+
+#ifndef HAVE_DECL_OPENAT
+#include <fcntl.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+extern int openat(int dirfd, const char *pathname, int flags, ...);
+#ifdef __cplusplus
+}
+#endif
+#endif
+
+#ifndef HAVE_DECL_POLL
+extern int poll(struct pollfd *fds, nfds_t nfds, int timeout);
+#endif
 
 #include "debug.h"
 #include "kernel/errno.h"
@@ -525,3 +546,4 @@ const struct fd_ops realfs_fdops = {
     .getflags = realfs_getflags,
     .setflags = realfs_setflags,
 };
+

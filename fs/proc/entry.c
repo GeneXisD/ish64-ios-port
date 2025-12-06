@@ -1,5 +1,6 @@
 #include <sys/stat.h>
 #include <string.h>
+#include <stdlib.h>
 #include "fs/stat.h"
 #include "fs/proc.h"
 #include "kernel/task.h"
@@ -74,3 +75,4 @@ void proc_entry_cleanup(struct proc_entry *entry) {
         free_string_array(entry->child_names);
     *entry = (struct proc_entry) {0};
 }
+

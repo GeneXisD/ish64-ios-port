@@ -1,10 +1,32 @@
-#ifndef SIGNAL_H
-#define SIGNAL_H
+#ifndef ISH_KERNEL_SIGNAL_H
+#define ISH_KERNEL_SIGNAL_H
 
+#include "lock.h"   // must come before using lock_t / lock_*()
 #include "misc.h"
 #include "util/list.h"
 #include "util/sync.h"
 struct task;
+#include <pthread.h>
+#include <signal.h>
+#pragma once
+
+#if __STDC_VERSION__ >= 201112L
+#  include <stdatomic.h>
+#else
+// Fallback if building in a mode without C11 atomics.
+// This keeps the struct layout compatible but loses real atomic semantics.
+typedef unsigned int atomic_uint;
+#endif
+// Forward declarations for read lock helpers.
+// The actual definitions live elsewhere (already linked in macOS build).
+void read_wrlock(void *lock);
+void read_wrunlock(void *lock);
+
+// Fallback lock_t definition for this iOS build
+#ifndef ISH_LOCK_T_DEFINED
+//typedef pthread_mutex_t lock_t;
+#define ISH_LOCK_T_DEFINED 1
+#endif
 
 typedef qword_t sigset_t_;
 
@@ -296,4 +318,4 @@ struct rt_sigframe_ {
 extern int xsave_extra;
 extern int fxsave_extra;
 
-#endif
+#endif /* ISH_KERNEL_SIGNAL_H */

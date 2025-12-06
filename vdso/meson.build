@@ -18,7 +18,7 @@ if result.returncode() != 0
     endif
     error('Could not find usable VDSO compiler. ' + install_msg)
 endif
-vdso_compiler = [clang, '-target', 'i386-linux', '-fuse-ld=lld']
+vdso_compiler = [clang, '-target', 'i386-linux']
 
 vdso = custom_target('vdso', input: ['vdso.S', 'vdso.c', 'vdso.lds'], output: 'libvdso.so.elf',
     command: vdso_compiler + ['-o', '@OUTPUT@', '@INPUT0@', '@INPUT1@',

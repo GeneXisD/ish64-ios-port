@@ -22,6 +22,9 @@
 
 /* Begin PBXBuildFile section */
 		0FC2383C2991FBA6004C09EC /* mmx.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2383B2991FB82004C09EC /* mmx.c */; };
+		159657872ECF574C00845AC4 /* backend_tinyemu.c in Sources */ = {isa = PBXBuildFile; fileRef = 159657862ECF574C00845AC4 /* backend_tinyemu.c */; };
+		159657882ECF574C00845AC4 /* backend_tinyemu.c in Sources */ = {isa = PBXBuildFile; fileRef = 159657862ECF574C00845AC4 /* backend_tinyemu.c */; };
+		159657932ED11AAA00845AC4 /* mach_excServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 159657922ED11AAA00845AC4 /* mach_excServer.c */; };
 		491B31E62883BF22008EEFB0 /* ThemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491B31E52883BF22008EEFB0 /* ThemeViewController.m */; };
 		49302D8E277669D300C9885A /* ish.c in Sources */ = {isa = PBXBuildFile; fileRef = 49302D8D277669D300C9885A /* ish.c */; };
 		496C7AB227CC697E005D7613 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 491C4C1E27C8FB65008B1DFA /* Theme.m */; };
@@ -246,22 +249,6 @@
 		BBFB55662158644C00DFE6DE /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFB55652158644C00DFE6DE /* libresolv.tbd */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildRule section */
-		497A08BE29633FC100B323CF /* PBXBuildRule */ = {
-			isa = PBXBuildRule;
-			compilerSpec = com.apple.compilers.proxy.script;
-			fileType = sourcecode.mig;
-			inputFiles = (
-			);
-			isEditable = 1;
-			outputFiles = (
-				"$(DERIVED_FILE_DIR)/mach_excServer.h",
-				"$(DERIVED_FILE_DIR)/mach_excServer.c",
-			);
-			script = "set -x\n\nunset IPHONEOS_DEPLOYMENT_TARGET\n\nsdk=\"$(dirname \"$SCRIPT_INPUT_FILE\")/../../../\"\ncd \"$DERIVED_FILE_DIR\"\nmig -sheader \"$DERIVED_FILE_DIR/mach_excServer.h\" -server \"$DERIVED_FILE_DIR/mach_excServer.c\" -Wno-incompatible-sysroot -isysroot \"$sdk\" \"$SCRIPT_INPUT_FILE\"\n";
-		};
-/* End PBXBuildRule section */
-
 /* Begin PBXContainerItemProxy section */
 		497F6D5A254E609000C82F46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -427,6 +414,10 @@
 
 /* Begin PBXFileReference section */
 		0FC2383B2991FB82004C09EC /* mmx.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mmx.c; sourceTree = "<group>"; };
+		159657862ECF574C00845AC4 /* backend_tinyemu.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = backend_tinyemu.c; sourceTree = "<group>"; };
+		159657892ECF578100845AC4 /* backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = backend.h; sourceTree = "<group>"; };
+		159657912ED11AAA00845AC4 /* mach_excServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mach_excServer.h; sourceTree = "<group>"; };
+		159657922ED11AAA00845AC4 /* mach_excServer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mach_excServer.c; sourceTree = "<group>"; };
 		408A2639236440F8008A4E81 /* iOSFS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSFS.m; sourceTree = "<group>"; };
 		408A263B23644102008A4E81 /* iOSFS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSFS.h; sourceTree = "<group>"; };
 		49087C13295DF0490058075B /* hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hook.h; sourceTree = "<group>"; };
@@ -1047,6 +1038,8 @@
 		BB792B521F96D90D00FFB7A4 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				159657912ED11AAA00845AC4 /* mach_excServer.h */,
+				159657922ED11AAA00845AC4 /* mach_excServer.c */,
 				BB792B531F96D90D00FFB7A4 /* AppDelegate.h */,
 				BB792B541F96D90D00FFB7A4 /* AppDelegate.m */,
 				BB565EA52734F22D00C93EAE /* CurrentRoot.h */,
@@ -1219,6 +1212,8 @@
 		BB8636F82167F4F200E7ADC0 /* emu */ = {
 			isa = PBXGroup;
 			children = (
+				159657862ECF574C00845AC4 /* backend_tinyemu.c */,
+				159657892ECF578100845AC4 /* backend.h */,
 				0FC2383B2991FB82004C09EC /* mmx.c */,
 				497F6C62254E5C7F00C82F46 /* cpu.h */,
 				497F6C58254E5C7E00C82F46 /* cpuid.h */,
@@ -1572,7 +1567,6 @@
 				BBEF191A26806364001225BD /* Sources */,
 			);
 			buildRules = (
-				497A08BE29633FC100B323CF /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -1706,8 +1700,8 @@
 			targets = (
 				BB792B4F1F96D90D00FFB7A4 /* iSH */,
 				BBEF191D26806364001225BD /* libiSHApp */,
-				BBEF1964268066D1001225BD /* iSH+Linux */,
 				BBECF3A12691314C00DEC937 /* libiSHLinux */,
+				BBEF1964268066D1001225BD /* iSH+Linux */,
 				BBBDDF802CE00F6A0071F1F3 /* libiSHLinuxUser */,
 				BB88F48F2154760800A341FD /* iSHFileProvider */,
 				BB41591B255EF9E300E0950C /* iSHUITests */,
@@ -2074,6 +2068,7 @@
 				497F6D1F254E5EA600C82F46 /* eventfd.c in Sources */,
 				497F6D20254E5EA600C82F46 /* exec.c in Sources */,
 				497F6D21254E5EA600C82F46 /* exit.c in Sources */,
+				159657872ECF574C00845AC4 /* backend_tinyemu.c in Sources */,
 				497F6D22254E5EA600C82F46 /* fork.c in Sources */,
 				497F6D23254E5EA600C82F46 /* fs_info.c in Sources */,
 				497F6D24254E5EA600C82F46 /* fs.c in Sources */,
@@ -2127,6 +2122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159657882ECF574C00845AC4 /* backend_tinyemu.c in Sources */,
 				BB28C7BB268975AE00BDC834 /* LocationDevice.m in Sources */,
 				BB28C7BA268975AA00BDC834 /* iOSFS.m in Sources */,
 				BB28C7BC268975B000BDC834 /* PasteboardDevice.m in Sources */,
@@ -2207,6 +2203,7 @@
 				BB28C7A126896B1F00BDC834 /* RootsTableViewController.m in Sources */,
 				BB28C7A326896B1F00BDC834 /* BarButton.m in Sources */,
 				BB28C7A426896B1F00BDC834 /* AppGroup.m in Sources */,
+				159657932ED11AAA00845AC4 /* mach_excServer.c in Sources */,
 				BBECF3BC26913F1600DEC937 /* AppDelegate.m in Sources */,
 				BB28C7A526896B1F00BDC834 /* UIApplication+OpenURL.m in Sources */,
 				49FF844B2A06249F00850B7A /* ExceptionExfiltrator.m in Sources */,
@@ -2501,6 +2498,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB0B86CD2586FD8800208600 /* App.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9XFS693LL9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.victorj.ish64;
 			};
 			name = "Debug-ApplePleaseFixFB19282108";
 		};
@@ -2508,6 +2507,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB0B86CD2586FD8800208600 /* App.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9XFS693LL9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.victorj.ish64;
 			};
 			name = Release;
 		};
@@ -2523,6 +2524,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB0B86CD2586FD8800208600 /* App.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9XFS693LL9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.victorj.ish64;
 			};
 			name = DebugLinux;
 		};
@@ -2545,8 +2548,10 @@
 			baseConfigurationReference = BB0B86D52587009D00208600 /* iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = app/FileProvider/iSHFileProvider.entitlements;
+				DEVELOPMENT_TEAM = 9XFS693LL9;
 				INFOPLIST_FILE = app/FileProvider/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER).FileProvider";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = "com.victorj.ish64.fileprovider-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -2622,8 +2627,10 @@
 			baseConfigurationReference = BB0B86D52587009D00208600 /* iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = app/FileProvider/iSHFileProvider.entitlements;
+				DEVELOPMENT_TEAM = 9XFS693LL9;
 				INFOPLIST_FILE = app/FileProvider/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER).FileProvider";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = "com.victorj.ish64.fileprovider-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -2634,8 +2641,10 @@
 			baseConfigurationReference = BB0B86D52587009D00208600 /* iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = app/FileProvider/iSHFileProvider.entitlements;
+				DEVELOPMENT_TEAM = 9XFS693LL9;
 				INFOPLIST_FILE = app/FileProvider/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER).FileProvider";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = "com.victorj.ish64.fileprovider-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -2769,6 +2778,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB0B86CD2586FD8800208600 /* App.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9XFS693LL9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.victorj.ish64;
 			};
 			name = ReleaseLinux;
 		};
@@ -2791,8 +2802,10 @@
 			baseConfigurationReference = BB0B86D52587009D00208600 /* iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = app/FileProvider/iSHFileProvider.entitlements;
+				DEVELOPMENT_TEAM = 9XFS693LL9;
 				INFOPLIST_FILE = app/FileProvider/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER).FileProvider";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = "com.victorj.ish64.fileprovider-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

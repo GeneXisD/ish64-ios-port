@@ -1,11 +1,12 @@
+#include <errno.h>
+#include <string.h>     // for strerror, if it’s not already included via another header
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/mman.h>
-#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <errno.h>
-
+#include "errno.h"
+#include "string.h"
 #define DEFAULT_CHANNEL memory
 #include "debug.h"
 #include "kernel/errno.h"
@@ -153,6 +154,7 @@ int pt_unmap_always(struct mem *mem, page_t start, pages_t pages) {
         if (--data->refcount == 0) {
             // vdso wasn't allocated with mmap, it's just in our data segment
             if (data->data != vdso_data) {
+                // Ensure errno is available for munmap error handling.
                 int err = munmap(data->data, data->size);
                 if (err != 0)
                     die("munmap(%p, %lu) failed: %s", data->data, data->size, strerror(errno));
@@ -344,3 +346,4 @@ void mem_coredump(struct mem *mem, const char *file) {
     printk("dumped %d pages\n", pages);
     close(fd);
 }
+

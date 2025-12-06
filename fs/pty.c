@@ -1,4 +1,6 @@
 #include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include <limits.h>
 #include <sys/stat.h>
 #include <ctype.h>
@@ -325,3 +327,5 @@ const struct fs_ops devptsfs = {
 static const struct fd_ops devpts_fdops = {
     .readdir = devpts_readdir,
 };
+
+

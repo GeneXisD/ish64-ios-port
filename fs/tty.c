@@ -5,7 +5,13 @@
 #include "fs/poll.h"
 #include "fs/tty.h"
 #include "fs/devices.h"
-
+#include "util/sync.h"   // <— add this
+#include "lock.h"
+#ifndef LOCK_INITIALIZER
+  #   include <pthread.h>
+      // fallback: assume lock_t is a pthread_mutex_t or struct wrapper
+  #   define LOCK_INITIALIZER PTHREAD_MUTEX_INITIALIZER
+  #endif
 extern struct tty_driver pty_master;
 extern struct tty_driver pty_slave;
 
@@ -806,3 +812,4 @@ struct dev_ops tty_dev = {
     .fd.ioctl_size = tty_ioctl_size,
     .fd.ioctl = tty_ioctl,
 };
+

@@ -15,6 +15,7 @@
 #include "util/fifo.h"
 #include "kernel/task.h"
 #include "misc.h"
+#include "lock.h"
 
 #define LOG_BUF_SHIFT 20
 static char log_buffer[1 << LOG_BUF_SHIFT];

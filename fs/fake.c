@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <string.h>
+#include <errno.h>
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <sys/file.h>
@@ -130,6 +131,7 @@ static int fakefs_rename(struct mount *mount, const char *src, const char *dst) 
 }
 
 static int fakefs_symlink(struct mount *mount, const char *target, const char *link) {
+    extern int errno;
     struct fakefs_db *fs = &mount->fakefs;
     db_begin_write(fs);
     // create a file containing the target
@@ -422,3 +424,4 @@ const struct fs_ops fakefs = {
 
     .inode_orphaned = fakefs_inode_orphaned,
 };
+

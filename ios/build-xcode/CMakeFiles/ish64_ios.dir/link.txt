@@ -1,0 +1,1 @@
+/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot iphoneos -miphoneos-version-min=16.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/libxcrypt/lib CMakeFiles/ish64_ios.dir/main.m.o -o ish64_ios.app/ish64_ios  libishcore.a -framework UIKit -framework Foundation

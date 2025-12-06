@@ -1,0 +1,2402 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/opt/homebrew/opt/boost/bin/"
+      - "/opt/homebrew/opt/boost/sbin/"
+      - "/opt/homebrew/opt/boost/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    searched_directories:
+      - "/opt/homebrew/opt/boost/bin/uname"
+      - "/opt/homebrew/opt/boost/sbin/uname"
+      - "/opt/homebrew/opt/boost/uname"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/uname"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/uname"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/uname"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/uname"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/uname"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/uname"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/uname"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/uname"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/uname"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/uname"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/uname"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/uname"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/uname"
+      - "/Applications/XAMPP/bin/uname"
+      - "/Users/victorj/.local/bin/uname"
+      - "/opt/homebrew/bin/uname"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/uname"
+      - "/usr/local/opt/coreutils/libexec/gnubin/uname"
+      - "/Users/victorj/.npm-global/bin/uname"
+      - "/Users/victorj/.cargo/bin/uname"
+      - "/Users/victorj/bin/uname"
+      - "/usr/local/sbin/uname"
+      - "/opt/homebrew/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/System/Cryptexes/App/usr/bin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Darwin - 25.0.0 - arm64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/opt/homebrew/opt/boost/bin/"
+      - "/opt/homebrew/opt/boost/sbin/"
+      - "/opt/homebrew/opt/boost/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    searched_directories:
+      - "/opt/homebrew/opt/boost/bin/gmake"
+      - "/opt/homebrew/opt/boost/sbin/gmake"
+      - "/opt/homebrew/opt/boost/gmake"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/gmake"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/gmake"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/gmake"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/gmake"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/gmake"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/gmake"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/gmake"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/gmake"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/gmake"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gmake"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/gmake"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/gmake"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/gmake"
+      - "/Applications/XAMPP/bin/gmake"
+      - "/Users/victorj/.local/bin/gmake"
+      - "/opt/homebrew/bin/gmake"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/gmake"
+      - "/usr/local/opt/coreutils/libexec/gnubin/gmake"
+      - "/Users/victorj/.npm-global/bin/gmake"
+      - "/Users/victorj/.cargo/bin/gmake"
+      - "/Users/victorj/bin/gmake"
+      - "/usr/local/sbin/gmake"
+      - "/opt/homebrew/sbin/gmake"
+      - "/usr/local/bin/gmake"
+      - "/System/Cryptexes/App/usr/bin/gmake"
+      - "/usr/bin/gmake"
+      - "/bin/gmake"
+      - "/usr/sbin/gmake"
+      - "/sbin/gmake"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/gmake"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/gmake"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/gmake"
+      - "/Library/Apple/usr/bin/gmake"
+      - "/Applications/VMware Fusion.app/Contents/Public/gmake"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/gmake"
+      - "/opt/homebrew/opt/boost/bin/make"
+      - "/opt/homebrew/opt/boost/sbin/make"
+      - "/opt/homebrew/opt/boost/make"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/make"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/make"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/make"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/make"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/make"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/make"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/make"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/make"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/make"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/make"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/make"
+    found: "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/make"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "C compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cc"
+      - "gcc"
+      - "cl"
+      - "bcc"
+      - "xlc"
+      - "icx"
+      - "clang"
+    candidate_directories:
+      - "/opt/homebrew/opt/boost/bin/"
+      - "/opt/homebrew/opt/boost/sbin/"
+      - "/opt/homebrew/opt/boost/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    searched_directories:
+      - "/opt/homebrew/opt/boost/bin/cc"
+      - "/opt/homebrew/opt/boost/sbin/cc"
+      - "/opt/homebrew/opt/boost/cc"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/cc"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/cc"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/cc"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/cc"
+    found: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
+      Build flags: -I/usr/include;-I/opt/homebrew/opt/openssl@3/include
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is AppleClang, found in:
+        /Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/4.1.2/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting C compiler apple sysroot: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc" "-I/usr/include" "-I/opt/homebrew/opt/openssl@3/include" "-E" "apple-sdk.c"
+        # 1 "apple-sdk.c"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 448 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.c" 2
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 89 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 90 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 91 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 207 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/Availability.h" 1 3 4
+        # 196 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 197 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 33 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 34 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 198 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 34 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternalLegacy.h" 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 35 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternalLegacy.h" 2 3 4
+        # 199 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/Availability.h" 2 3 4
+        # 208 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.c" 2
+        
+        
+      Found apple sysroot: /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    found: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    found: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    found: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    found: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    found: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/nm"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    found: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    searched_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objcopy"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/objcopy"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/objcopy"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/objcopy"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/objcopy"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/objcopy"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/objcopy"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/objcopy"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/objcopy"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/objcopy"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/objcopy"
+      - "/Applications/XAMPP/bin/objcopy"
+      - "/Users/victorj/.local/bin/objcopy"
+      - "/opt/homebrew/bin/objcopy"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/objcopy"
+      - "/usr/local/opt/coreutils/libexec/gnubin/objcopy"
+      - "/Users/victorj/.npm-global/bin/objcopy"
+      - "/Users/victorj/.cargo/bin/objcopy"
+      - "/Users/victorj/bin/objcopy"
+      - "/usr/local/sbin/objcopy"
+      - "/opt/homebrew/sbin/objcopy"
+      - "/usr/local/bin/objcopy"
+      - "/System/Cryptexes/App/usr/bin/objcopy"
+      - "/usr/bin/objcopy"
+      - "/bin/objcopy"
+      - "/usr/sbin/objcopy"
+      - "/sbin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/objcopy"
+      - "/Library/Apple/usr/bin/objcopy"
+      - "/Applications/VMware Fusion.app/Contents/Public/objcopy"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/objcopy"
+    found: false
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    searched_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/readelf"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/readelf"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/readelf"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/readelf"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/readelf"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/readelf"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/readelf"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/readelf"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/readelf"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/readelf"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/readelf"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/readelf"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/readelf"
+      - "/Applications/XAMPP/bin/readelf"
+      - "/Users/victorj/.local/bin/readelf"
+      - "/opt/homebrew/bin/readelf"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/readelf"
+      - "/usr/local/opt/coreutils/libexec/gnubin/readelf"
+      - "/Users/victorj/.npm-global/bin/readelf"
+      - "/Users/victorj/.cargo/bin/readelf"
+      - "/Users/victorj/bin/readelf"
+      - "/usr/local/sbin/readelf"
+      - "/opt/homebrew/sbin/readelf"
+      - "/usr/local/bin/readelf"
+      - "/System/Cryptexes/App/usr/bin/readelf"
+      - "/usr/bin/readelf"
+      - "/bin/readelf"
+      - "/usr/sbin/readelf"
+      - "/sbin/readelf"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/readelf"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/readelf"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/readelf"
+      - "/Library/Apple/usr/bin/readelf"
+      - "/Applications/VMware Fusion.app/Contents/Public/readelf"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/readelf"
+    found: false
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    searched_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dlltool"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/dlltool"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/dlltool"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/dlltool"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/dlltool"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/dlltool"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/dlltool"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/dlltool"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/dlltool"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/dlltool"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/dlltool"
+      - "/Applications/XAMPP/bin/dlltool"
+      - "/Users/victorj/.local/bin/dlltool"
+      - "/opt/homebrew/bin/dlltool"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/dlltool"
+      - "/usr/local/opt/coreutils/libexec/gnubin/dlltool"
+      - "/Users/victorj/.npm-global/bin/dlltool"
+      - "/Users/victorj/.cargo/bin/dlltool"
+      - "/Users/victorj/bin/dlltool"
+      - "/usr/local/sbin/dlltool"
+      - "/opt/homebrew/sbin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/System/Cryptexes/App/usr/bin/dlltool"
+      - "/usr/bin/dlltool"
+      - "/bin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/sbin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/dlltool"
+      - "/Library/Apple/usr/bin/dlltool"
+      - "/Applications/VMware Fusion.app/Contents/Public/dlltool"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/dlltool"
+    found: false
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    searched_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/addr2line"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/addr2line"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/addr2line"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/addr2line"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/addr2line"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/addr2line"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/addr2line"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/addr2line"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/addr2line"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/addr2line"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/addr2line"
+      - "/Applications/XAMPP/bin/addr2line"
+      - "/Users/victorj/.local/bin/addr2line"
+      - "/opt/homebrew/bin/addr2line"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/addr2line"
+      - "/usr/local/opt/coreutils/libexec/gnubin/addr2line"
+      - "/Users/victorj/.npm-global/bin/addr2line"
+      - "/Users/victorj/.cargo/bin/addr2line"
+      - "/Users/victorj/bin/addr2line"
+      - "/usr/local/sbin/addr2line"
+      - "/opt/homebrew/sbin/addr2line"
+      - "/usr/local/bin/addr2line"
+      - "/System/Cryptexes/App/usr/bin/addr2line"
+      - "/usr/bin/addr2line"
+      - "/bin/addr2line"
+      - "/usr/sbin/addr2line"
+      - "/sbin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/addr2line"
+      - "/Library/Apple/usr/bin/addr2line"
+      - "/Applications/VMware Fusion.app/Contents/Public/addr2line"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/addr2line"
+    found: false
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    found: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/tapi"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineOBJCCompiler.cmake:61 (_cmake_find_compiler)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJC_COMPILER"
+    description: "OBJC compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "clang"
+      - "cc"
+      - "gcc"
+    candidate_directories:
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+    found: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineOBJCCompiler.cmake:117 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeOBJCCompilerId.m.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeOBJCCompilerId.m.in"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineOBJCCompiler.cmake:117 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the OBJC compiler identification source file "CMakeOBJCCompilerId.m" succeeded.
+      Compiler: /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the OBJC compiler identification source "CMakeOBJCCompilerId.m" produced "a.out"
+      
+      The OBJC compiler identification is AppleClang, found in:
+        /Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/4.1.2/CompilerIdOBJC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineOBJCCompiler.cmake:117 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting OBJC compiler apple sysroot: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-E" "apple-sdk.m"
+        # 1 "apple-sdk.m"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 460 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.m" 2
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 89 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 90 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 91 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 207 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/Availability.h" 1 3 4
+        # 196 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 197 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 33 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 34 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 198 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 34 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternalLegacy.h" 3 4
+        # 1 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 35 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityInternalLegacy.h" 2 3 4
+        # 199 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/Availability.h" 2 3 4
+        # 208 "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.m" 2
+        
+        
+      Found apple sysroot: /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake:76 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake:32 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_INSTALL_NAME_TOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "install_name_tool"
+    candidate_directories:
+      - "/opt/homebrew/opt/boost/bin/"
+      - "/opt/homebrew/opt/boost/sbin/"
+      - "/opt/homebrew/opt/boost/"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/"
+      - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin/"
+      - "/Applications/XAMPP/bin/"
+      - "/Users/victorj/.local/bin/"
+      - "/opt/homebrew/bin/"
+      - "/usr/local/opt/gnu-sed/libexec/gnubin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Users/victorj/.npm-global/bin/"
+      - "/Users/victorj/.cargo/bin/"
+      - "/Users/victorj/bin/"
+      - "/usr/local/sbin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+    searched_directories:
+      - "/opt/homebrew/opt/boost/bin/install_name_tool"
+      - "/opt/homebrew/opt/boost/sbin/install_name_tool"
+      - "/opt/homebrew/opt/boost/install_name_tool"
+      - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources/install_name_tool"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin/install_name_tool"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin/install_name_tool"
+      - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec/install_name_tool"
+    found: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/install_name_tool"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/opt/boost"
+      ENV{PATH}:
+        - "/Applications/Xcode-beta-3.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.1.5276.7.kFqKji/Metal.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin"
+        - "/Applications/Xcode-beta-3.app/Contents/Developer/usr/local/bin"
+        - "/Applications/XAMPP/bin"
+        - "/Users/victorj/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/usr/local/opt/gnu-sed/libexec/gnubin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Users/victorj/.npm-global/bin"
+        - "/Users/victorj/.cargo/bin"
+        - "/Users/victorj/bin"
+        - "/usr/local/sbin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-O58UnY"
+      binary: "/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-O58UnY"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-I/usr/include -I/opt/homebrew/opt/openssl@3/include"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/opt/homebrew/opt/libxcrypt/lib"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-O58UnY'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/make -f Makefile cmTC_bf9db/fast
+        /Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_bf9db.dir/build.make CMakeFiles/cmTC_bf9db.dir/build
+        Building C object CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o
+        /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -I/usr/include -I/opt/homebrew/opt/openssl@3/include  -arch arm64 -isysroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Apple clang version 17.0.0 (clang-1700.3.13.4)
+        Target: arm64-apple-darwin25.0.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        cc: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios16.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.0 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-a7 -target-feature +zcm -target-feature +zcz -target-feature +v8a -target-feature +aes -target-feature +fp-armv8 -target-feature +neon -target-feature +perfmon -target-feature +sha2 -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-O58UnY -target-linker-version 1218 -v -fcoverage-compilation-dir=/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-O58UnY -resource-dir /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -I /usr/include -I /opt/homebrew/opt/openssl@3/include -internal-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/local/include -internal-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include -internal-externc-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-error -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 17.0.0 (clang-1700.3.13.4) default target arm64-apple-darwin25.0.0
+        ignoring nonexistent directory "/usr/include"
+        ignoring nonexistent directory "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/local/include"
+        ignoring nonexistent directory "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/homebrew/opt/openssl@3/include
+         /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include
+         /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include
+         /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks (framework directory)
+         /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/SubFrameworks (framework directory)
+        End of search list.
+        Linking C executable cmTC_bf9db
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf9db.dir/link.txt --verbose=1
+        Apple clang version 17.0.0 (clang-1700.3.13.4)
+        Target: arm64-apple-darwin25.0.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios 16.0.0 26.0 -syslibroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_bf9db -L/opt/homebrew/opt/libxcrypt/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a
+        @(#)PROGRAM:ld PROJECT:ld-1218
+        BUILD 14:02:51 Jul  2 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 17.0.0 (static support for 29, runtime is 29)
+        TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.3.5.6)
+        Library search paths:
+        	/opt/homebrew/opt/libxcrypt/lib
+        	/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib
+        	/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib/swift
+        Framework search paths:
+        	/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks
+        /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -I/usr/include -I/opt/homebrew/opt/openssl@3/include  -arch arm64 -isysroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/libxcrypt/lib -v -Wl,-v CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o -o cmTC_bf9db
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/homebrew/opt/openssl@3/include]
+          add: [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include]
+          add: [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include]
+          add: [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        end of search list found
+        collapse include dir [/opt/homebrew/opt/openssl@3/include] ==> [/opt/homebrew/opt/openssl@3/include]
+        collapse include dir [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include] ==> [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include]
+        collapse include dir [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include] ==> [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include]
+        collapse include dir [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/opt/homebrew/opt/openssl@3/include;/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include;/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include;/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-O58UnY']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/make -f Makefile cmTC_bf9db/fast]
+        ignore line: [/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_bf9db.dir/build.make CMakeFiles/cmTC_bf9db.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -I/usr/include -I/opt/homebrew/opt/openssl@3/include  -arch arm64 -isysroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Apple clang version 17.0.0 (clang-1700.3.13.4)]
+        ignore line: [Target: arm64-apple-darwin25.0.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [cc: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios16.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.0 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-a7 -target-feature +zcm -target-feature +zcz -target-feature +v8a -target-feature +aes -target-feature +fp-armv8 -target-feature +neon -target-feature +perfmon -target-feature +sha2 -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-O58UnY -target-linker-version 1218 -v -fcoverage-compilation-dir=/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-O58UnY -resource-dir /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -I /usr/include -I /opt/homebrew/opt/openssl@3/include -internal-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/local/include -internal-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include -internal-externc-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-error -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 17.0.0 (clang-1700.3.13.4) default target arm64-apple-darwin25.0.0]
+        ignore line: [ignoring nonexistent directory "/usr/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/homebrew/opt/openssl@3/include]
+        ignore line: [ /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include]
+        ignore line: [ /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include]
+        ignore line: [ /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [ /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/SubFrameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking C executable cmTC_bf9db]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf9db.dir/link.txt --verbose=1]
+        ignore line: [Apple clang version 17.0.0 (clang-1700.3.13.4)]
+        ignore line: [Target: arm64-apple-darwin25.0.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        link line: [ "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios 16.0.0 26.0 -syslibroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_bf9db -L/opt/homebrew/opt/libxcrypt/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a]
+          arg [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [ios] ==> ignore
+          arg [16.0.0] ==> ignore
+          arg [26.0] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_bf9db] ==> ignore
+          arg [-L/opt/homebrew/opt/libxcrypt/lib] ==> dir [/opt/homebrew/opt/libxcrypt/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_bf9db.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a] ==> lib [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a]
+        linker tool for 'C': /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Library search paths: [;/opt/homebrew/opt/libxcrypt/lib;/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib;/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib/swift]
+        Framework search paths: [;/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a]
+        collapse library dir [/opt/homebrew/opt/libxcrypt/lib] ==> [/opt/homebrew/opt/libxcrypt/lib]
+        collapse library dir [/opt/homebrew/opt/libxcrypt/lib] ==> [/opt/homebrew/opt/libxcrypt/lib]
+        collapse library dir [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib] ==> [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib]
+        collapse library dir [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib/swift] ==> [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib/swift]
+        collapse framework dir [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks] ==> [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/opt/homebrew/opt/libxcrypt/lib;/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib;/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib/swift]
+        implicit fwks: [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1218
+      BUILD 14:02:51 Jul  2 2025
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 17.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.3.5.6)
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestOBJCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting OBJC compiler ABI info"
+    directories:
+      source: "/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-OXybYZ"
+      binary: "/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-OXybYZ"
+    cmakeVariables:
+      CMAKE_EXE_LINKER_FLAGS: "-L/opt/homebrew/opt/libxcrypt/lib"
+      CMAKE_OBJC_FLAGS: ""
+      CMAKE_OBJC_FLAGS_DEBUG: "-g"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk"
+    buildResult:
+      variable: "CMAKE_OBJC_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-OXybYZ'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/make -f Makefile cmTC_81614/fast
+        /Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_81614.dir/build.make CMakeFiles/cmTC_81614.dir/build
+        Building OBJC object CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o
+        /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -x objective-c -arch arm64 -isysroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o -MF CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o.d -o CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o -c /opt/homebrew/share/cmake/Modules/CMakeOBJCCompilerABI.m
+        Apple clang version 17.0.0 (clang-1700.3.13.4)
+        Target: arm64-apple-darwin25.0.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios16.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeOBJCCompilerABI.m -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.0 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-a7 -target-feature +zcm -target-feature +zcz -target-feature +v8a -target-feature +aes -target-feature +fp-armv8 -target-feature +neon -target-feature +perfmon -target-feature +sha2 -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-OXybYZ -target-linker-version 1218 -v -fcoverage-compilation-dir=/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-OXybYZ -resource-dir /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o -sys-header-deps -isysroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -internal-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/local/include -internal-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include -internal-externc-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-error -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fobjc-runtime=ios-16.0.0 -fobjc-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o -x objective-c /opt/homebrew/share/cmake/Modules/CMakeOBJCCompilerABI.m
+        clang -cc1 version 17.0.0 (clang-1700.3.13.4) default target arm64-apple-darwin25.0.0
+        ignoring nonexistent directory "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/local/include"
+        ignoring nonexistent directory "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include
+         /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include
+         /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks (framework directory)
+         /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/SubFrameworks (framework directory)
+        End of search list.
+        Linking OBJC executable cmTC_81614
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81614.dir/link.txt --verbose=1
+        Apple clang version 17.0.0 (clang-1700.3.13.4)
+        Target: arm64-apple-darwin25.0.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios 16.0.0 26.0 -syslibroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_81614 -L/opt/homebrew/opt/libxcrypt/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o -lSystem /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a
+        @(#)PROGRAM:ld PROJECT:ld-1218
+        BUILD 14:02:51 Jul  2 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 17.0.0 (static support for 29, runtime is 29)
+        TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.3.5.6)
+        Library search paths:
+        	/opt/homebrew/opt/libxcrypt/lib
+        	/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib
+        	/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib/swift
+        Framework search paths:
+        	/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks
+        /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/libxcrypt/lib -v -Wl,-v CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o -o cmTC_81614
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestOBJCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestOBJCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed OBJC implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include]
+          add: [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include]
+          add: [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        end of search list found
+        collapse include dir [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include] ==> [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include]
+        collapse include dir [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include] ==> [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include]
+        collapse include dir [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include;/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include;/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestOBJCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed OBJC implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-OXybYZ']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/make -f Makefile cmTC_81614/fast]
+        ignore line: [/Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_81614.dir/build.make CMakeFiles/cmTC_81614.dir/build]
+        ignore line: [Building OBJC object CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o]
+        ignore line: [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -x objective-c -arch arm64 -isysroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o -MF CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o.d -o CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o -c /opt/homebrew/share/cmake/Modules/CMakeOBJCCompilerABI.m]
+        ignore line: [Apple clang version 17.0.0 (clang-1700.3.13.4)]
+        ignore line: [Target: arm64-apple-darwin25.0.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios16.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeOBJCCompilerABI.m -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.0 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-a7 -target-feature +zcm -target-feature +zcz -target-feature +v8a -target-feature +aes -target-feature +fp-armv8 -target-feature +neon -target-feature +perfmon -target-feature +sha2 -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-OXybYZ -target-linker-version 1218 -v -fcoverage-compilation-dir=/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/CMakeScratch/TryCompile-OXybYZ -resource-dir /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o -sys-header-deps -isysroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -internal-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/local/include -internal-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include -internal-externc-isystem /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-error -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fobjc-runtime=ios-16.0.0 -fobjc-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o -x objective-c /opt/homebrew/share/cmake/Modules/CMakeOBJCCompilerABI.m]
+        ignore line: [clang -cc1 version 17.0.0 (clang-1700.3.13.4) default target arm64-apple-darwin25.0.0]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include]
+        ignore line: [ /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/include]
+        ignore line: [ /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [ /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/SubFrameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking OBJC executable cmTC_81614]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81614.dir/link.txt --verbose=1]
+        ignore line: [Apple clang version 17.0.0 (clang-1700.3.13.4)]
+        ignore line: [Target: arm64-apple-darwin25.0.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        link line: [ "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios 16.0.0 26.0 -syslibroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_81614 -L/opt/homebrew/opt/libxcrypt/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o -lSystem /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a]
+          arg [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [ios] ==> ignore
+          arg [16.0.0] ==> ignore
+          arg [26.0] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_81614] ==> ignore
+          arg [-L/opt/homebrew/opt/libxcrypt/lib] ==> dir [/opt/homebrew/opt/libxcrypt/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_81614.dir/CMakeOBJCCompilerABI.m.o] ==> ignore
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a] ==> lib [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a]
+        linker tool for 'OBJC': /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Library search paths: [;/opt/homebrew/opt/libxcrypt/lib;/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib;/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib/swift]
+        Framework search paths: [;/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a]
+        collapse library dir [/opt/homebrew/opt/libxcrypt/lib] ==> [/opt/homebrew/opt/libxcrypt/lib]
+        collapse library dir [/opt/homebrew/opt/libxcrypt/lib] ==> [/opt/homebrew/opt/libxcrypt/lib]
+        collapse library dir [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib] ==> [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib]
+        collapse library dir [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib/swift] ==> [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib/swift]
+        collapse framework dir [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks] ==> [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/opt/homebrew/opt/libxcrypt/lib;/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib;/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/usr/lib/swift]
+        implicit fwks: [/Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestOBJCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the OBJC compiler's linker: "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1218
+      BUILD 14:02:51 Jul  2 2025
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 17.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.3.5.6)
+...
