@@ -16,7 +16,7 @@
  */
 
 #include "slirp.h"
-#include "compat/ios_fixes.h"
+#include "../../compat/ios_fixes.h"
 
 #define MBUF_THRESH 30
 

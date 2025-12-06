@@ -6,7 +6,7 @@
  */
 
 #include "slirp.h"
-#include "compat/ios_fixes.h"
+#include "../../compat/ios_fixes.h"
 #include "ip_icmp.h"
 #include <errno.h>
 

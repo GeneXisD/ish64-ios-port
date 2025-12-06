@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 #include "slirp.h"
-#include "compat/ios_fixes.h"
+#include "../../compat/ios_fixes.h"
 #include <errno.h>
 
 void slirp_output(void *opaque, const void *pkt, int pkt_len);

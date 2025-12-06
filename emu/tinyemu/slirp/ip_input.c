@@ -40,7 +40,6 @@
 
 #include "slirp.h"
 #include "ip_icmp.h"
-#include "compat/ios_fixes.h"
 
 #define container_of(ptr, type, member) ({                      \
         const typeof( ((type *)0)->member ) *__mptr = (ptr);    \
@@ -684,3 +683,4 @@ ip_stripoptions(register struct mbuf *m, struct mbuf *mopt)
 
 	ip->ip_hl = sizeof(struct ip) >> 2;
 }
+

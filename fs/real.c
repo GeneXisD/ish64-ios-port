@@ -15,17 +15,18 @@
 #include <sys/xattr.h>
 #include <sys/file.h>
 #include <sys/statvfs.h>
-#include <poll.h>
 
-#ifndef HAVE_DECL_OPENAT
-#include <fcntl.h>
-#ifdef __cplusplus
-extern "C" {
+#ifndef HAVE_DECL_NFDS_T
+#include <sys/types.h>
+typedef unsigned long int nfds_t;
 #endif
-extern int openat(int dirfd, const char *pathname, int flags, ...);
-#ifdef __cplusplus
-}
-#endif
+
+#ifndef HAVE_DECL_STRUCT_POLLFD
+struct pollfd {
+    int   fd;
+    short events;
+    short revents;
+};
 #endif
 
 #ifndef HAVE_DECL_POLL
@@ -546,4 +547,3 @@ const struct fd_ops realfs_fdops = {
     .getflags = realfs_getflags,
     .setflags = realfs_setflags,
 };
-

@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 #include "slirp.h"
-#include "compat/ios_fixes.h"
+#include "../../compat/ios_fixes.h"
 
 /* XXX: only DHCP is supported */
 
