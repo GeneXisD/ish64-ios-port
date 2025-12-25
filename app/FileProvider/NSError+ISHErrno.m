@@ -8,6 +8,7 @@
 #import <FileProvider/FileProvider.h>
 #import "NSError+ISHErrno.h"
 #include "kernel/errno.h"
+#include <errno.h>
 
 @implementation NSError (ISHErrno)
 

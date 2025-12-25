@@ -5,6 +5,7 @@
 #include "fs/mem.h"
 #include "fs/dev.h"
 #include "fs/devices.h"
+#include <errno.h>
 
 extern struct dev_ops
     null_dev,

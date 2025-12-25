@@ -1,5 +1,6 @@
 #include <sys/stat.h>
 #include <string.h>
+#include <errno.h>
 
 #include "kernel/calls.h"
 #include "kernel/errno.h"

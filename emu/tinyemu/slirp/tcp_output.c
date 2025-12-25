@@ -39,6 +39,7 @@
  */
 
 #include "slirp.h"
+#include "util/errno_compat.h"
 
 static const u_char  tcp_outflags[TCP_NSTATES] = {
 	TH_RST|TH_ACK, 0,      TH_SYN,        TH_SYN|TH_ACK,
@@ -86,7 +87,7 @@ again:
 	off = tp->snd_nxt - tp->snd_una;
 	win = min(tp->snd_wnd, tp->snd_cwnd);
 
-	flags = tcp_outflags[tp->t_state];
+        //flags = tcp_outflags[tp->t_state];
 
 	DEBUG_MISC((dfd, " --- tcp_output flags = 0x%x\n",flags));
 

@@ -8,6 +8,7 @@
 #include "fs/fd.h"
 #include "fs/path.h"
 #include "fs/dev.h"
+#include <errno.h>
 
 static struct fd *at_fd(fd_t f) {
     if (f == AT_FDCWD_)

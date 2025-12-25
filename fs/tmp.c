@@ -7,6 +7,7 @@
 #include "util/refcount.h"
 #include "debug.h"
 #include "lock.h"
+#include <errno.h>
 
 // ========================
 // ======== INODES ========

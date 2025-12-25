@@ -1,3 +1,5 @@
+static struct tcpcb *tcp_timers(struct tcpcb *tp, int timer);
+
 /*
  * Copyright (c) 1982, 1986, 1988, 1990, 1993
  *	The Regents of the University of California.  All rights reserved.
@@ -31,8 +33,8 @@
  */
 
 #include "slirp.h"
+#include "util/errno_compat.h"
 
-static struct tcpcb *tcp_timers(register struct tcpcb *tp, int timer);
 
 /*
  * Fast timeout routine for processing delayed acks
@@ -85,24 +87,20 @@ tcp_slowtimo(Slirp *slirp)
                 }
 		for (i = 0; i < TCPT_NTIMERS; i++) {
 			if (tp->t_timer[i] && --tp->t_timer[i] == 0) {
-				tcp_timers(tp,i);
+				tp = tcp_timers(tp,i);
 				if (ipnxt->so_prev != ip)
-					goto tpgone;
+						goto tpgone;
+				}
 			}
+			tp->t_idle++;
+			if (tp->t_rtt)
+			   tp->t_rtt++;
+			tpgone:
+				;
 		}
-		tp->t_idle++;
-		if (tp->t_rtt)
-		   tp->t_rtt++;
-tpgone:
-		;
-	}
 	slirp->tcp_iss += TCP_ISSINCR/PR_SLOWHZ;	/* increment iss */
 	slirp->tcp_now++;				/* for timestamps */
 }
-
-/*
- * Cancel all timers for TCP tp.
- */
 void
 tcp_canceltimers(struct tcpcb *tp)
 {
@@ -115,6 +113,9 @@ tcp_canceltimers(struct tcpcb *tp)
 const int tcp_backoff[TCP_MAXRXTSHIFT + 1] =
    { 1, 2, 4, 8, 16, 32, 64, 64, 64, 64, 64, 64, 64 };
 
+/*
+ * TCP timer processing.
+ */
 /*
  * TCP timer processing.
  */

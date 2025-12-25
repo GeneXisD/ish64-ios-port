@@ -6,6 +6,7 @@
 #include "emu/cpu.h"
 #include "emu/interrupt.h"
 #include "util/list.h"
+#include "util/wrlock_compat.h"
 
 extern int current_pid(void);
 

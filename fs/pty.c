@@ -8,6 +8,7 @@
 #include "kernel/errno.h"
 #include "fs/tty.h"
 #include "fs/devices.h"
+#include <errno.h>
 
 extern struct tty_driver pty_slave;
 

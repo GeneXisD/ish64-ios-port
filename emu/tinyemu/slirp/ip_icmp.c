@@ -31,6 +31,8 @@
  */
 
 #include "slirp.h"
+#include <string.h>
+#include "util/errno_compat.h"
 
 #include "../../compat/ios_fixes.h"
 #include "ip_icmp.h"

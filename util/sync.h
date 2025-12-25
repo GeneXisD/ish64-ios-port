@@ -51,5 +51,12 @@ static inline bool lock_held(lock_t *lock) {
     return false;
 }
 
+#ifndef LOCK_INITIALIZER
+/* fallback: if lock_t is pthread_mutex_t this uses PTHREAD_MUTEX_INITIALIZER */
+#ifdef __APPLE__
+#include <pthread.h>
+#endif
+#define LOCK_INITIALIZER PTHREAD_MUTEX_INITIALIZER
+#endif
 #endif /* UTIL_SYNC_H */
 

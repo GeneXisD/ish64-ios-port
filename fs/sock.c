@@ -12,6 +12,8 @@
 #include "fs/sock.h"
 #include "debug.h"
 
+#include <errno.h>
+#include <string.h>
 #define SOCKET_TYPE_MASK 0xf
 
 const struct fd_ops socket_fdops;

@@ -13,6 +13,7 @@
 #include <linux/tty.h>
 #include <linux/tty_flip.h>
 #include <linux/slab.h>
+#include <errno.h>
 
 static void nslog_console_write(struct console *console, const char *data, unsigned len) {
     ConsoleLog(data, len);

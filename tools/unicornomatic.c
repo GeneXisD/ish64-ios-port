@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <errno.h>
 #include <sys/mman.h>
+#include <string.h>
 
 #include <unicorn/unicorn.h>
 

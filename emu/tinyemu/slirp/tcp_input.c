@@ -39,9 +39,31 @@
  */
 
 #include "slirp.h"
+#include <errno.h>
+#include <string.h>
 #include "../../compat/ios_fixes.h"
 #include "ip_icmp.h"
 #include <errno.h>
+#include <string.h>
+#include "../../../util/errno_compat.h"
+
+
+#ifndef EINPROGRESS
+#define EINPROGRESS 36        /* macOS usually uses 36 */
+#endif
+
+#ifndef EWOULDBLOCK
+#define EWOULDBLOCK EAGAIN    /* EAGAIN exists on macOS */
+#endif
+
+#ifndef ECONNREFUSED
+#define ECONNREFUSED 61       /* macOS usually uses 61 */
+#endif
+
+#ifndef EHOSTUNREACH
+#define EHOSTUNREACH 65       /* macOS usually uses 65 */
+#endif
+
 #define	TCPREXMTTHRESH 3
 
 #define TCP_PAWS_IDLE	(24 * 24 * 60 * 60 * PR_SLOWHZ)
@@ -1101,7 +1123,7 @@ step6:
 	    (SEQ_LT(tp->snd_wl1, ti->ti_seq) ||
 	    (tp->snd_wl1 == ti->ti_seq && (SEQ_LT(tp->snd_wl2, ti->ti_ack) ||
 	    (tp->snd_wl2 == ti->ti_ack && tiwin > tp->snd_wnd))))) {
-		tp->snd_wnd = tiwin;
+		tp->snd_wnd = (uint32_t)tiwin;
 		tp->snd_wl1 = ti->ti_seq;
 		tp->snd_wl2 = ti->ti_ack;
 		if (tp->snd_wnd > tp->max_sndwnd)

@@ -24,15 +24,41 @@
 #ifndef CUTILS_H
 #define CUTILS_H
 
-#include <inttypes.h>
+#pragma once
 
-#define likely(x)       __builtin_expect(!!(x), 1)
-#define unlikely(x)     __builtin_expect(!!(x), 0)
+/* Core includes */
+#include <stdint.h>
+#include <inttypes.h>
+#include <sys/stat.h>
+#include <time.h>
+
+/* errno compatibility (explicit path to avoid ambiguity) */
+#include "../util/errno_compat.h"
+
+/* Branch prediction hints */
+#ifndef likely
+#define likely(x)   __builtin_expect(!!(x), 1)
+#endif
+
+#ifndef unlikely
+#define unlikely(x) __builtin_expect(!!(x), 0)
+#endif
+
+/* Inline controls */
+#ifndef force_inline
 #define force_inline inline __attribute__((always_inline))
+#endif
+
+#ifndef no_inline
 #define no_inline __attribute__((noinline))
+#endif
+
+/* Attributes */
 #define __maybe_unused __attribute__((unused))
 
+/* Token glue */
 #define xglue(x, y) x ## y
+#ifndef glue
 #define glue(x, y) xglue(x, y)
 #define stringify(s)    tostring(s)
 #define tostring(s)     #s
@@ -149,7 +175,7 @@ static inline void put_be32(uint8_t *d, uint32_t v)
 static inline void put_be64(uint8_t *d, uint64_t v)
 {
     put_be32(d, v >> 32);
-    put_be32(d + 4, v);
+    put_be32(d + 4, (uint32_t)v);
 }
 
 #ifdef WORDS_BIGENDIAN

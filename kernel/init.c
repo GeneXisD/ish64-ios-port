@@ -1,3 +1,5 @@
+#include <signal.h>
+
 #include "signal.h"
 #include <signal.h>
 #include "kernel/signal.h"

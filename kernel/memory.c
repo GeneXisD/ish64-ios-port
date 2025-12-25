@@ -1,5 +1,10 @@
+#include <string.h>
+
 #include <errno.h>
-#include <string.h>     // for strerror, if it’s not already included via another header
+
+#include <errno.h>
+#include <string.h>
+#include "../util/wrlock_compat.h"
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/mman.h>
@@ -7,6 +12,7 @@
 #include <stdio.h>
 #include "errno.h"
 #include "string.h"
+#include "util/wrlock_compat.h"
 #define DEFAULT_CHANNEL memory
 #include "debug.h"
 #include "kernel/errno.h"

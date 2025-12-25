@@ -12,6 +12,7 @@
 #include <linux/init.h>
 #include <linux/fcntl.h>
 #include "LinuxInterop.h"
+#include <errno.h>
 
 #define INITIAL_BUFFER_CAP 1024
 // 8MB: https://stackoverflow.com/a/3523175

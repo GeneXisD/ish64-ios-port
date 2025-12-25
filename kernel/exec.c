@@ -1,5 +1,7 @@
 #include "kernel/signal.h"
 #include "task.h"
+#include <errno.h>
+#include "util/wrlock_compat.h"
 #define _GNU_SOURCE
 #include <unistd.h>
 #include <fcntl.h>

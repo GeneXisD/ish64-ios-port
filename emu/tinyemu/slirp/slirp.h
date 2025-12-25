@@ -1,9 +1,11 @@
 #ifndef __COMMON_H__
 #define __COMMON_H__
 
+#include "util/errno_compat.h"
 #include <stdlib.h>
-#include "../cutils.h"
 #include "slirp_config.h"
+#include <string.h>
+#include "compat/apple_clang.h"
 
 #ifdef _WIN32
 # include <inttypes.h>
@@ -77,6 +79,7 @@ typedef char *caddr_t;
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #endif
+ #include "../cutils.h"
 
 /* Systems lacking strdup() definition in <string.h>. */
 #if defined(ultrix)

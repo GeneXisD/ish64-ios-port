@@ -8,6 +8,7 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #include <sys/stat.h>
 #include <dirent.h>
+#include <errno.h>
 #import "FileProviderExtension.h"
 #import "FileProviderItem.h"
 #include "fs/fake-db.h"

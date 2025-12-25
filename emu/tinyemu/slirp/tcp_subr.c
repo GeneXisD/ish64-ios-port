@@ -39,6 +39,8 @@
  */
 
 #include "slirp.h"
+#include <errno.h>
+#include "util/errno_compat.h"
 
 int get_dns_addr(struct in_addr *);
 

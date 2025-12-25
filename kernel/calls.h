@@ -7,6 +7,7 @@
 #include "fs/dev.h"
 #include "kernel/fs.h"
 #include "misc.h"
+#include <errno.h>
 
 #include "kernel/signal.h"
 #include "fs/sock.h"

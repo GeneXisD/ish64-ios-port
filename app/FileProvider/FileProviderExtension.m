@@ -12,6 +12,7 @@
 #import "../AppGroup.h"
 #import "../ExceptionExfiltrator.h"
 #include "fs/fake-db.h"
+#include <errno.h>
 
 @interface FileProviderExtension () {
     BOOL _mounted;

@@ -22,8 +22,9 @@
  * THE SOFTWARE.
  */
 #include "slirp.h"
-#include "../../compat/ios_fixes.h"
+#include "compat/ios_fixes.h"
 #include <errno.h>
+#include "util/errno_compat.h"
 
 void slirp_output(void *opaque, const void *pkt, int pkt_len);
 
@@ -242,7 +243,8 @@ void slirp_cleanup(Slirp *slirp)
 
 /* The signature of slirp_select_fill must match the declaration in slirp.h to avoid conflicting type errors */
 void slirp_select_fill(Slirp *slirp, int *pnfds,
-                       fd_set *readfds, fd_set *writefds, fd_set *xfds)
+                       fd_set *readfds, fd_set *writefds)
+
 {
     struct socket *so, *so_next;
     int nfds;
@@ -360,15 +362,16 @@ void slirp_select_fill(Slirp *slirp, int *pnfds,
 }
 
 void slirp_select_poll(Slirp *slirp,
-                       fd_set *readfds, fd_set *writefds, fd_set *xfds,
-                       int select_error)
+                       fd_set *readfds, fd_set *writefds,
+                       int *ready)
+
 {
     struct socket *so, *so_next;
     int ret;
 
     global_readfds = readfds;
     global_writefds = writefds;
-    global_xfds = xfds;
+    
 
     curtime = os_get_time_ms();
 
@@ -409,8 +412,7 @@ void slirp_select_poll(Slirp *slirp,
 			 * This will soread as well, so no need to
 			 * test for readfds below if this succeeds
 			 */
-			if (FD_ISSET(so->s, xfds))
-			   sorecvoob(so);
+	
 			/*
 			 * Check sockets for reading
 			 */
@@ -440,7 +442,7 @@ void slirp_select_poll(Slirp *slirp,
 			    /* Connected */
 			    so->so_state &= ~SS_ISFCONNECTING;
 
-			    ret = send(so->s, (const void *) &ret, 0, 0);
+			    ret = (int) ret = send(so->s, (const void *) &ret, 0, 0;
 			    if (ret < 0) {
 			      /* XXXXX Must fix, zero bytes is a NOP */
 			      if (errno == EAGAIN || errno == EWOULDBLOCK ||
@@ -488,7 +490,7 @@ void slirp_select_poll(Slirp *slirp,
 
 			    /* tcp_input will take care of it */
 			  } else {
-			    ret = send(so->s, &ret, 0,0);
+			    ret = (int) ret = send(so->s, &ret, 0,0;
 			    if (ret < 0) {
 			      /* XXX */
 			      if (errno == EAGAIN || errno == EWOULDBLOCK ||

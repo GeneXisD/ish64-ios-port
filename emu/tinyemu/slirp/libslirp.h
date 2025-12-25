@@ -17,6 +17,8 @@ Slirp *slirp_init(int restricted, struct in_addr vnetwork,
                   struct in_addr vnameserver, void *opaque);
 void slirp_cleanup(Slirp *slirp);
 
+typedef struct Slirp Slirp;
+
 void slirp_select_fill(Slirp *slirp, int *pnfds,
                        fd_set *readfds, fd_set *writefds, fd_set *xfds);
 
@@ -46,18 +48,13 @@ int slirp_get_time_ms(void);
 
 #else /* !CONFIG_SLIRP */
 
-static inline void slirp_select_fill(int *pnfds, fd_set *readfds,
-                                     fd_set *writefds, fd_set *xfds) { }
+struct Slirp;
+typedef struct Slirp Slirp;
 
-static inline void slirp_select_poll(fd_set *readfds, fd_set *writefds,
-                                     fd_set *xfds, int select_error) { }
+void slirp_select_fill(Slirp *slirp, int *pnfds, fd_set *readfds, fd_set *writefds);
+void slirp_select_poll(Slirp *slirp, fd_set *readfds, fd_set *writefds, int *ready);
 
-void slirp_select_fill(Slirp *slirp, int *pnfds,
-                       fd_set *readfds, fd_set *writefds,
-                       fd_set *exceptfds);
-void slirp_select_poll(Slirp *slirp,
-                       fd_set *readfds, fd_set *writefds,
-                       fd_set *exceptfds, struct timeval *tvp);
 #endif /* !CONFIG_SLIRP */
 
 #endif
+

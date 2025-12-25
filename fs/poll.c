@@ -1,3 +1,5 @@
+#include <errno.h>
+
 #include "kernel/task.h"
 #include <string.h>
 #include <poll.h>

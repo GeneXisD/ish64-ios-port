@@ -8,6 +8,7 @@
 #include "fs/fd.h"
 #include "misc.h"
 #include "debug.h"
+#include <errno.h>
 
 int_t sys_socketcall(dword_t call_num, addr_t args_addr);
 

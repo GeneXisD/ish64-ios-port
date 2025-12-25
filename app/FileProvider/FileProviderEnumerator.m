@@ -7,6 +7,7 @@
 
 #import <MobileCoreServices/MobileCoreServices.h>
 #include <dirent.h>
+#include <errno.h>
 #import "FileProviderExtension.h"
 #import "FileProviderEnumerator.h"
 #import "FileProviderItem.h"

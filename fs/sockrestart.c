@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <errno.h>
+
 // sockrestart.c – ensure errno/strerror are declared
 #include <string.h>
 #include <signal.h>

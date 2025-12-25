@@ -3,6 +3,7 @@
 #include "fs/dyndev.h"
 #include "fs/devices.h"
 #include "util/sync.h"
+#include <errno.h>
 
 #define MAX_MINOR 255
 

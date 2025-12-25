@@ -1,27 +1,12 @@
-# Replace include lines in the slirp sources we modified earlier:
-FILES=(
-  emu/tinyemu/slirp/socket.c
-  emu/tinyemu/slirp/slirp.c
-  emu/tinyemu/slirp/ip_icmp.c
-  emu/tinyemu/slirp/tcp_input.c
-  emu/tinyemu/slirp/bootp.c
-  emu/tinyemu/slirp/ip_input.c
-  emu/tinyemu/slirp/mbuf.c
-  emu/tinyemu/slirp/mbuf.c  # appears twice in logs; harmless
-)
-
-for f in "${FILES[@]}"; do
-  if [ -f "$f" ]; then
-    # if it already includes the relative path, skip
-    if grep -q '#include "../../compat/ios_fixes.h"' "$f"; then
-      echo "OK: $f already uses relative include"
-    else
-      # replace "compat/ios_fixes.h" with ../../compat/ios_fixes.h
-      perl -0777 -pe 's/#include\s+"compat\/ios_fixes.h"/#include "..\/..\/compat\/ios_fixes.h"/g' -i "$f"
-      echo "Patched include in $f"
-    fi
-  else
-    echo "Missing file: $f (skipped)"
-  fi
-done
+# Example fixes in socket.c — backup then apply
+SC=emu/tinyemu/slirp/socket.c
+if [ -f "$SC" ]; then
+  cp "$SC" "$SC.bak"
+  # cast recvfrom result assigned to m->m_len
+  perl -0777 -pe '
+    s{m->m_len\s*=\s*recvfrom\(([^;]+?)\);}{"m->m_len = (int) recvfrom($1);"}gs;
+    s{ret\s*=\s*sendto\(([^;]+?)\);}{"ret = (int) sendto($1);"}gs;
+  ' -i "$SC"
+  echo "Added casts in $SC (backup: $SC.bak)"
+fi
 

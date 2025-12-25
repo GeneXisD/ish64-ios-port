@@ -5,6 +5,7 @@
 #include "fs/tty.h"
 #include "fs/dyndev.h"
 #include "fs/devices.h"
+#include <errno.h>
 
 struct dev_ops *block_devs[256] = {
     // no block devices yet

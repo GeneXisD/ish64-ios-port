@@ -6,6 +6,9 @@
  */
 
 #include "slirp.h"
+#include <errno.h>
+#include <string.h>
+#include "util/errno_compat.h"
 
 #ifdef DEBUG
 int slirp_debug = DBG_CALL|DBG_MISC|DBG_ERROR;

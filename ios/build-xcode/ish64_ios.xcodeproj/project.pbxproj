@@ -968,7 +968,6 @@
 				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/MinSizeRel${EFFECTIVE_PLATFORM_NAME}";
 				DEVELOPMENT_TEAM = 9XFS693LL9;
 				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
@@ -1007,7 +1006,6 @@
 					Foundation,
 					"$(inherited)",
 				);
-				OTHER_REZFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.victorj.ish64-ios";
 				PRODUCT_NAME = ish64_ios;
 				SECTORDER_FLAGS = "";
@@ -1026,7 +1024,6 @@
 				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/Debug${EFFECTIVE_PLATFORM_NAME}";
 				DEVELOPMENT_TEAM = 9XFS693LL9;
 				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1064,7 +1061,6 @@
 					Foundation,
 					"$(inherited)",
 				);
-				OTHER_REZFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.victorj.ish64-ios";
 				PRODUCT_NAME = ish64_ios;
 				SECTORDER_FLAGS = "";
@@ -1108,7 +1104,6 @@
 				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/RelWithDebInfo${EFFECTIVE_PLATFORM_NAME}";
 				DEVELOPMENT_TEAM = 9XFS693LL9;
 				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
@@ -1147,7 +1142,6 @@
 					Foundation,
 					"$(inherited)",
 				);
-				OTHER_REZFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.victorj.ish64-ios";
 				PRODUCT_NAME = ish64_ios;
 				SECTORDER_FLAGS = "";
@@ -1269,7 +1263,6 @@
 				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/Release${EFFECTIVE_PLATFORM_NAME}";
 				DEVELOPMENT_TEAM = 9XFS693LL9;
 				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
@@ -1308,11 +1301,11 @@
 					Foundation,
 					"$(inherited)",
 				);
-				OTHER_REZFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.victorj.ish64-ios";
 				PRODUCT_NAME = ish64_ios;
 				SECTORDER_FLAGS = "";
 				TARGET_TEMP_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ish64_ios.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				"TARGET_TEMP_DIR[arch=*]" = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ish64_ios.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};

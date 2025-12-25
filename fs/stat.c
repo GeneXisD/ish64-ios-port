@@ -1,6 +1,7 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <limits.h>
+#include <errno.h>
 
 #include "kernel/calls.h"
 #include "kernel/errno.h"
@@ -11,7 +12,7 @@
 struct newstat64 stat_convert_newstat64(struct statbuf stat) {
     struct newstat64 newstat;
     newstat.dev = stat.dev;
-    newstat.fucked_ino = stat.inode;
+    newstat.fucked_ino = (dword_t)stat.inode;
     newstat.ino = stat.inode;
     newstat.mode = stat.mode;
     newstat.nlink = stat.nlink;
@@ -136,10 +137,10 @@ dword_t sys_statx(fd_t at_f, addr_t path_addr, int_t flags, uint_t mask, addr_t 
     statx.mtime.nsec = stat.mtime_nsec;
     statx.ctime.sec = stat.ctime;
     statx.ctime.nsec = stat.ctime_nsec;
-    statx.rdev_major = dev_major(stat.rdev);
-    statx.rdev_minor = dev_minor(stat.rdev);
-    statx.dev_major = dev_major(stat.dev);
-    statx.dev_minor = dev_minor(stat.dev);
+    statx.rdev_major = (dev_t_)dev_major(stat.rdev);
+    statx.rdev_minor = (dev_t_)dev_minor(stat.rdev);
+    statx.dev_major = (dev_t_)dev_major(stat.dev);
+    statx.dev_minor = (dev_t_)dev_minor(stat.dev);
 
     if (user_put(statx_addr, statx))
         return _EFAULT;

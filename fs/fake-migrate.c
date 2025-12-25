@@ -3,6 +3,7 @@
 #include "kernel/errno.h"
 #include "fs/fake-db.h"
 #include "fs/sqlutil.h"
+#include <errno.h>
 
 // The value of the user_version pragma is used to decide what needs migrating.
 

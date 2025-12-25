@@ -5,6 +5,7 @@
 #include "task.h"
 #include <string.h>
 #include "util/sync.h"
+#include <errno.h>
 
 // Returns stopped child with the given pid, locked with the ptrace lock
 static struct task *find_child(pid_t_ pid) {

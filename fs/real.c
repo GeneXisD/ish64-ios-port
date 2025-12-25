@@ -4,9 +4,19 @@
 #define _POSIX_C_SOURCE 200112L
 #endif
 
+#include "util/posix_compat.h"
 #include <string.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <errno.h>
+#ifndef HAVE_DECL_OPENAT
+extern int openat(int dirfd, const char *pathname, int flags, ...);
+#endif
+#ifdef __APPLE__
+#ifndef F_GETPATH
+#define F_GETPATH 50
+#endif
+#endif
 #include <dirent.h>
 #include <sys/stat.h>
 #include <sys/ioctl.h>
@@ -15,6 +25,7 @@
 #include <sys/xattr.h>
 #include <sys/file.h>
 #include <sys/statvfs.h>
+#include "emu/tinyemu/cutils.h"
 
 #ifndef HAVE_DECL_NFDS_T
 #include <sys/types.h>
@@ -100,30 +111,52 @@ int realfs_close(struct fd *fd) {
         return errno_map();
     return 0;
 }
+/* required near the top of the file */
+#include <sys/stat.h>
+#include <time.h>
+#include <stdint.h>   /* for int64_t */
+#include <errno.h>
+#include <string.h>
 
+/* copy_stat: copy fields from host struct stat into project statbuf */
 static void copy_stat(struct statbuf *fake_stat, struct stat *real_stat) {
-    fake_stat->dev = dev_fake_from_real(real_stat->st_dev);
-    fake_stat->inode = real_stat->st_ino;
-    fake_stat->mode = real_stat->st_mode;
-    fake_stat->nlink = real_stat->st_nlink;
-    fake_stat->uid = real_stat->st_uid;
-    fake_stat->gid = real_stat->st_gid;
-    fake_stat->rdev = dev_fake_from_real(real_stat->st_rdev);
-    fake_stat->size = real_stat->st_size;
-    fake_stat->blksize = real_stat->st_blksize;
-    fake_stat->blocks = real_stat->st_blocks;
-    fake_stat->atime = real_stat->st_atime;
-    fake_stat->mtime = real_stat->st_mtime;
-    fake_stat->ctime = real_stat->st_ctime;
-#if __APPLE__
-#define TIMESPEC(x) st_##x##timespec
-#elif __linux__
-#define TIMESPEC(x) st_##x##tim
+    fake_stat->dev      = dev_fake_from_real(real_stat->st_dev);
+    fake_stat->inode    = real_stat->st_ino;
+    fake_stat->mode     = real_stat->st_mode;
+    fake_stat->nlink    = real_stat->st_nlink;
+    fake_stat->uid      = real_stat->st_uid;
+    fake_stat->gid      = real_stat->st_gid;
+    fake_stat->rdev     = dev_fake_from_real(real_stat->st_rdev);
+    fake_stat->size     = real_stat->st_size;
+    fake_stat->blksize  = real_stat->st_blksize;
+    fake_stat->blocks   = real_stat->st_blocks;
+
+#if defined(__APPLE__) || defined(__MACH__)
+    /* macOS / iOS */
+    fake_stat->atime      = real_stat->st_atimespec.tv_sec;
+    fake_stat->mtime      = real_stat->st_mtimespec.tv_sec;
+    fake_stat->atime_nsec = (int64_t)real_stat->st_atimespec.tv_nsec;
+    fake_stat->mtime_nsec = (int64_t)real_stat->st_mtimespec.tv_nsec;
+
+#elif defined(__linux__) || defined(__unix__) || defined(__CYGWIN__)
+    /* Linux / POSIX */
+    fake_stat->atime      = real_stat->st_atim.tv_sec;
+    fake_stat->mtime      = real_stat->st_mtim.tv_sec;
+    fake_stat->atime_nsec = (int64_t)real_stat->st_atim.tv_nsec;
+    fake_stat->mtime_nsec = (int64_t)real_stat->st_mtim.tv_nsec;
+
+#else
+    /* Fallback: seconds only */
+    fake_stat->atime      = real_stat->st_atime;
+    fake_stat->mtime      = real_stat->st_mtime;
+    fake_stat->atime_nsec = 0;
+    fake_stat->mtime_nsec = 0;
 #endif
-    fake_stat->atime_nsec = real_stat->TIMESPEC(a).tv_nsec;
-    fake_stat->mtime_nsec = real_stat->TIMESPEC(m).tv_nsec;
-    fake_stat->ctime_nsec = real_stat->TIMESPEC(c).tv_nsec;
-#undef TIMESPEC
+}
+  #endif
+#endif
+
+    fake_stat->ctime_nsec = real_stat->st_ctim.tv_nsec;
 }
 
 int realfs_stat(struct mount *mount, const char *path, struct statbuf *fake_stat) {

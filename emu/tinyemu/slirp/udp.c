@@ -40,6 +40,7 @@
 #include <errno.h> // Ensure errno is declared
 #include <sys/errno.h>
 #include <string.h>
+#include "util/errno_compat.h"
 
 #include "slirp.h"
 #include "ip_icmp.h"

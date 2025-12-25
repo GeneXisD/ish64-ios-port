@@ -7,3 +7,4 @@
 #include "kernel/memory.h"
 #include "kernel/mm.h"
 #include "util/sync.h"
+#include <errno.h>

@@ -4,6 +4,7 @@
 #include "debug.h"
 #include "misc.h"
 #include "fs/fake-db.h"
+#include <errno.h>
 
 static void db_check_error(struct fakefs_db *fs) {
     int errcode = sqlite3_errcode(fs->db);

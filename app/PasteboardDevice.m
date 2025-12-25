@@ -1,4 +1,5 @@
 #include <string.h>
+#include <errno.h>
 #import <UIKit/UIKit.h>
 #include "fs/poll.h"
 #include "fs/dyndev.h"

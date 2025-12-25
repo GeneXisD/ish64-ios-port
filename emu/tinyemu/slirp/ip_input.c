@@ -40,6 +40,7 @@
 
 #include "slirp.h"
 #include "ip_icmp.h"
+#include "util/errno_compat.h"
 
 #define container_of(ptr, type, member) ({                      \
         const typeof( ((type *)0)->member ) *__mptr = (ptr);    \

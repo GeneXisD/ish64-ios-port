@@ -4,6 +4,7 @@
 #include "kernel/fs.h"
 #include "fs/fd.h"
 #include "kernel/errno.h"
+#include <errno.h>
 
 static struct mount adhoc_mount;
 

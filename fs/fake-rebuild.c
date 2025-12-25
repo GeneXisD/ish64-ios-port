@@ -7,6 +7,7 @@
 #include "kernel/errno.h"
 #include "util/list.h"
 #include "debug.h"
+#include <errno.h>
 
 // rebuild process in pseudocode:
 //

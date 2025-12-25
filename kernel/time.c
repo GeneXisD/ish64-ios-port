@@ -2,6 +2,7 @@ struct timer;
 #ifdef __linux__
 #define _GNU_SOURCE
 #include <sys/resource.h>
+#include <errno.h>
 #endif
 #include "debug.h"
 #include <time.h>
