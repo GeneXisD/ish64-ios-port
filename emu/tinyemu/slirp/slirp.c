@@ -23,9 +23,9 @@
  */
 #include "slirp.h"
 #include "compat/ios_fixes.h"
-#include <errno.h>
 #include "util/errno_compat.h"
 
+#include <errno.h>
 void slirp_output(void *opaque, const void *pkt, int pkt_len);
 
 /* host loopback address */
@@ -247,7 +247,7 @@ void slirp_select_fill(Slirp *slirp, int *pnfds,
 
 {
     struct socket *so, *so_next;
-    int nfds;
+     int nfds, select_error = 0;
 
     /* fail safe */
     global_readfds = NULL;
@@ -318,7 +318,7 @@ void slirp_select_fill(Slirp *slirp, int *pnfds,
 			 */
 			if (CONN_CANFRCV(so) && (so->so_snd.sb_cc < (so->so_snd.sb_datalen/2))) {
 				FD_SET(so->s, readfds);
-				FD_SET(so->s, xfds);
+                                 FD_SET(so->s, global_xfds);
 				UPD_NFDS(so->s);
 			}
 		}
@@ -442,8 +442,7 @@ void slirp_select_poll(Slirp *slirp,
 			    /* Connected */
 			    so->so_state &= ~SS_ISFCONNECTING;
 
-			    ret = (int) ret = send(so->s, (const void *) &ret, 0, 0;
-			    if (ret < 0) {
+                             ret = send(so->s, (const void *) &ret, 0, 0);			    if (ret < 0) {
 			      /* XXXXX Must fix, zero bytes is a NOP */
 			      if (errno == EAGAIN || errno == EWOULDBLOCK ||
 				  errno == EINPROGRESS || errno == ENOTCONN)
@@ -490,8 +489,7 @@ void slirp_select_poll(Slirp *slirp,
 
 			    /* tcp_input will take care of it */
 			  } else {
-			    ret = (int) ret = send(so->s, &ret, 0,0;
-			    if (ret < 0) {
+			    ret = (int) ret = send(so->s, &ret, 0, 0);			    if (ret < 0) {
 			      /* XXX */
 			      if (errno == EAGAIN || errno == EWOULDBLOCK ||
 				  errno == EINPROGRESS || errno == ENOTCONN)
