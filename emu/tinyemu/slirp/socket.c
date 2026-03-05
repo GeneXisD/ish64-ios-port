@@ -1,4 +1,4 @@
-/*
+XtXXX/*
  * Copyright (c) 1995 Danny Gasparovski.
  *
  * Please read the file COPYRIGHT for the
@@ -8,9 +8,10 @@
 #include "slirp.h"
 #include "compat/ios_fixes.h"
 #include "ip_icmp.h"
+#include "util/errno_compat.h"
+
 #include <errno.h>
 #include <string.h>
-#include "util/errno_compat.h"
 
 int get_dns_addr(struct in_addr *pdns_addr);
 
@@ -495,9 +496,8 @@ sorecvfrom(struct socket *so)
 	  }
 	  /* } */
 
-	  "m->m_len = (int) recvfrom(so->s, m->m_data, len, 0,
-			      (struct sockaddr *)&addr, &addrlen);"
-	  DEBUG_MISC((dfd, " did recvfrom %d, errno = %d-%s\n",
+        m->m_len = (int) recvfrom(so->s, m->m_data, len, 0,
+        (struct sockaddr *)&addr, &addrlen);	  DEBUG_MISC((dfd, " did recvfrom %d, errno = %d-%s\n",
 		      m->m_len, errno,strerror(errno)));
 	  if(m->m_len<0) {
 	    u_char code=ICMP_UNREACH_PORT;
@@ -562,9 +562,8 @@ sosendto(struct socket *so, struct mbuf *m)
 	DEBUG_MISC((dfd, " sendto()ing, addr.sin_port=%d, addr.sin_addr.s_addr=%.16s\n", ntohs(addr.sin_port), inet_ntoa(addr.sin_addr)));
 
 	/* Don't care what port we get */
-	"ret = (int) sendto(so->s, m->m_data, m->m_len, 0,
-		     (struct sockaddr *)&addr, sizeof (struct sockaddr));"
-	if (ret < 0)
+    ret = (int) sendto(so->s, m->m_data, m->m_len, 0,
+            (struct sockaddr *)&addr, sizeof(struct sockaddr));	if (ret < 0)
 		return -1;
 
 	/*
