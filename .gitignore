@@ -35,3 +35,7 @@ DerivedData/
 *.tgz
 *.tar
 *.zip
+
+# Xcode user data
+iSH.xcodeproj/xcuserdata/
+*.xcuserdata/
