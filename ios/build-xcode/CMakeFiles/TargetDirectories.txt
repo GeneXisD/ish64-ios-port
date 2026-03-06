@@ -1,4 +1,0 @@
-/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/ishcore.dir
-/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/ish64_ios.dir
-/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/ALL_BUILD.dir
-/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/ZERO_CHECK.dir
