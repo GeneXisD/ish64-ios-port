@@ -1,20 +1,37 @@
+# macOS
+.DS_Store
+
+# build outputs
 build/
-xcuserdata/
-.floo
+build-xcode/
+ios/build-xcode/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
 
-cross-*.txt
-root.tar.gz
+# compiled objects
+*.o
+*.d
+*.a
+*.so
+*.dylib
 
-node_modules
-app/xtermjs/xterm-dist
-app/xtermjs/.cache
+# patch backups
+*.bak_patch
 
-subprojects/
-!subprojects/*.wrap
+# rescue folders
+deps/_rescue/
 
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots
-fastlane/test_output
+# Xcode user data
+*.xcuserdata
+*.xcworkspace
+DerivedData/
 
-e2e_out/
+# logs
+*.log
+
+# archives
+*.tgz
+*.tar
+*.zip
