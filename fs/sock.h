@@ -9,7 +9,70 @@
 #include "misc.h"
 #include "debug.h"
 #include <errno.h>
+#include <sys/types.h>
 
+#ifndef u_char
+typedef unsigned char u_char;
+#endif
+
+#ifndef u_short
+typedef unsigned short u_short;
+#endif
+
+#ifndef u_int
+typedef unsigned int u_int;
+#endif
+#include <netinet/ip.h>
+#include <netinet/ip6.h>
+#include <sys/un.h>
+
+#ifndef AF_LOCAL
+#define AF_LOCAL AF_UNIX
+#endif
+
+#ifndef PF_LOCAL
+#define PF_LOCAL PF_UNIX
+#endif
+
+#ifndef IPPROTO_ICMPV6
+#define IPPROTO_ICMPV6 58
+#endif
+
+#ifndef MSG_DONTWAIT
+#define MSG_DONTWAIT 0
+#endif
+
+#ifndef SO_TIMESTAMP
+#define SO_TIMESTAMP 0x0400
+#endif
+
+#ifndef IP_TOS
+#define IP_TOS 3
+#endif
+
+#ifndef IP_TTL
+#define IP_TTL 4
+#endif
+
+#ifndef IP_HDRINCL
+#define IP_HDRINCL 2
+#endif
+
+#ifndef IP_RETOPTS
+#define IP_RETOPTS 8
+#endif
+
+#ifndef IP_RECVTTL
+#define IP_RECVTTL 24
+#endif
+
+#ifndef IP_RECVTOS
+#define IP_RECVTOS 27
+#endif
+
+#ifndef IPV6_TCLASS
+#define IPV6_TCLASS 36
+#endif
 int_t sys_socketcall(dword_t call_num, addr_t args_addr);
 
 int_t sys_socket(dword_t domain, dword_t type, dword_t protocol);

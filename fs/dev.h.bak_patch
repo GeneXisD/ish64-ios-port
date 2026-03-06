@@ -1,0 +1,51 @@
+#ifndef FS_DEV_H
+#define FS_DEV_H
+
+#include <sys/types.h>
+
+/*
+ * Keep the fake/Linux-side device encoding stable inside ish:
+ * high 16 bits = major
+ * low  16 bits = minor
+ */
+typedef unsigned int dev_t_;
+
+static inline dev_t_ dev_make(dev_t_ major_, dev_t_ minor_) {
+    return ((major_ & 0xffffu) << 16) | (minor_ & 0xffffu);
+}
+
+static inline dev_t_ dev_major(dev_t_ dev) {
+    return (dev >> 16) & 0xffffu;
+}
+
+static inline dev_t_ dev_minor(dev_t_ dev) {
+    return dev & 0xffffu;
+}
+
+/*
+ * Darwin/iOS compatibility:
+ * do not depend on makedev/major/minor from sys/sysmacros.h
+ * because that header is unavailable on this SDK.
+ *
+ * These helpers only need to convert between the host dev_t and the
+ * ish internal split representation. For now we use the same stable
+ * 16:16 packing both ways.
+ */
+static inline dev_t real_dev(dev_t_ dev) {
+    return (dev_t) dev;
+}
+
+static inline dev_t_ fake_dev(dev_t dev) {
+    return (dev_t_) dev;
+}
+
+/* compatibility with older ish code */
+static inline dev_t dev_real_from_fake(dev_t_ dev) {
+    return real_dev(dev);
+}
+
+static inline dev_t_ dev_fake_from_real(dev_t dev) {
+    return fake_dev(dev);
+}
+
+#endif

@@ -11,6 +11,22 @@
 #include <stdint.h>
 #endif
 
+// ---- compiler ISH_FALLTHROUGH annotation (portable) ----
+#ifndef ISH_FALLTHROUGH
+#  if defined(__has_attribute)
+#    if __has_attribute(ISH_FALLTHROUGH)
+#      define ISH_FALLTHROUGH __attribute__((ISH_FALLTHROUGH))
+#    else
+#      define ISH_FALLTHROUGH do {} while (0)
+#    endif
+#  else
+#    define ISH_FALLTHROUGH do {} while (0)
+#  endif
+#endif
+
+// Optional: keep old kernel-style spelling, but ONLY if not already used
+#ifndef ISH_FALLTHROUGH
+#endif
 // utility macros
 #define glue(a, b) _glue(a, b)
 #define _glue(a, b) a##b
@@ -52,10 +68,20 @@
 #define container_of(ptr, type, member) \
     ((type *) ((char *) (ptr) - offsetof(type, member)))
 #endif
-#if has_attribute(fallthrough)
-#define fallthrough __attribute__((fallthrough))
-#else
-#define fallthrough
+/* ---- ISH_FALLTHROUGH handling ----
+   Never define a macro named 'ISH_FALLTHROUGH' because Apple system headers use
+   __has_attribute(ISH_FALLTHROUGH) and it breaks preprocessing.
+*/
+#ifndef ISH_FALLTHROUGH
+#  if defined(__has_attribute)
+#    if __has_attribute(ISH_FALLTHROUGH)
+#      define ISH_FALLTHROUGH __attribute__((ISH_FALLTHROUGH))
+#    else
+#      define ISH_FALLTHROUGH ((void)0)
+#    endif
+#  else
+#    define ISH_FALLTHROUGH ((void)0)
+#  endif
 #endif
 #endif
 

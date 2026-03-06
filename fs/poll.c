@@ -1,4 +1,12 @@
 #include <errno.h>
+#include <errno.h>
+extern int errno;
+#ifndef EINTR
+#define EINTR 4
+#endif
+#ifndef EAGAIN
+#define EAGAIN 35
+#endif
 
 #include "kernel/task.h"
 #include <string.h>
@@ -6,7 +14,6 @@
 #include <fcntl.h>
 #include <limits.h>
 #include <stdlib.h>
-#include <errno.h>
 #include "misc.h"
 #include "util/list.h"
 #include "kernel/errno.h"

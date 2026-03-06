@@ -1,0 +1,369 @@
+Command line invocation:
+    /Applications/Xcode-beta-3.app/Contents/Developer/usr/bin/xcodebuild -project /Users/victorj/Projects/ish64/ios/build-xcode/ish64_ios.xcodeproj -scheme ish64_ios -configuration Debug -sdk iphoneos -destination generic/platform=iOS build
+
+Build settings from command line:
+    SDKROOT = iphoneos26.0
+
+ComputePackagePrebuildTargetDependencyGraph
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (3 targets)
+    Target 'ish64_ios' in project 'ish64_ios'
+        ➜ Explicit dependency on target 'ishcore' in project 'ish64_ios'
+        ➜ Explicit dependency on target 'ZERO_CHECK' in project 'ish64_ios'
+    Target 'ishcore' in project 'ish64_ios'
+        ➜ Explicit dependency on target 'ZERO_CHECK' in project 'ish64_ios'
+    Target 'ZERO_CHECK' in project 'ish64_ios' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -x objective-c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+ExecuteExternalTool /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -V
+
+Build description signature: e9c6120f3ec0f5717493604249c78aa3
+Build description path: /Users/victorj/Projects/ish64/ios/build-xcode/build/XCBuildData/e9c6120f3ec0f5717493604249c78aa3.xcbuilddata
+ClangStatCache /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache
+    cd /Users/victorj/Projects/ish64/ios/build-xcode/ish64_ios.xcodeproj
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode-beta-3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk -o /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache
+
+PhaseScriptExecution Generate\ CMakeFiles/ZERO_CHECK /Users/victorj/Projects/ish64/ios/build-xcode/build/ish64_ios.build/Debug-iphoneos/ZERO_CHECK.build/Script-91640E0D4C50165AC5587525.sh (in target 'ZERO_CHECK' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    /bin/sh -c /Users/victorj/Projects/ish64/ios/build-xcode/build/ish64_ios.build/Debug-iphoneos/ZERO_CHECK.build/Script-91640E0D4C50165AC5587525.sh
+make: `/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/cmake.check_cache' is up to date.
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/fifo.o /Users/victorj/Projects/ish64/util/fifo.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/fifo.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/fifo.dia -c /Users/victorj/Projects/ish64/util/fifo.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/fifo.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/fifo.o
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/random.o /Users/victorj/Projects/ish64/kernel/random.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/random.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/random.dia -c /Users/victorj/Projects/ish64/kernel/random.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/random.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/random.o
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/signal.o /Users/victorj/Projects/ish64/kernel/signal.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/signal.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/signal.dia -c /Users/victorj/Projects/ish64/kernel/signal.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/signal.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/signal.o
+/Users/victorj/Projects/ish64/kernel/signal.c:86:45: warning: result of comparison of constant 16 with expression of type 'bool' is always false [-Wtautological-constant-out-of-range-compare]
+   86 |             if (trylock(task->waiting_lock) == EBUSY) {
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~
+/Users/victorj/Projects/ish64/kernel/signal.c:16:19: warning: function 'wait_for_ignore_signals' has internal linkage but is not defined [-Wundefined-internal]
+   16 | static inline int wait_for_ignore_signals(cond_t *cond, lock_t *lock, struct timespec *timeout);
+      |                   ^
+/Users/victorj/Projects/ish64/kernel/signal.c:324:9: note: used here
+  324 |         wait_for_ignore_signals(&current->ptrace.cond, &current->ptrace.lock, NULL);
+      |         ^
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/resource.o /Users/victorj/Projects/ish64/kernel/resource.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/resource.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/resource.dia -c /Users/victorj/Projects/ish64/kernel/resource.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/resource.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/resource.o
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/fchdir.o /Users/victorj/Projects/ish64/util/fchdir.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/fchdir.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/fchdir.dia -c /Users/victorj/Projects/ish64/util/fchdir.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/fchdir.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/fchdir.o
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/ptrace.o /Users/victorj/Projects/ish64/kernel/ptrace.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/ptrace.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/ptrace.dia -c /Users/victorj/Projects/ish64/kernel/ptrace.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/ptrace.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/ptrace.o
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/stat.o /Users/victorj/Projects/ish64/fs/stat.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/stat.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/stat.dia -c /Users/victorj/Projects/ish64/fs/stat.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/stat.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/stat.o
+/Users/victorj/Projects/ish64/fs/stat.c:140:47: warning: implicit conversion loses integer precision: 'qword_t' (aka 'unsigned long long') to 'dev_t_' (aka 'unsigned int') [-Wshorten-64-to-32]
+  140 |     statx.rdev_major = (dev_t_)dev_major(stat.rdev);
+      |                                ~~~~~~~~~ ~~~~~^~~~
+/Users/victorj/Projects/ish64/fs/stat.c:141:47: warning: implicit conversion loses integer precision: 'qword_t' (aka 'unsigned long long') to 'dev_t_' (aka 'unsigned int') [-Wshorten-64-to-32]
+  141 |     statx.rdev_minor = (dev_t_)dev_minor(stat.rdev);
+      |                                ~~~~~~~~~ ~~~~~^~~~
+/Users/victorj/Projects/ish64/fs/stat.c:142:46: warning: implicit conversion loses integer precision: 'qword_t' (aka 'unsigned long long') to 'dev_t_' (aka 'unsigned int') [-Wshorten-64-to-32]
+  142 |     statx.dev_major = (dev_t_)dev_major(stat.dev);
+      |                               ~~~~~~~~~ ~~~~~^~~
+/Users/victorj/Projects/ish64/fs/stat.c:143:46: warning: implicit conversion loses integer precision: 'qword_t' (aka 'unsigned long long') to 'dev_t_' (aka 'unsigned int') [-Wshorten-64-to-32]
+  143 |     statx.dev_minor = (dev_t_)dev_minor(stat.dev);
+      |                               ~~~~~~~~~ ~~~~~^~~
+4 warnings generated.
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/tcp_input.o /Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/tcp_input.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/tcp_input.dia -c /Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/tcp_input.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/tcp_input.o
+In file included from /Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c:46:
+In file included from /Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.h:82:
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/../cutils.h:163:19: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+  163 |     put_le32(ptr, v);
+      |     ~~~~~~~~      ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c:565:36: error: use of undeclared identifier 'errno'
+  565 |           if((tcp_fconnect(so) == -1) && (errno != EINPROGRESS) && (errno != EWOULDBLOCK)) {
+      |                                           ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c:565:45: error: use of undeclared identifier 'EINPROGRESS'
+  565 |           if((tcp_fconnect(so) == -1) && (errno != EINPROGRESS) && (errno != EWOULDBLOCK)) {
+      |                                                    ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c:565:62: error: use of undeclared identifier 'errno'
+  565 |           if((tcp_fconnect(so) == -1) && (errno != EINPROGRESS) && (errno != EWOULDBLOCK)) {
+      |                                                                     ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c:565:71: error: use of undeclared identifier 'EWOULDBLOCK'
+  565 |           if((tcp_fconnect(so) == -1) && (errno != EINPROGRESS) && (errno != EWOULDBLOCK)) {
+      |                                                                              ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c:569:9: error: use of undeclared identifier 'errno'
+  569 |             if(errno == ECONNREFUSED) {
+      |                ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c:569:18: error: use of undeclared identifier 'ECONNREFUSED'
+  569 |             if(errno == ECONNREFUSED) {
+      |                         ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c:574:11: error: use of undeclared identifier 'errno'
+  574 |               if(errno == EHOSTUNREACH) code=ICMP_UNREACH_HOST;
+      |                  ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c:574:20: error: use of undeclared identifier 'EHOSTUNREACH'
+  574 |               if(errno == EHOSTUNREACH) code=ICMP_UNREACH_HOST;
+      |                           ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c:582:52: error: use of undeclared identifier 'errno'
+  582 |               icmp_error(m, ICMP_UNREACH,code, 0,strerror(errno));
+      |                                                           ^
+1 warning and 9 errors generated.
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/sockrestart.o /Users/victorj/Projects/ish64/fs/sockrestart.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/sockrestart.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/sockrestart.dia -c /Users/victorj/Projects/ish64/fs/sockrestart.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/sockrestart.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/sockrestart.o
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/socket.o /Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/socket.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/socket.dia -c /Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/socket.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/socket.o
+In file included from /Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:8:
+In file included from /Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.h:82:
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/../cutils.h:163:19: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+  163 |     put_le32(ptr, v);
+      |     ~~~~~~~~      ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:119:27: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+  119 |                         total = iov[0].iov_len + iov[1].iov_len;
+      |                               ~ ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:172:18: error: use of undeclared identifier 'errno'
+  172 |                 if (nn < 0 && (errno == EINTR || errno == EAGAIN))
+      |                                ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:172:27: error: use of undeclared identifier 'EINTR'
+  172 |                 if (nn < 0 && (errno == EINTR || errno == EAGAIN))
+      |                                         ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:172:36: error: use of undeclared identifier 'errno'
+  172 |                 if (nn < 0 && (errno == EINTR || errno == EAGAIN))
+      |                                                  ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:172:45: error: use of undeclared identifier 'EAGAIN'
+  172 |                 if (nn < 0 && (errno == EINTR || errno == EAGAIN))
+      |                                                           ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:169:7: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+  169 |         nn = recv(so->s, iov[0].iov_base, iov[0].iov_len,0);
+      |            ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:194:19: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+  194 |             ret = recv(so->s, iov[1].iov_base, iov[1].iov_len,0);
+      |                 ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:226:21: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+  226 |     nn = min(iov[0].iov_len, copy);
+      |        ~     ~~~~~~~^~~~~~~
+In file included from /Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:8:
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.h:307:32: note: expanded from macro 'min'
+  307 | #define min(x,y) ((x) < (y) ? (x) : (y))
+      |                                ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:303:7: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+  303 |                 n = slirp_send(so, sb->sb_rptr, so->so_urgc, (MSG_OOB)); /* |MSG_DONTWAIT)); */
+      |                   ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:313:40: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  313 |                 len = (sb->sb_data + sb->sb_datalen) - sb->sb_rptr;
+      |                     ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:318:20: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  318 |                         n = sb->sb_wptr - sb->sb_data;
+      |                           ~ ~~~~~~~~~~~~^~~~~~~~~~~~~
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:324:7: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+  324 |                 n = slirp_send(so, buff, len, (MSG_OOB)); /* |MSG_DONTWAIT)); */
+      |                   ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:396:17: error: use of undeclared identifier 'errno'
+  396 |         if (nn < 0 && (errno == EAGAIN || errno == EINTR))
+      |                        ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:396:26: error: use of undeclared identifier 'EAGAIN'
+  396 |         if (nn < 0 && (errno == EAGAIN || errno == EINTR))
+      |                                 ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:396:36: error: use of undeclared identifier 'errno'
+  396 |         if (nn < 0 && (errno == EAGAIN || errno == EINTR))
+      |                                           ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:396:45: error: use of undeclared identifier 'EINTR'
+  396 |         if (nn < 0 && (errno == EAGAIN || errno == EINTR))
+      |                                                    ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:393:7: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+  393 |         nn = slirp_send(so, iov[0].iov_base, iov[0].iov_len,0);
+      |            ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:410:19: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+  410 |             ret = slirp_send(so, iov[1].iov_base, iov[1].iov_len,0);
+      |                 ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:456:9: error: use of undeclared identifier 'errno'
+  456 |             if(errno == EHOSTUNREACH) code=ICMP_UNREACH_HOST;
+      |                ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:456:18: error: use of undeclared identifier 'EHOSTUNREACH'
+  456 |             if(errno == EHOSTUNREACH) code=ICMP_UNREACH_HOST;
+      |                         ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:457:14: error: use of undeclared identifier 'errno'
+  457 |             else if(errno == ENETUNREACH) code=ICMP_UNREACH_NET;
+      |                     ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:457:23: error: use of undeclared identifier 'ENETUNREACH'
+  457 |             else if(errno == ENETUNREACH) code=ICMP_UNREACH_NET;
+      |                              ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:461:57: error: use of undeclared identifier 'errno'
+  461 |             icmp_error(so->so_m, ICMP_UNREACH,code, 0,strerror(errno));
+      |                                                                ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:504:9: error: use of undeclared identifier 'errno'
+  504 |             if(errno == EHOSTUNREACH) code=ICMP_UNREACH_HOST;
+      |                ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:504:18: error: use of undeclared identifier 'EHOSTUNREACH'
+  504 |             if(errno == EHOSTUNREACH) code=ICMP_UNREACH_HOST;
+      |                         ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:505:14: error: use of undeclared identifier 'errno'
+  505 |             else if(errno == ENETUNREACH) code=ICMP_UNREACH_NET;
+      |                     ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:505:23: error: use of undeclared identifier 'ENETUNREACH'
+  505 |             else if(errno == ENETUNREACH) code=ICMP_UNREACH_NET;
+      |                              ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:508:57: error: use of undeclared identifier 'errno'
+  508 |             icmp_error(so->so_m, ICMP_UNREACH,code, 0,strerror(errno));
+      |                                                                ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:449:10: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+  449 |           len = recvfrom(so->s, buff, 256, 0,
+      |               ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  450 |                          (struct sockaddr *)&addr, &addrlen);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:487:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  487 |           len = M_FREEROOM(m);
+      |               ~ ^~~~~~~~~~~~~
+In file included from /Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:8:
+In file included from /Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.h:157:
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/mbuf.h:82:34: note: expanded from macro 'M_FREEROOM'
+   82 | #define M_FREEROOM(m) (M_ROOM(m) - (m)->m_len)
+      |                        ~~~~~~~~~~^~~~~~~~~~~~
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:492:48: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  492 |             n = (m->m_data - m->m_dat) + m->m_len + n + 1;
+      |               ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:494:12: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  494 |             len = M_FREEROOM(m);
+      |                 ~ ^~~~~~~~~~~~~
+In file included from /Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:8:
+In file included from /Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.h:157:
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/mbuf.h:82:34: note: expanded from macro 'M_FREEROOM'
+   82 | #define M_FREEROOM(m) (M_ROOM(m) - (m)->m_len)
+      |                        ~~~~~~~~~~^~~~~~~~~~~~
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c:630:18: error: use of undeclared identifier 'errno'
+  630 |                 int tmperrno = errno; /* Don't clobber the real reason we failed */
+      |                                ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+15 warnings and 20 errors generated.
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/sock.o /Users/victorj/Projects/ish64/fs/sock.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/sock.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/sock.dia -c /Users/victorj/Projects/ish64/fs/sock.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/sock.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/sock.o
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/slirp.o /Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/slirp.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/slirp.dia -c /Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/slirp.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/slirp.o
+In file included from /Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c:24:
+In file included from /Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.h:82:
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/../cutils.h:163:19: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+  163 |     put_le32(ptr, v);
+      |     ~~~~~~~~      ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c:395:7: error: use of undeclared identifier 'select_error'
+  395 |         if (!select_error) {
+      |              ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c:447:14: error: use of undeclared identifier 'errno'
+  447 |                               if (errno == EAGAIN || errno == EWOULDBLOCK ||
+      |                                   ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c:447:23: error: use of undeclared identifier 'EAGAIN'
+  447 |                               if (errno == EAGAIN || errno == EWOULDBLOCK ||
+      |                                            ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c:447:33: error: use of undeclared identifier 'errno'
+  447 |                               if (errno == EAGAIN || errno == EWOULDBLOCK ||
+      |                                                      ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c:447:42: error: use of undeclared identifier 'EWOULDBLOCK'
+  447 |                               if (errno == EAGAIN || errno == EWOULDBLOCK ||
+      |                                                               ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c:448:7: error: use of undeclared identifier 'errno'
+  448 |                                   errno == EINPROGRESS || errno == ENOTCONN)
+      |                                   ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c:448:16: error: use of undeclared identifier 'EINPROGRESS'
+  448 |                                   errno == EINPROGRESS || errno == ENOTCONN)
+      |                                            ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c:448:31: error: use of undeclared identifier 'errno'
+  448 |                                   errno == EINPROGRESS || errno == ENOTCONN)
+      |                                                           ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c:448:40: error: use of undeclared identifier 'ENOTCONN'
+  448 |                                   errno == EINPROGRESS || errno == ENOTCONN)
+      |                                                                    ^
+/Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c:445:36: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+  445 |                              ret = send(so->s, (const void *) &ret, 0, 0);                          if (ret < 0) {
+      |                                  ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings and 9 errors generated.
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/sbuf.o /Users/victorj/Projects/ish64/emu/tinyemu/slirp/sbuf.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/sbuf.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/sbuf.dia -c /Users/victorj/Projects/ish64/emu/tinyemu/slirp/sbuf.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/sbuf.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/sbuf.o
+
+CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/root.o /Users/victorj/Projects/ish64/fs/proc/root.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+    cd /Users/victorj/Projects/ish64/ios
+    
+    Using response file: /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/victorj/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.0-23A5287e-3885c01c3e6b6a337905948deab2002e32086c387ab902fcc593219739204623.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -index-store-path /Users/victorj/Library/Developer/Xcode/DerivedData/ish64_ios-cllvuwmsscdtbialfcocolhokafl/Index.noindex/DataStore @/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/root.d --serialize-diagnostics /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/root.dia -c /Users/victorj/Projects/ish64/fs/proc/root.c -o /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/root.o -index-unit-output-path /ishcore.build/Debug-iphoneos/Objects-normal/arm64/root.o
+
+note: Run script build phase 'Generate CMakeFiles/ZERO_CHECK' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'ZERO_CHECK' from project 'ish64_ios')
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/tcp_input.o /Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+	CompileC /Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/Debug-iphoneos/Objects-normal/arm64/socket.o /Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'ishcore' from project 'ish64_ios')
+	Building project ish64_ios with scheme ish64_ios and configuration Debug
+(3 failures)

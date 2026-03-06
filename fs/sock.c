@@ -13,8 +13,19 @@
 #include "debug.h"
 
 #include <errno.h>
+#ifndef errno
+extern int errno;
+#endif
+#ifndef EINTR
+#define EINTR 4
+#endif
+#ifndef EINVAL
+#define EINVAL 22
+#endif
+
 #include <string.h>
 #define SOCKET_TYPE_MASK 0xf
+
 
 const struct fd_ops socket_fdops;
 
@@ -456,7 +467,7 @@ static void copy_unix_name(char *sockaddr, dword_t *sockaddr_len, struct fd *soc
     struct sockaddr_ *fake_addr = (void *) sockaddr;
     fake_addr->family = PF_LOCAL_;
 
-    size_t data_len = *sockaddr_len - offsetof(struct sockaddr_, data);
+    size_t data_len =*sockaddr_len - offsetof(struct sockaddr_, data);
     size_t name_len = sock->socket.unix_name_len;
     if (name_len > data_len)
         name_len = data_len;

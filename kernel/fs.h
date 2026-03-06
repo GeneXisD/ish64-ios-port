@@ -1,6 +1,7 @@
 #ifndef FS_H
 #define FS_H
 
+#include "fs/fd.h"
 #include "misc.h"
 #include "util/list.h"
 #include "fs/stat.h"

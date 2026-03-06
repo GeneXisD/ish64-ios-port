@@ -319,3 +319,5 @@ extern int xsave_extra;
 extern int fxsave_extra;
 
 #endif /* ISH_KERNEL_SIGNAL_H */
+
+int wait_for_ignore_signals(cond_t *cond, lock_t *lock, struct timespec *timeout);

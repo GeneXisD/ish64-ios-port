@@ -1,3 +1,6 @@
+#ifndef TCPREXMTTHRESH
+#define TCPREXMTTHRESH 3
+#endif
 /*
  * Copyright (c) 1982, 1986, 1988, 1990, 1993, 1994
  *	The Regents of the University of California.  All rights reserved.
@@ -37,200 +40,154 @@
  * Please read the file COPYRIGHT for the
  * terms and conditions of the copyright.
  */
-
 #include "slirp.h"
-#include <errno.h>
-#include <string.h>
 #include "../../compat/ios_fixes.h"
 #include "ip_icmp.h"
-#include <errno.h>
+#include <sys/socket.h>
+#include <sys/errno.h>
 #include <string.h>
-#include "../../../util/errno_compat.h"
-
-
-#ifndef EINPROGRESS
-#define EINPROGRESS 36        /* macOS usually uses 36 */
-#endif
-
-#ifndef EWOULDBLOCK
-#define EWOULDBLOCK EAGAIN    /* EAGAIN exists on macOS */
-#endif
-
-#ifndef ECONNREFUSED
-#define ECONNREFUSED 61       /* macOS usually uses 61 */
-#endif
-
-#ifndef EHOSTUNREACH
-#define EHOSTUNREACH 65       /* macOS usually uses 65 */
-#endif
-
-#define	TCPREXMTTHRESH 3
-
-#define TCP_PAWS_IDLE	(24 * 24 * 60 * 60 * PR_SLOWHZ)
-
-/* for modulo comparisons of timestamps */
-#define TSTMP_LT(a,b)	((int)((a)-(b)) < 0)
-#define TSTMP_GEQ(a,b)	((int)((a)-(b)) >= 0)
-
-/*
- * Insert segment ti into reassembly queue of tcp with
- * control block tp.  Return TH_FIN if reassembly now includes
- * a segment with FIN.  The macro form does the common case inline
- * (segment is the next to be received on an established connection,
- * and the queue is empty), avoiding linkage into and removal
- * from the queue and repetition of various conversions.
- * Set DELACK for segments received in order, but ack immediately
- * when segments are out of order (so fast retransmit can work).
- */
+/* TCP Reassembly macro */
 #ifdef TCP_ACK_HACK
 #define TCP_REASS(tp, ti, m, so, flags) {\
-       if ((ti)->ti_seq == (tp)->rcv_nxt && \
-           tcpfrag_list_empty(tp) && \
-           (tp)->t_state == TCPS_ESTABLISHED) {\
-               if (ti->ti_flags & TH_PUSH) \
-                       tp->t_flags |= TF_ACKNOW; \
-               else \
-                       tp->t_flags |= TF_DELACK; \
-               (tp)->rcv_nxt += (ti)->ti_len; \
-               flags = (ti)->ti_flags & TH_FIN; \
-               if (so->so_emu) { \
-		       if (tcp_emu((so),(m))) sbappend((so), (m)); \
-	       } else \
-	       	       sbappend((so), (m)); \
-	} else {\
-               (flags) = tcp_reass((tp), (ti), (m)); \
-               tp->t_flags |= TF_ACKNOW; \
-       } \
+    if ((ti)->ti_seq == (tp)->rcv_nxt && tcpfrag_list_empty(tp) && (tp)->t_state == TCPS_ESTABLISHED) {\
+        if ((ti)->ti_flags & TH_PUSH) \
+            (tp)->t_flags |= TF_ACKNOW; \
+        else \
+            (tp)->t_flags |= TF_DELACK; \
+        (tp)->rcv_nxt += (ti)->ti_len; \
+        flags = (ti)->ti_flags & TH_FIN; \
+        if (so->so_emu) { \
+            if (tcp_emu((so),(m))) sbappend((so),(m)); \
+        } else \
+            sbappend((so),(m)); \
+    } else {\
+        (flags) = tcp_reass((tp),(ti),(m)); \
+        (tp)->t_flags |= TF_ACKNOW; \
+    } \
 }
 #else
-#define	TCP_REASS(tp, ti, m, so, flags) { \
-	if ((ti)->ti_seq == (tp)->rcv_nxt && \
-        tcpfrag_list_empty(tp) && \
-	    (tp)->t_state == TCPS_ESTABLISHED) { \
-		tp->t_flags |= TF_DELACK; \
-		(tp)->rcv_nxt += (ti)->ti_len; \
-		flags = (ti)->ti_flags & TH_FIN; \
-		if (so->so_emu) { \
-			if (tcp_emu((so),(m))) sbappend(so, (m)); \
-		} else \
-			sbappend((so), (m)); \
-	} else { \
-		(flags) = tcp_reass((tp), (ti), (m)); \
-		tp->t_flags |= TF_ACKNOW; \
-	} \
+#define TCP_REASS(tp, ti, m, so, flags) { \
+    if ((ti)->ti_seq == (tp)->rcv_nxt && tcpfrag_list_empty(tp) && (tp)->t_state == TCPS_ESTABLISHED) { \
+        (tp)->t_flags |= TF_DELACK; \
+        (tp)->rcv_nxt += (ti)->ti_len; \
+        flags = (ti)->ti_flags & TH_FIN; \
+        if (so->so_emu) { \
+            if (tcp_emu((so),(m))) sbappend(so,(m)); \
+        } else \
+            sbappend((so),(m)); \
+    } else { \
+        (flags) = tcp_reass((tp),(ti),(m)); \
+        (tp)->t_flags |= TF_ACKNOW; \
+    } \
 }
 #endif
-static void tcp_dooptions(struct tcpcb *tp, u_char *cp, int cnt,
+
+/* Function declarations */
+static void tcp_dooptions(struct tcpcb *tp, unsigned char *cp, int cnt,
                           struct tcpiphdr *ti);
 static void tcp_xmit_timer(register struct tcpcb *tp, int rtt);
 
+/* TCP Reassembly function */
 static int
 tcp_reass(register struct tcpcb *tp, register struct tcpiphdr *ti,
           struct mbuf *m)
 {
-	register struct tcpiphdr *q;
-	struct socket *so = tp->t_socket;
-	int flags;
+    register struct tcpiphdr *q;
+    struct socket *so = tp->t_socket;
+    int flags = 0;
 
-	/*
-	 * Call with ti==NULL after become established to
-	 * force pre-ESTABLISHED data up to user socket.
-	 */
-        if (ti == NULL)
-		goto present;
+    /*
+     * Call with ti==NULL after become established to force
+     * pre-ESTABLISHED data up.
+     */
+    if (ti == NULL)
+        goto present;
 
-	/*
-	 * Find a segment which begins after this one does.
-	 */
-	for (q = tcpfrag_list_first(tp); !tcpfrag_list_end(q, tp);
-            q = tcpiphdr_next(q))
-		if (SEQ_GT(q->ti_seq, ti->ti_seq))
-			break;
+    /* Find a segment which begins after this one */
+    for (q = tcpfrag_list_first(tp); !tcpfrag_list_end(q, tp);
+         q = tcpiphdr_next(q)) {
+        if (SEQ_GT(q->ti_seq, ti->ti_seq))
+            break;
+    }
 
-	/*
-	 * If there is a preceding segment, it may provide some of
-	 * our data already.  If so, drop the data from the incoming
-	 * segment.  If it provides all of our data, drop us.
-	 */
-	if (!tcpfrag_list_end(tcpiphdr_prev(q), tp)) {
-		register int i;
-		q = tcpiphdr_prev(q);
-		/* conversion to int (in i) handles seq wraparound */
-		i = q->ti_seq + q->ti_len - ti->ti_seq;
-		if (i > 0) {
-			if (i >= ti->ti_len) {
-				m_freem(m);
-				/*
-				 * Try to present any queued data
-				 * at the left window edge to the user.
-				 * This is needed after the 3-WHS
-				 * completes.
-				 */
-				goto present;   /* ??? */
-			}
-			m_adj(m, i);
-			ti->ti_len -= i;
-			ti->ti_seq += i;
-		}
-		q = tcpiphdr_next(q);
-	}
-	ti->ti_mbuf = m;
+    /* Check for preceding segment overlap */
+    if (!tcpfrag_list_end(tcpiphdr_prev(q), tp)) {
+        register int i;
+        q = tcpiphdr_prev(q);
+        i = (q->ti_seq + q->ti_len) - ti->ti_seq;
+        if (i > 0) {
+            if (i >= ti->ti_len) {
+                m_freem(m);
+                goto present;
+            }
+            m_adj(m, i);
+            ti->ti_len -= i;
+            ti->ti_seq += i;
+        }
+        q = tcpiphdr_next(q);
+    }
 
-	/*
-	 * While we overlap succeeding segments trim them or,
-	 * if they are completely covered, dequeue them.
-	 */
-	while (!tcpfrag_list_end(q, tp)) {
-		register int i = (ti->ti_seq + ti->ti_len) - q->ti_seq;
-		if (i <= 0)
-			break;
-		if (i < q->ti_len) {
-			q->ti_seq += i;
-			q->ti_len -= i;
-			m_adj(q->ti_mbuf, i);
-			break;
-		}
-		q = tcpiphdr_next(q);
-		m = tcpiphdr_prev(q)->ti_mbuf;
-		remque(tcpiphdr2qlink(tcpiphdr_prev(q)));
-		m_freem(m);
-	}
+    ti->ti_mbuf = m;
 
-	/*
-	 * Stick new segment in its place.
-	 */
-	insque(tcpiphdr2qlink(ti), tcpiphdr2qlink(tcpiphdr_prev(q)));
+
+    /* Trim or dequeue overlapping succeeding segments */
+    while (!tcpfrag_list_end(q, tp)) {
+        register int i = (ti->ti_seq + ti->ti_len) - q->ti_seq;
+        if (i <= 0)
+            break;
+
+        if (i < q->ti_len) {
+            q->ti_seq += i;
+            q->ti_len -= i;
+            m_adj(q->ti_mbuf, i);
+            break;
+        }
+
+        q = tcpiphdr_next(q);
+        m = tcpiphdr_prev(q)->ti_mbuf;
+        remque(tcpiphdr2qlink(tcpiphdr_prev(q)));
+        m_freem(m);
+    }
+
+    /* Insert the new segment in its place */
+    insque(tcpiphdr2qlink(ti), tcpiphdr2qlink(tcpiphdr_prev(q)));
 
 present:
-	/*
-	 * Present data to user, advancing rcv_nxt through
-	 * completed sequence space.
-	 */
-	if (!TCPS_HAVEESTABLISHED(tp->t_state))
-		return (0);
-	ti = tcpfrag_list_first(tp);
-	if (tcpfrag_list_end(ti, tp) || ti->ti_seq != tp->rcv_nxt)
-		return (0);
-	if (tp->t_state == TCPS_SYN_RECEIVED && ti->ti_len)
-		return (0);
-	do {
-		tp->rcv_nxt += ti->ti_len;
-		flags = ti->ti_flags & TH_FIN;
-		remque(tcpiphdr2qlink(ti));
-		m = ti->ti_mbuf;
-		ti = tcpiphdr_next(ti);
-		if (so->so_state & SS_FCANTSENDMORE)
-			m_freem(m);
-		else {
-			if (so->so_emu) {
-				if (tcp_emu(so,m)) sbappend(so, m);
-			} else
-				sbappend(so, m);
-		}
-	} while (ti != (struct tcpiphdr *)tp && ti->ti_seq == tp->rcv_nxt);
-	return (flags);
-}
+    /*
+        * Present data to user, advancing rcv_nxt through
+        * completed sequence space.
+        */
+       if (!TCPS_HAVEESTABLISHED(tp->t_state))
+           return 0;
 
+       ti = tcpfrag_list_first(tp);
+       if (tcpfrag_list_end(ti, tp) || ti->ti_seq != tp->rcv_nxt)
+           return 0;
+
+       if (tp->t_state == TCPS_SYN_RECEIVED && ti->ti_len)
+           return 0;
+
+       do {
+           tp->rcv_nxt += ti->ti_len;
+           flags = ti->ti_flags & TH_FIN;
+
+           remque(tcpiphdr2qlink(ti));
+           m = ti->ti_mbuf;
+           ti = tcpiphdr_next(ti);
+
+           if (so->so_state & SS_FCANTSENDMORE) {
+               m_freem(m);
+           } else {
+               if (so->so_emu) {
+                   if (tcp_emu(so, m)) sbappend(so, m);
+               } else {
+                   sbappend(so, m);
+               }
+           }
+       } while (ti != (struct tcpiphdr *)tp && ti->ti_seq == tp->rcv_nxt);
+
+       return flags;
+   }
 /*
  * TCP input routine, follows pages 65-76 of the
  * protocol specification dated September, 1981 very closely.

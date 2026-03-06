@@ -1,3 +1,6 @@
+#include <errno.h>
+#include <string.h>
+
 static struct tcpcb *tcp_timers(struct tcpcb *tp, int timer);
 
 /*

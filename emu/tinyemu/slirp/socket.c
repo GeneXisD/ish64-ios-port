@@ -1,4 +1,5 @@
-XtXXX/*
+
+/*
  * Copyright (c) 1995 Danny Gasparovski.
  *
  * Please read the file COPYRIGHT for the
@@ -6,12 +7,37 @@ XtXXX/*
  */
 
 #include "slirp.h"
+#include <errno.h>
+#include <string.h>
+#include <sys/socket.h>
 #include "compat/ios_fixes.h"
 #include "ip_icmp.h"
 #include "util/errno_compat.h"
+#ifndef errno
+extern int errno;
+#endif
 
-#include <errno.h>
-#include <string.h>
+#ifndef EINTR
+#define EINTR 4
+#endif
+#ifndef EAGAIN
+#define EAGAIN 35
+#endif
+#ifndef EWOULDBLOCK
+#define EWOULDBLOCK EAGAIN
+#endif
+#ifndef EHOSTUNREACH
+#define EHOSTUNREACH 65
+#endif
+#ifndef ENETUNREACH
+#define ENETUNREACH 51
+#endif
+#ifndef ENOTCONN
+#define ENOTCONN 57
+#endif
+#ifndef EINPROGRESS
+#define EINPROGRESS 36
+#endif
 
 int get_dns_addr(struct in_addr *pdns_addr);
 

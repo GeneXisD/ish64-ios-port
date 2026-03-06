@@ -1,3 +1,6 @@
+#include <errno.h>
+#include <string.h>
+
 /*
  * Copyright (c) 1995 Danny Gasparovski.
  *

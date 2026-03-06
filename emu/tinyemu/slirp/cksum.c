@@ -1,3 +1,6 @@
+#include <errno.h>
+#include <string.h>
+
 /*
  * Copyright (c) 1988, 1992, 1993
  *	The Regents of the University of California.  All rights reserved.

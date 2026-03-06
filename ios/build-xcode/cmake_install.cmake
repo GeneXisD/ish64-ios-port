@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -35,6 +35,26 @@ endif()
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/Applications/Xcode-beta-3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
+endif()
+
+set(CMAKE_BINARY_DIR "/Users/victorj/Projects/ish64/ios/build-xcode")
+
+if(NOT PLATFORM_NAME)
+  if(NOT "$ENV{PLATFORM_NAME}" STREQUAL "")
+    set(PLATFORM_NAME "$ENV{PLATFORM_NAME}")
+  endif()
+  if(NOT PLATFORM_NAME)
+    set(PLATFORM_NAME iphoneos)
+  endif()
+endif()
+
+if(NOT EFFECTIVE_PLATFORM_NAME)
+  if(NOT "$ENV{EFFECTIVE_PLATFORM_NAME}" STREQUAL "")
+    set(EFFECTIVE_PLATFORM_NAME "$ENV{EFFECTIVE_PLATFORM_NAME}")
+  endif()
+  if(NOT EFFECTIVE_PLATFORM_NAME)
+    set(EFFECTIVE_PLATFORM_NAME -iphoneos)
+  endif()
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT

@@ -1,48 +1,89 @@
-#ifndef DEV_H
-#define DEV_H
+#ifndef FS_DEV_H
+#define FS_DEV_H
 
 #include <sys/types.h>
-#if __linux__
-#include <sys/sysmacros.h>
-#endif
-#include "fs/fd.h"
+#include <stdint.h>
 
-// a dev_t is encoded like this in hex, where M is major and m is minor:
-// mmmMMMmm
-// (legacy I guess)
+/*
+ * Keep the fake/Linux-side device encoding stable inside ish:
+ * high 16 bits = major
+ * low  16 bits = minor
+ */
+typedef unsigned int dev_t_;
 
-typedef uint32_t dev_t_;
-
-static inline dev_t_ dev_make(int major, int minor) {
-    return ((minor & 0xfff00) << 12) | (major << 8) | (minor & 0xff);
+static inline dev_t_ dev_make(dev_t_ major_, dev_t_ minor_) {
+    return ((major_ & 0xffffu) << 16) | (minor_ & 0xffffu);
 }
-static inline int dev_major(dev_t_ dev) {
-    return (dev & 0xfff00) >> 8;
+
+static inline dev_t_ dev_major(dev_t_ dev) {
+    return (dev >> 16) & 0xffffu;
 }
-static inline int dev_minor(dev_t_ dev) {
-    return ((dev & 0xfff00000) >> 12) | (dev & 0xff);
+
+static inline dev_t_ dev_minor(dev_t_ dev) {
+    return dev & 0xffffu;
+}
+
+static inline dev_t real_dev(dev_t_ dev) {
+    return (dev_t) dev;
+}
+
+static inline dev_t_ fake_dev(dev_t dev) {
+    return (dev_t_) dev;
 }
 
 static inline dev_t dev_real_from_fake(dev_t_ dev) {
-    return makedev(dev_major(dev), dev_minor(dev));
+    return real_dev(dev);
 }
+
 static inline dev_t_ dev_fake_from_real(dev_t dev) {
-    return dev_make(major(dev), minor(dev));
+    return fake_dev(dev);
 }
 
-#define DEV_BLOCK 0
-#define DEV_CHAR 1
+/* Darwin / BSD style compatibility typedefs for iPhoneOS SDK headers */
+#ifndef __U_INT_DEFINED_ISH64
+#define __U_INT_DEFINED_ISH64
+typedef unsigned int u_int;
+#endif
 
-struct dev_ops {
-    int (*open)(int major, int minor, struct fd *fd);
-    struct fd_ops fd;
+#ifndef __U_CHAR_DEFINED_ISH64
+#define __U_CHAR_DEFINED_ISH64
+typedef unsigned char u_char;
+#endif
+
+#ifndef __U_SHORT_DEFINED_ISH64
+#define __U_SHORT_DEFINED_ISH64
+typedef unsigned short u_short;
+#endif
+
+struct fd;
+struct fd_ops;
+struct mount;
+struct path;
+struct statbuf;
+struct poll;
+
+/*
+ * Important:
+ * fs/fd.h must come AFTER dev_t_ is defined.
+ */
+#include "fs/fd.h"
+
+/* add this back */
+enum dev_kind {
+    DEV_BLOCK,
+    DEV_CHAR,
 };
 
-extern struct dev_ops *block_devs[];
-extern struct dev_ops *char_devs[];
+/* add this back */
+int dev_open(int major, int minor, enum dev_kind kind, struct fd *fd);
 
-int dev_open(int major, int minor, int type, struct fd *fd);
-
-extern struct dev_ops null_dev;
+struct dev_ops {
+    const char *name;
+    int (*open)(int major, int minor, struct fd *fd);
+    int (*getpath)(struct mount *mount, struct path *path, char *buf);
+    int (*stat)(struct fd *fd, struct statbuf *stat);
+    int (*readlink)(struct mount *mount, struct path *path, char *buf);
+    struct fd_ops fd;
+};
 
 #endif

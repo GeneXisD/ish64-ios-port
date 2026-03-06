@@ -33,7 +33,11 @@
 #include <time.h>
 
 /* errno compatibility (explicit path to avoid ambiguity) */
-#include "../util/errno_compat.h"
+#if defined(__APPLE__)
+# include <errno.h>
+#else
+# include "../util/errno_compat.h"
+#endif
 
 /* Branch prediction hints */
 #ifndef likely
@@ -62,6 +66,7 @@
 #define glue(x, y) xglue(x, y)
 #define stringify(s)    tostring(s)
 #define tostring(s)     #s
+#endif
 
 #ifndef offsetof
 #define offsetof(type, field) ((size_t) &((type *)0)->field)

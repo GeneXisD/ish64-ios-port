@@ -1,5 +1,6 @@
 #include "kernel/calls.h"
 #include "lock.h"
+#include <pthread.h>
 
 #define FUTEX_WAIT_ 0
 #define FUTEX_WAKE_ 1
@@ -101,7 +102,7 @@ static int futex_wait(addr_t uaddr, dword_t val, struct timespec *timeout) {
         err = _EAGAIN;
     else {
         struct futex_wait wait;
-        wait.cond = COND_INITIALIZER;
+        pthread_cond_init(&wait.cond, NULL);
         wait.futex = futex;
         list_add_tail(&futex->queue, &wait.queue);
         err = wait_for(&wait.cond, &futex_lock, timeout);

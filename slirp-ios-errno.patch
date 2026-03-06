@@ -1,0 +1,20 @@
+diff --git a/emu/tinyemu/slirp/tcp_input.c b/emu/tinyemu/slirp/tcp_input.c
+index 0000000..0000000 100644
+--- a/emu/tinyemu/slirp/tcp_input.c
++++ b/emu/tinyemu/slirp/tcp_input.c
+@@
++#include <errno.h>
++#include <string.h>   /* strerror */
+diff --git a/emu/tinyemu/slirp/socket.c b/emu/tinyemu/slirp/socket.c
+index 0000000..0000000 100644
+--- a/emu/tinyemu/slirp/socket.c
++++ b/emu/tinyemu/slirp/socket.c
+@@
++#include <errno.h>
++#include <string.h>   /* strerror */
+diff --git a/emu/tinyemu/slirp/slirp.c b/emu/tinyemu/slirp/slirp.c
+index 0000000..0000000 100644
+--- a/emu/tinyemu/slirp/slirp.c
++++ b/emu/tinyemu/slirp/slirp.c
+@@
++#include <errno.h>

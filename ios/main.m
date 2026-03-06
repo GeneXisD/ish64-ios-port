@@ -1,5 +1,10 @@
 #import <UIKit/UIKit.h>
 
+#ifdef ISH_FALLTHROUGH
+#undef ISH_FALLTHROUGH
+#endif
+
+
 @interface ISHAppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
 @end

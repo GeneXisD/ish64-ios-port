@@ -1,0 +1,37 @@
+diff --git a/emu/tinyemu/slirp/cutils.h b/emu/tinyemu/slirp/cutils.h
+--- a/emu/tinyemu/slirp/cutils.h
++++ b/emu/tinyemu/slirp/cutils.h
+@@ -129,7 +129,11 @@
+ static inline void put_le32(void *ptr, uint32_t v) {
+@@
+-    *(uint32_t *)ptr = v;
++    *(uint32_t *)ptr = (uint32_t)v;
+ }
+
+ static inline void put_be32(void *d, uint64_t v) {
+@@
+-    put_be32(d + 4, v);
++    put_be32(d + 4, (uint32_t)v);
+ }
+diff --git a/emu/tinyemu/slirp/tcp_input.c b/emu/tinyemu/slirp/tcp_input.c
+--- a/emu/tinyemu/slirp/tcp_input.c
++++ b/emu/tinyemu/slirp/tcp_input.c
+@@ -1120,7 +1120,9 @@
+-    tp->snd_wnd = tiwin;
++    tp->snd_wnd = (uint32_t)tiwin;
+diff --git a/fs/stat.c b/fs/stat.c
+--- a/fs/stat.c
++++ b/fs/stat.c
+@@ -14,7 +14,11 @@
+-    newstat.fucked_ino = stat.inode;
++    newstat.fucked_ino = (dword_t)stat.inode;
+@@ -139,10 +143,14 @@
+-    statx.rdev_major = dev_major(stat.rdev);
+-    statx.rdev_minor = dev_minor(stat.rdev);
+-    statx.dev_major = dev_major(stat.dev);
+-    statx.dev_minor = dev_minor(stat.dev);
++    statx.rdev_major = (dev_t_)dev_major(stat.rdev);
++    statx.rdev_minor = (dev_t_)dev_minor(stat.rdev);
++    statx.dev_major = (dev_t_)dev_major(stat.dev);
++    statx.dev_minor = (dev_t_)dev_minor(stat.dev);
+

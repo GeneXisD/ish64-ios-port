@@ -3,6 +3,7 @@
 #include "kernel/task.h"
 #include "kernel/errno.h"
 #include "kernel/fs.h"
+#include "fd.h"
 #include "fs/path.h"
 #include "util/refcount.h"
 #include "debug.h"

@@ -1,7 +1,8 @@
 #include <signal.h>
+#include <sys/signal.h>
+#include <unistd.h>
+#include <errno.h>
 
-#include "signal.h"
-#include <signal.h>
 #include "kernel/signal.h"
 #include <string.h>
 #include <sys/stat.h>
@@ -28,9 +29,13 @@ static void establish_signal_handlers() {
     struct sigaction sigact;
     sigact.sa_handler = sigusr1_handler;
     sigact.sa_flags = 0;
+#if !defined(__APPLE_TARGET_EMBEDDED__) && !defined(TARGET_OS_IPHONE)
     sigemptyset(&sigact.sa_mask);
     sigaddset(&sigact.sa_mask, SIGUSR1);
     sigaction(SIGUSR1, &sigact, NULL);
+#else
+    (void) sigact;
+#endif
     signal(SIGPIPE, SIG_IGN);
 }
 

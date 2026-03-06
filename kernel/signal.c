@@ -13,7 +13,6 @@
 #include "kernel/vdso.h"
 #include "emu/interrupt.h"
 #include "util/sync.h"
-static inline int wait_for_ignore_signals(cond_t *cond, lock_t *lock, struct timespec *timeout);
 #include "lock.h"
 
 #if is_gcc(9)

@@ -1,3 +1,6 @@
+#include <errno.h>
+#include <string.h>
+
 /*
  * QEMU BOOTP/DHCP server
  *

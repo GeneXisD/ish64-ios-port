@@ -9,7 +9,7 @@
 /* Begin PBXAggregateTarget section */
 		1AE011348B354AC708153261 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 31B7F71E3E4C412885AD5B01 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 58EEC9E24FD3401BA253DB26 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
 				91640E0D4C50165AC5587525 /* Generate CMakeFiles/ZERO_CHECK */,
 			);
@@ -20,14 +20,14 @@
 		};
 		7BE8695BDBE1686471C35F91 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = D9F441802ACB48E3829F1888 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 20D7BCBC021647E09ECDC68A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
 				2069DB6A7FA03C9FE1789FDE /* Generate CMakeFiles/ALL_BUILD */,
 			);
 			dependencies = (
-				F46729A3D9A04307977BD3BB /* PBXTargetDependency */,
-				7097C2B4266443EDB7CF5D71 /* PBXTargetDependency */,
-				221E77FB0AC549E7999431F4 /* PBXTargetDependency */,
+				F0280CC317B14FC1B81E12C4 /* PBXTargetDependency */,
+				0177F8D9C13D47158627CD57 /* PBXTargetDependency */,
+				1C13BA8CCB864A20B0213921 /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
@@ -35,134 +35,134 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		028DE8E3139E4B848E8F8D6E /* adhoc.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BAE0A87C10043C6BF050639 /* adhoc.c */; };
-		052204D69D864B2AACF178CB /* entry.c in Sources */ = {isa = PBXBuildFile; fileRef = A25A43C9F3CE47A381981F90 /* entry.c */; };
-		087381588C214E3A8E1F364B /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = A7E85DFF72AC42C8ABD7BDC4 /* init.c */; };
-		090EB7C2758141D2B38B36E8 /* ip_input.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F257176EFCA46C397F4B32D /* ip_input.c */; };
-		0D96383501374E6682F91A97 /* ip_output.c in Sources */ = {isa = PBXBuildFile; fileRef = 22E0EE88EA1D49B389B22DCE /* ip_output.c */; };
-		0DE94BC97E6F403F96813E45 /* fake-db.c in Sources */ = {isa = PBXBuildFile; fileRef = A5D3614DB55446C3B3838B68 /* fake-db.c */; };
-		18ECB075E580405FA31CE9B8 /* tty.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F11D600416D4A059471B245 /* tty.c */; };
-		1969A9096C06400D90895E1D /* slirp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3344AD90EEC14BB59056B9BD /* slirp.c */; };
-		1DD79094545F4EC7AF5B44AD /* lock.c in Sources */ = {isa = PBXBuildFile; fileRef = 6478C3FD8AC849B8B84AB88D /* lock.c */; };
-		22466CF076FF4726AA589C7E /* task.c in Sources */ = {isa = PBXBuildFile; fileRef = 841BBEE13D95427A91EFE4AB /* task.c */; };
-		2280F13F335F4C0792965C1A /* ish.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D1FFB27F2514BFA96BAAF08 /* ish.c */; };
-		249EA56106CA4C2281C0B209 /* fake.c in Sources */ = {isa = PBXBuildFile; fileRef = 221A5A626A534E88832000DA /* fake.c */; };
-		28E4C29325A84013958E64B3 /* tty-real.c in Sources */ = {isa = PBXBuildFile; fileRef = 0CB61E4938B0418D822810C2 /* tty-real.c */; };
-		2AC22367B21A456DBB764A48 /* sync.c in Sources */ = {isa = PBXBuildFile; fileRef = 7F704F7E16B24746B7579E11 /* sync.c */; };
-		2CC73F6D840E41D5A3F163A1 /* tcp_output.c in Sources */ = {isa = PBXBuildFile; fileRef = FA63FBA3BAB148728CA687B8 /* tcp_output.c */; };
-		30D2EF9E81584A21B75F666C /* fork.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC0E8453244E198FBB186 /* fork.c */; };
-		37FE174AA8E341EBA941695F /* getset.c in Sources */ = {isa = PBXBuildFile; fileRef = 320B907951654332909B9939 /* getset.c */; };
-		3D16F09C3BAE44CE84FE84BF /* resource.c in Sources */ = {isa = PBXBuildFile; fileRef = 4FC25CCF834946B4A8214F1C /* resource.c */; };
-		4089E36623A04B71BEC43E76 /* pipe.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A83FC87078144E19E2D9986 /* pipe.c */; };
-		41F7A7B06DB3443C9234F8D2 /* time.c in Sources */ = {isa = PBXBuildFile; fileRef = E9F3D23D3A064524872A6337 /* time.c */; };
-		45A14FE7258442238A2F69A7 /* tcp_subr.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F144D1C244FE9964105AD /* tcp_subr.c */; };
-		46AC363209B2466BA973BFB1 /* socket.c in Sources */ = {isa = PBXBuildFile; fileRef = 540BC6EF6EFD4E47849F1CA7 /* socket.c */; };
-		4A1D10A1AA184BCB856427E1 /* float80.c in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3F0BAF3214338ADEF46C1 /* float80.c */; };
-		4B605418E6294E98B40D460A /* fake-migrate.c in Sources */ = {isa = PBXBuildFile; fileRef = 586DD80A37134418A9DB7F49 /* fake-migrate.c */; };
-		5204A4EB4B0B4AF6A86128E9 /* user.c in Sources */ = {isa = PBXBuildFile; fileRef = B41782FC988E4C3BAB3A516A /* user.c */; };
-		522239EB1E8B4F528E840394 /* ptrace.c in Sources */ = {isa = PBXBuildFile; fileRef = 9E059229A1D341ECA651F278 /* ptrace.c */; };
-		59D5CB44F2C348088EB9444D /* fpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 23955B4A14E043FDADA1B4F7 /* fpu.c */; };
-		5A5C3E99342540A487BCC39A /* dyndev.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B1DAED336744255A9AB00BA /* dyndev.c */; };
-		5AD8E32B807749019853D806 /* inode.c in Sources */ = {isa = PBXBuildFile; fileRef = 62DF737FA6D74C18B95E04B1 /* inode.c */; };
-		5E0E1AA2F3934262B7872BC1 /* mem.c in Sources */ = {isa = PBXBuildFile; fileRef = EE38FC4FCF0148258FE32BFB /* mem.c */; };
-		623C68C0EE3D4171A996F713 /* misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 097EFAF5124B416793CC7CD8 /* misc.c */; };
-		6336DC99736645C0BA2CCD6B /* fd.c in Sources */ = {isa = PBXBuildFile; fileRef = CCAD7E17E5B24E96B18276D2 /* fd.c */; };
-		687D87AEF80540A3B187C66C /* fake-rebuild.c in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF66EFBBB149C98426A21C /* fake-rebuild.c */; };
-		68B583930D604D3DBEDE8A5A /* pty.c in Sources */ = {isa = PBXBuildFile; fileRef = 5F3EDD4760514329A3C726F5 /* pty.c */; };
-		6B704367D96A4A488D120930 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 6474D64BEC714ADC9F73143B /* memory.c */; };
-		6EB8B4367C49438BA1B4B15E /* real.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F55D00B48B748A3BEC2A50B /* real.c */; };
-		7520B16C42094BC884646B09 /* sbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C61F25CA2E34625895FF348 /* sbuf.c */; };
-		75E5FB423B2C42A8882FC28C /* proc.c in Sources */ = {isa = PBXBuildFile; fileRef = B829F64B437842DF92050E5F /* proc.c */; };
-		7640F696598C4B159891BEAC /* vec.c in Sources */ = {isa = PBXBuildFile; fileRef = 25CF67CBF7DD44D0B6B079B1 /* vec.c */; };
-		799663B2FFE84B659C7E1AEC /* root.c in Sources */ = {isa = PBXBuildFile; fileRef = 283E3B04C9394F70955F288B /* root.c */; };
-		8011B2A1BA2B457880C13937 /* fs_info.c in Sources */ = {isa = PBXBuildFile; fileRef = D9699CBBEDAE4A61B2897DFE /* fs_info.c */; };
-		845C47E49F604E57BC46F0AA /* epoll.c in Sources */ = {isa = PBXBuildFile; fileRef = 180BDDBBCECE4DB6B151A78C /* epoll.c */; };
-		869E8AF0FAA344159112DB4D /* tls.c in Sources */ = {isa = PBXBuildFile; fileRef = 579649FE97BE4336A4F87EC4 /* tls.c */; };
-		893CEE77E73A436F948ED1C7 /* exit.c in Sources */ = {isa = PBXBuildFile; fileRef = 349BEA04D6C04B5FBCC236C4 /* exit.c */; };
-		89847886DEBD4391AAB986CE /* mmx.c in Sources */ = {isa = PBXBuildFile; fileRef = 973C80690DBB430A8B2E746E /* mmx.c */; };
-		8B165F8AEA5141AF8A322A10 /* timer.c in Sources */ = {isa = PBXBuildFile; fileRef = 9EE768580C934C4CA64A7300 /* timer.c */; };
-		9603E22BA94A4765AC698948 /* bootp.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAD01A95AC445AAD38C37D /* bootp.c */; };
-		9A6DAF7F66F94B7A9F6B0A71 /* float80-test.c in Sources */ = {isa = PBXBuildFile; fileRef = 926E5694024B40B3B005DEE0 /* float80-test.c */; };
-		9F9A02115BAA427891C68234 /* signal.c in Sources */ = {isa = PBXBuildFile; fileRef = 073739F0C8D44D8B91C9FA7C /* signal.c */; };
-		9FDAADD1B27E4E0EBF747240 /* tcp_input.c in Sources */ = {isa = PBXBuildFile; fileRef = 8119A10D5ECC4BDBB1DEDD2B /* tcp_input.c */; };
-		9FF916317C3E4ED683299BA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E636CCEB6434B799286DFCD /* main.m */; };
-		A0E7477C175E49B08FF004A4 /* if.c in Sources */ = {isa = PBXBuildFile; fileRef = EBBA12A5C0E347DA9A5641C6 /* if.c */; };
-		A31BDB42ACAE443888C724A4 /* log.c in Sources */ = {isa = PBXBuildFile; fileRef = 865EBCB02C204C9A938C6FDA /* log.c */; };
-		A3D496615AD243059575C702 /* path.c in Sources */ = {isa = PBXBuildFile; fileRef = D9F0EB18F3E1406E81D78E9E /* path.c */; };
-		A6DFBBE5C10049EFBA430D9C /* fs.c in Sources */ = {isa = PBXBuildFile; fileRef = 283787699F2742D296F34E71 /* fs.c */; };
-		A841CD76E6284BBCB4A66C1B /* calls.c in Sources */ = {isa = PBXBuildFile; fileRef = 027FE35C8D1243108AB23854 /* calls.c */; };
-		AA21FA3D21BA4B47B65FB621 /* dir.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B218EAFF4344B31BF741008 /* dir.c */; };
-		AA3106AF3C23462AAD6BA587 /* sockrestart.c in Sources */ = {isa = PBXBuildFile; fileRef = 13859B82DE9C41C8BBA78F68 /* sockrestart.c */; };
-		AA6B8815A4C741C4B658147A /* exec.c in Sources */ = {isa = PBXBuildFile; fileRef = A93E4E22E71140BCAA6A6C46 /* exec.c */; };
-		AC1395A4D8F24D27879BCF0F /* generic.c in Sources */ = {isa = PBXBuildFile; fileRef = 479B96B01D81480CB31E0FBF /* generic.c */; };
-		AFA74182238E47D5A589AE73 /* misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FF63639742B42A38A65D2AF /* misc.c */; };
-		B0E94C6C9ACD4B8D9FBEA2E9 /* eventfd.c in Sources */ = {isa = PBXBuildFile; fileRef = E4D94ECCA1F348EDAC7397D8 /* eventfd.c */; };
-		B4012FFCF8CF464DB687E194 /* fifo.c in Sources */ = {isa = PBXBuildFile; fileRef = 7195DCDDF349465382A43E23 /* fifo.c */; };
-		B46800375D5748148BB555CD /* group.c in Sources */ = {isa = PBXBuildFile; fileRef = 062551F4055D466F937E3733 /* group.c */; };
-		B505835E67BE47049936221F /* futex.c in Sources */ = {isa = PBXBuildFile; fileRef = C366AC8390174470B690F4A6 /* futex.c */; };
-		B69A3AF7B2E543AEA3ACD89F /* random.c in Sources */ = {isa = PBXBuildFile; fileRef = 48229F1535F040FB8293048C /* random.c */; };
-		B7381CD21DAA468195E04746 /* cksum.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FD223E13F5A4C0A996B96AE /* cksum.c */; };
-		B963F8979754439CA3F2593F /* mmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 190F68C43A0F4DC18F49731F /* mmap.c */; };
-		C1FFB3708F234FCA929C4911 /* sock.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A267D0AF7CD421A80247A04 /* sock.c */; };
-		C32BBB24BE9D4B159839C438 /* ipc.c in Sources */ = {isa = PBXBuildFile; fileRef = B0B96A31B09E4BB9B05E0473 /* ipc.c */; };
-		CA9BE7806A5344F59826AAE0 /* vdso_stub.c in Sources */ = {isa = PBXBuildFile; fileRef = 303929D9B7FE4C279ED9B6D9 /* vdso_stub.c */; };
-		CFD6D560476B4DCFBBAF1FEB /* stat.c in Sources */ = {isa = PBXBuildFile; fileRef = 521EF505AE3349139BDDC7B3 /* stat.c */; };
-		D266B6D28A644AA29A238777 /* udp.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B735B227AAB4197B9A314AD /* udp.c */; };
-		DED45682CD3B4CC9882700F3 /* dev.c in Sources */ = {isa = PBXBuildFile; fileRef = FB715C17AADE4DA6A2CF66BB /* dev.c */; };
-		E03EEC8F031B4904A3EFD97A /* tlb.c in Sources */ = {isa = PBXBuildFile; fileRef = 65DAD60CA8884D9C8D24F8EC /* tlb.c */; };
-		E479DCE6654745A3B76FB246 /* fchdir.c in Sources */ = {isa = PBXBuildFile; fileRef = 031666F1F0874E98A8841DA8 /* fchdir.c */; };
-		EA1E7C95CF2E41D389602F16 /* poll.c in Sources */ = {isa = PBXBuildFile; fileRef = 6692A5B9AE39440E8BA4B7A2 /* poll.c */; };
-		EAD4E74E81204E9B81E7A66E /* errno.c in Sources */ = {isa = PBXBuildFile; fileRef = 62759A2F849B414383B3DD46 /* errno.c */; };
-		EAECDC118E2841DABD186570 /* pid.c in Sources */ = {isa = PBXBuildFile; fileRef = EB4246186EEF497599EC9BB2 /* pid.c */; };
-		EAF663DC60C04114B5EEA82F /* poll.c in Sources */ = {isa = PBXBuildFile; fileRef = F22399B61CAD49C2802C16CC /* poll.c */; };
-		EB06155403714C709B118E8C /* uname.c in Sources */ = {isa = PBXBuildFile; fileRef = D235DE71901A43D3AEB6F3DB /* uname.c */; };
-		EB851FD954F4433D8DC169E7 /* tmp.c in Sources */ = {isa = PBXBuildFile; fileRef = B7AA0B031D944BB7B84C463B /* tmp.c */; };
-		EC1D92A568704F85BA7F79A7 /* mount.c in Sources */ = {isa = PBXBuildFile; fileRef = 07F7E56FBFA2426388CBA6B8 /* mount.c */; };
-		F4711D7A51594CCABD4E9184 /* ip_icmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 949BC26AF93C46DCA6B2D6D6 /* ip_icmp.c */; };
-		FCB0540D90C242F7AEB59BE7 /* tcp_timer.c in Sources */ = {isa = PBXBuildFile; fileRef = D6A80B5940024B9A9DF71FA2 /* tcp_timer.c */; };
-		FD26372BF2624CBCBC132C4C /* backend_tinyemu.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE057DF3C124E958B9276D5 /* backend_tinyemu.c */; };
-		FF8C58AAD1D1458982E889D8 /* mbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 58A274D6A70441AEBDA13B0F /* mbuf.c */; };
+		043E76A3061A40DD8A9C1590 /* pty.c in Sources */ = {isa = PBXBuildFile; fileRef = BECB5B95FF89453F8E3D6E0A /* pty.c */; };
+		0896BF95FDA047898785EF7B /* dev.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D507AEA63164026AB7B212E /* dev.c */; };
+		0ED002B800F6448F98BF80C4 /* root.c in Sources */ = {isa = PBXBuildFile; fileRef = 9B59A1C5F87A495D92CBFF1C /* root.c */; };
+		14D4017CF3654E05B8CEE491 /* fifo.c in Sources */ = {isa = PBXBuildFile; fileRef = 49E788FA5BB9411D9112CD58 /* fifo.c */; };
+		16C8F41F8D6D48ED8B051CE3 /* fs_info.c in Sources */ = {isa = PBXBuildFile; fileRef = D187B910F5114507BCF8DEB4 /* fs_info.c */; };
+		172718A6D1A34E208C5D8AF6 /* fchdir.c in Sources */ = {isa = PBXBuildFile; fileRef = 790E838B999541889A8EC436 /* fchdir.c */; };
+		1B831FDDA94D4A50ABC4DA32 /* mount.c in Sources */ = {isa = PBXBuildFile; fileRef = 98A5BD9BE2A2414489822C63 /* mount.c */; };
+		1C0E4C4D2BC0481BB04D57BE /* if.c in Sources */ = {isa = PBXBuildFile; fileRef = 5CA72EE250094FD0A3F64C31 /* if.c */; };
+		212CAADAEF1E430A817A4A9A /* mmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 669CE00BE8684DB0A809EEBD /* mmap.c */; };
+		246478E3B9C9400BA9B28B65 /* udp.c in Sources */ = {isa = PBXBuildFile; fileRef = C0F1E6FC62D04767A584C863 /* udp.c */; };
+		24E1EE60B6FA4F9694E44E30 /* poll.c in Sources */ = {isa = PBXBuildFile; fileRef = 4EFED943D3B242978472B25C /* poll.c */; };
+		24F7F3930D2D4296AB2A2F6B /* ip_output.c in Sources */ = {isa = PBXBuildFile; fileRef = C030E63243BE4F1890E47810 /* ip_output.c */; };
+		25D43DA72E0F4328811A7E0C /* entry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A981394E6DE4D208C81226D /* entry.c */; };
+		282C4D08C4434490B8849872 /* tcp_timer.c in Sources */ = {isa = PBXBuildFile; fileRef = 4221A9AE6C91411A86CD8480 /* tcp_timer.c */; };
+		2935F7A9E33E4953956DA051 /* tlb.c in Sources */ = {isa = PBXBuildFile; fileRef = D33CABB12B444B178EB7BF75 /* tlb.c */; };
+		2D8670D2E6664CC4B8109B39 /* group.c in Sources */ = {isa = PBXBuildFile; fileRef = 602D3E86B5404D7D8D6985A9 /* group.c */; };
+		2DD1ADF523F0425897B5D95B /* tty.c in Sources */ = {isa = PBXBuildFile; fileRef = D9A6EB5BE54345FAB82F09E5 /* tty.c */; };
+		2E33746136614D0D868EC53D /* pipe.c in Sources */ = {isa = PBXBuildFile; fileRef = C0BB1DEC80C346939C2674E7 /* pipe.c */; };
+		2F684F4889F24C9F918B5CCA /* time.c in Sources */ = {isa = PBXBuildFile; fileRef = E671DA5A7ADC4ACEA7AAE78D /* time.c */; };
+		3065B3C0E4D446D19F015E37 /* dir.c in Sources */ = {isa = PBXBuildFile; fileRef = 90785F3A9FED45D386CC9EFA /* dir.c */; };
+		31BB318B7B094AA3BE348AF3 /* futex.c in Sources */ = {isa = PBXBuildFile; fileRef = 2A4E714CFF3A4D43B3A7C4D5 /* futex.c */; };
+		363545383DC84B73AB94B6F1 /* tcp_input.c in Sources */ = {isa = PBXBuildFile; fileRef = F969189E81D34E72A728B340 /* tcp_input.c */; };
+		422C76F4567648678D8CADB9 /* exec.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F28CCCDEDA049C48CD6E39F /* exec.c */; };
+		43F529809B96461B9BC368D9 /* sock.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D918493DD1542BDB0C1A5DB /* sock.c */; };
+		477912442DB94FA1990B532F /* lock.c in Sources */ = {isa = PBXBuildFile; fileRef = 19DAC9C6E49F4D73BEA3F983 /* lock.c */; };
+		4897D6C668FF46C39C034EFF /* mmx.c in Sources */ = {isa = PBXBuildFile; fileRef = 67CD5B0DFA47403E95589F13 /* mmx.c */; };
+		49C22F55372245D9953EC936 /* fake-migrate.c in Sources */ = {isa = PBXBuildFile; fileRef = 7BC5CB801EB7479F8F693170 /* fake-migrate.c */; };
+		4B9D34389A564BFC82CE06BD /* fake.c in Sources */ = {isa = PBXBuildFile; fileRef = 698FE39F909841498A827F9E /* fake.c */; };
+		4E146D75EF3C4ADAB4704108 /* eventfd.c in Sources */ = {isa = PBXBuildFile; fileRef = 33DA6979AD41457B88055248 /* eventfd.c */; };
+		52998851F68B44FF84458081 /* tty-real.c in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8FE67004C4B4C97BBBC58 /* tty-real.c */; };
+		5326959E451242FAB47E59F0 /* inode.c in Sources */ = {isa = PBXBuildFile; fileRef = 73E15FE2968649918E247EE1 /* inode.c */; };
+		5511C572572945ECA3E4FF5E /* tmp.c in Sources */ = {isa = PBXBuildFile; fileRef = D53E4C28221E4F80B0FDEB3E /* tmp.c */; };
+		55BFE27A57C549D0BFB39245 /* log.c in Sources */ = {isa = PBXBuildFile; fileRef = A424F03B9E654A0E9617F5E1 /* log.c */; };
+		582B2E1C17884034B46F9FC1 /* adhoc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3CC7A83F6C37459A8099D335 /* adhoc.c */; };
+		586F0556E5CD4EC7A528355B /* socket.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FD54064B042405AABA90EE3 /* socket.c */; };
+		5D1618FA621841AF9CD9E2DA /* misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 200612E31FEF47CCB52ED207 /* misc.c */; };
+		5FF77D94E1DD415DA34D8602 /* mbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 88CAF779317B42A0834AAF0B /* mbuf.c */; };
+		62391BCAFD334A0BB9114993 /* proc.c in Sources */ = {isa = PBXBuildFile; fileRef = ED2F4F7958404240867EDC80 /* proc.c */; };
+		628E75C54C8C45FF99824445 /* uname.c in Sources */ = {isa = PBXBuildFile; fileRef = 84094CB74F2D498BAB1E82F5 /* uname.c */; };
+		6578D685BBDA4D1C97831421 /* ish.c in Sources */ = {isa = PBXBuildFile; fileRef = 314C6B60CCE64A668A4E0CD5 /* ish.c */; };
+		65A1FC70ACBA465183142905 /* ipc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2703529FAC6A433784E5A6A3 /* ipc.c */; };
+		66604C7AD5F246BCB03B9643 /* ip_input.c in Sources */ = {isa = PBXBuildFile; fileRef = 81A2B2ACAD7148B790DC5A03 /* ip_input.c */; };
+		68F741FFC8914481BBC1F2C7 /* getset.c in Sources */ = {isa = PBXBuildFile; fileRef = ECF131AEF3A341859B634398 /* getset.c */; };
+		691C1888079044EFA7FA19BF /* epoll.c in Sources */ = {isa = PBXBuildFile; fileRef = F55BFB479EB74AED8BF0976E /* epoll.c */; };
+		6FB96DF2EE2A410785630091 /* slirp.c in Sources */ = {isa = PBXBuildFile; fileRef = 62A3B4094B534000B15B86CE /* slirp.c */; };
+		70321FEA9C5D45449BC66C79 /* stat.c in Sources */ = {isa = PBXBuildFile; fileRef = CA08FA1834544B8FA5AE2F7F /* stat.c */; };
+		71C60E7AFF3E49ED98D51BEC /* timer.c in Sources */ = {isa = PBXBuildFile; fileRef = 476393B79C254EFD9DA9FF3A /* timer.c */; };
+		72AD2CA29BF342C3986BAEB7 /* task.c in Sources */ = {isa = PBXBuildFile; fileRef = 15F1625BD5A14507B3E6E952 /* task.c */; };
+		734AD8DA178D438FA07F6875 /* vec.c in Sources */ = {isa = PBXBuildFile; fileRef = C2B3EAA307854FF9AA716F84 /* vec.c */; };
+		806621969EB34166B76E4D25 /* tcp_output.c in Sources */ = {isa = PBXBuildFile; fileRef = CA7BF61C7F4840EBAC90BC48 /* tcp_output.c */; };
+		845AD0F4E31945F9AA97E8BB /* fs.c in Sources */ = {isa = PBXBuildFile; fileRef = 192CA8D308A548FDB15F7BDF /* fs.c */; };
+		852FE27987EE49C5AD41087F /* path.c in Sources */ = {isa = PBXBuildFile; fileRef = B6D53A408CF7447A813FB34B /* path.c */; };
+		9213ADA4EAD246DCBB701D60 /* real.c in Sources */ = {isa = PBXBuildFile; fileRef = E2E987713A7D45429C10BB5C /* real.c */; };
+		92CABCBF60B94E878C856BDB /* bootp.c in Sources */ = {isa = PBXBuildFile; fileRef = 554FBDCC70F24A009E0DDAE5 /* bootp.c */; };
+		959FEA86B8A047BA87E1CFD1 /* backend_tinyemu.c in Sources */ = {isa = PBXBuildFile; fileRef = 1039496C0DF345E09F9AF5FA /* backend_tinyemu.c */; };
+		981FF1D501704B92A5AA0D38 /* tls.c in Sources */ = {isa = PBXBuildFile; fileRef = 182D1EEC722D4D80AC9CA259 /* tls.c */; };
+		9A035F3EA8984D529AB92F30 /* sync.c in Sources */ = {isa = PBXBuildFile; fileRef = AF3DACD64E4D47B1B2FE487F /* sync.c */; };
+		9DE5A836D7D843069B5804FD /* dyndev.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F95E91E67B648318687C170 /* dyndev.c */; };
+		A120DBD3ADFD4F3C94E8C230 /* cksum.c in Sources */ = {isa = PBXBuildFile; fileRef = 22181AF8EE78402183864B9A /* cksum.c */; };
+		A54A97C2007046FC97DBE309 /* fake-rebuild.c in Sources */ = {isa = PBXBuildFile; fileRef = 3706681802E34AE68908226D /* fake-rebuild.c */; };
+		A913FBBED84F435CABA2D19B /* errno.c in Sources */ = {isa = PBXBuildFile; fileRef = C96D9C0C150A4AB2BFFEF761 /* errno.c */; };
+		A96AAD2483DF4E76B9A3E938 /* signal.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A4D6375FFC34D4F85502EE1 /* signal.c */; };
+		A98683EC038547F6821C3B5B /* tcp_subr.c in Sources */ = {isa = PBXBuildFile; fileRef = 093CCAB22BB64F6E94E7DF3F /* tcp_subr.c */; };
+		AD49C5E2C87C476283DC52AF /* float80-test.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AB926A0738D4B83BAAA59D8 /* float80-test.c */; };
+		AE4976BB40E9490C931F6A1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD42A9EAF4F4B64A39FBB25 /* main.m */; };
+		B061AA68572849829DFF5521 /* ip_icmp.c in Sources */ = {isa = PBXBuildFile; fileRef = B3DBFC2478E1466C84A81BF4 /* ip_icmp.c */; };
+		B13B94B1ABE449A6A1431712 /* fpu.c in Sources */ = {isa = PBXBuildFile; fileRef = CFF4D32A87CD4CCCB3097273 /* fpu.c */; };
+		B8EF8C7C30994B0F950ACD86 /* vdso_stub.c in Sources */ = {isa = PBXBuildFile; fileRef = FBA4E52303D04D4391BEBC0F /* vdso_stub.c */; };
+		C7429CEFC3224725B8DA6ADC /* ptrace.c in Sources */ = {isa = PBXBuildFile; fileRef = 62ED05CE8AEA4325B6D30CB7 /* ptrace.c */; };
+		C78A67AC57FE42EDAF6A0420 /* misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 94A48E5F5B44412B9B736DC3 /* misc.c */; };
+		C7DC3328B6E4407691ADCC00 /* user.c in Sources */ = {isa = PBXBuildFile; fileRef = 532BEA0A8AF041D3A64C2CF1 /* user.c */; };
+		C7F470F586EB48ABB510E7BC /* random.c in Sources */ = {isa = PBXBuildFile; fileRef = 8885EDF1C0B84CF790E23C5F /* random.c */; };
+		CB1073B3F10F4599B8F3E7D0 /* fork.c in Sources */ = {isa = PBXBuildFile; fileRef = B665141859E445648ABD54AC /* fork.c */; };
+		CFDD932795DB4F338177015D /* sbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = CC98378755BD4A3687E452E0 /* sbuf.c */; };
+		D262212DDB184FB8BFBB9969 /* sockrestart.c in Sources */ = {isa = PBXBuildFile; fileRef = 384D1598C9E6437FA73467B3 /* sockrestart.c */; };
+		DDFB7B466FE347FFA0B1A8B5 /* poll.c in Sources */ = {isa = PBXBuildFile; fileRef = D635467F90D14964AEFA9620 /* poll.c */; };
+		DF7826DBCE2A43179C24CAD3 /* exit.c in Sources */ = {isa = PBXBuildFile; fileRef = 00E4A4CEC4054D88827075A4 /* exit.c */; };
+		E02A53DE626F4538AF478A1A /* calls.c in Sources */ = {isa = PBXBuildFile; fileRef = 55CB76862CA3417F94195B85 /* calls.c */; };
+		E2F00B036006475FA5AE83F9 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EA14EFD2C454B832BC005 /* memory.c */; };
+		E3ADAEBE0EC44AC8A4A6EAFB /* float80.c in Sources */ = {isa = PBXBuildFile; fileRef = B3DA18EC00994BD78D6CC2D1 /* float80.c */; };
+		E8DCF512699944F19C646A95 /* resource.c in Sources */ = {isa = PBXBuildFile; fileRef = 138A7FA2BE7E4167994D670B /* resource.c */; };
+		F1033790C4E242C481D3F803 /* pid.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C1CFACC13984980AB594B1C /* pid.c */; };
+		F15F5E3B4D604377A096B814 /* generic.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A99D5245247A6993C19F5 /* generic.c */; };
+		F3CD02D5F23047658A1F7D3F /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3497089B14CEF84D9DE2D /* init.c */; };
+		F8A9508281604105A0719960 /* fake-db.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B703464B995414FA9650162 /* fake-db.c */; };
+		FAAC65DA99C6459FB381F46D /* mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CC83B31F36542BC94FD2A57 /* mem.c */; };
+		FB7054CD744143D3A9271022 /* fd.c in Sources */ = {isa = PBXBuildFile; fileRef = BA3A324EA12241A2AAD294E3 /* fd.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		086BAB73C405443093B80FFC /* PBXContainerItemProxy */ = {
+		0185BCA0059F44509AD1FFD8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B0517170754F4722B264E685 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1AE011348B354AC708153261;
-			remoteInfo = ZERO_CHECK;
-		};
-		08D32C63C0D94E95B3078DAF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B0517170754F4722B264E685 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1AE011348B354AC708153261;
-			remoteInfo = ZERO_CHECK;
-		};
-		161A48BB443046F08A15A2EB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B0517170754F4722B264E685 /* Project object */;
+			containerPortal = 0E08370096F84B83907A628A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6E975F6907B711E962AA1D87;
 			remoteInfo = ish64_ios;
 		};
-		16ED9328813B496D991104C1 /* PBXContainerItemProxy */ = {
+		25FF475B26984A318429C4AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B0517170754F4722B264E685 /* Project object */;
+			containerPortal = 0E08370096F84B83907A628A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AE011348B354AC708153261;
+			remoteInfo = ZERO_CHECK;
+		};
+		3C72C5CEB6C940F7913BDC48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E08370096F84B83907A628A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AE011348B354AC708153261;
+			remoteInfo = ZERO_CHECK;
+		};
+		575C0C6DACD2432880B78ECB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E08370096F84B83907A628A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 05642E34347F3263CE9C1150;
 			remoteInfo = ishcore;
 		};
-		7F32425A233E46EB80EC8207 /* PBXContainerItemProxy */ = {
+		8D125429D513419E97B91BD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B0517170754F4722B264E685 /* Project object */;
+			containerPortal = 0E08370096F84B83907A628A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 05642E34347F3263CE9C1150;
 			remoteInfo = ishcore;
 		};
-		E86E625B68C64FBA8127314F /* PBXContainerItemProxy */ = {
+		C408AA8E0E6A4AE4BE9BDA2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B0517170754F4722B264E685 /* Project object */;
+			containerPortal = 0E08370096F84B83907A628A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1AE011348B354AC708153261;
 			remoteInfo = ZERO_CHECK;
@@ -170,113 +170,110 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		027FE35C8D1243108AB23854 /* calls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = calls.c; path = /Users/victorj/Projects/ish64/kernel/calls.c; sourceTree = "<absolute>"; };
-		031666F1F0874E98A8841DA8 /* fchdir.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fchdir.c; path = /Users/victorj/Projects/ish64/util/fchdir.c; sourceTree = "<absolute>"; };
-		062551F4055D466F937E3733 /* group.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = group.c; path = /Users/victorj/Projects/ish64/kernel/group.c; sourceTree = "<absolute>"; };
-		073739F0C8D44D8B91C9FA7C /* signal.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = signal.c; path = /Users/victorj/Projects/ish64/kernel/signal.c; sourceTree = "<absolute>"; };
-		07F7E56FBFA2426388CBA6B8 /* mount.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mount.c; path = /Users/victorj/Projects/ish64/fs/mount.c; sourceTree = "<absolute>"; };
-		097EFAF5124B416793CC7CD8 /* misc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = misc.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/misc.c; sourceTree = "<absolute>"; };
-		0CB61E4938B0418D822810C2 /* tty-real.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "tty-real.c"; path = "/Users/victorj/Projects/ish64/fs/tty-real.c"; sourceTree = "<absolute>"; };
-		13859B82DE9C41C8BBA78F68 /* sockrestart.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sockrestart.c; path = /Users/victorj/Projects/ish64/fs/sockrestart.c; sourceTree = "<absolute>"; };
-		1563D7782ED7CA1A0076A4CF /* slirp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = slirp.h; sourceTree = "<group>"; };
-		1563D7792ED7CA1C0076A4CF /* slirp 2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "slirp 2.h"; sourceTree = "<group>"; };
-		1563D77A2ED7CAF90076A4CF /* slirp 3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "slirp 3.h"; sourceTree = "<group>"; };
-		180BDDBBCECE4DB6B151A78C /* epoll.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = epoll.c; path = /Users/victorj/Projects/ish64/kernel/epoll.c; sourceTree = "<absolute>"; };
-		190F68C43A0F4DC18F49731F /* mmap.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mmap.c; path = /Users/victorj/Projects/ish64/kernel/mmap.c; sourceTree = "<absolute>"; };
-		1B735B227AAB4197B9A314AD /* udp.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = udp.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/udp.c; sourceTree = "<absolute>"; };
-		1F257176EFCA46C397F4B32D /* ip_input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ip_input.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/ip_input.c; sourceTree = "<absolute>"; };
-		221A5A626A534E88832000DA /* fake.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fake.c; path = /Users/victorj/Projects/ish64/fs/fake.c; sourceTree = "<absolute>"; };
-		22E0EE88EA1D49B389B22DCE /* ip_output.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ip_output.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/ip_output.c; sourceTree = "<absolute>"; };
-		23955B4A14E043FDADA1B4F7 /* fpu.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fpu.c; path = /Users/victorj/Projects/ish64/emu/fpu.c; sourceTree = "<absolute>"; };
-		25CF67CBF7DD44D0B6B079B1 /* vec.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vec.c; path = /Users/victorj/Projects/ish64/emu/vec.c; sourceTree = "<absolute>"; };
-		283787699F2742D296F34E71 /* fs.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fs.c; path = /Users/victorj/Projects/ish64/kernel/fs.c; sourceTree = "<absolute>"; };
-		283E3B04C9394F70955F288B /* root.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = root.c; path = /Users/victorj/Projects/ish64/fs/proc/root.c; sourceTree = "<absolute>"; };
-		2B1DAED336744255A9AB00BA /* dyndev.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = dyndev.c; path = /Users/victorj/Projects/ish64/fs/dyndev.c; sourceTree = "<absolute>"; };
-		303929D9B7FE4C279ED9B6D9 /* vdso_stub.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vdso_stub.c; path = /Users/victorj/Projects/ish64/kernel/vdso_stub.c; sourceTree = "<absolute>"; };
-		320B907951654332909B9939 /* getset.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = getset.c; path = /Users/victorj/Projects/ish64/kernel/getset.c; sourceTree = "<absolute>"; };
-		3344AD90EEC14BB59056B9BD /* slirp.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = slirp.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c; sourceTree = "<absolute>"; };
-		349BEA04D6C04B5FBCC236C4 /* exit.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = exit.c; path = /Users/victorj/Projects/ish64/kernel/exit.c; sourceTree = "<absolute>"; };
-		3A83FC87078144E19E2D9986 /* pipe.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pipe.c; path = /Users/victorj/Projects/ish64/fs/pipe.c; sourceTree = "<absolute>"; };
-		3CBF66EFBBB149C98426A21C /* fake-rebuild.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "fake-rebuild.c"; path = "/Users/victorj/Projects/ish64/fs/fake-rebuild.c"; sourceTree = "<absolute>"; };
-		3D1FFB27F2514BFA96BAAF08 /* ish.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ish.c; path = /Users/victorj/Projects/ish64/fs/proc/ish.c; sourceTree = "<absolute>"; };
-		3F55D00B48B748A3BEC2A50B /* real.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = real.c; path = /Users/victorj/Projects/ish64/fs/real.c; sourceTree = "<absolute>"; };
-		479B96B01D81480CB31E0FBF /* generic.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = generic.c; path = /Users/victorj/Projects/ish64/fs/generic.c; sourceTree = "<absolute>"; };
-		48229F1535F040FB8293048C /* random.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = random.c; path = /Users/victorj/Projects/ish64/kernel/random.c; sourceTree = "<absolute>"; };
-		4CA3366631D84BAABBA0AF2A /* libishcore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libishcore.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FC25CCF834946B4A8214F1C /* resource.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = resource.c; path = /Users/victorj/Projects/ish64/kernel/resource.c; sourceTree = "<absolute>"; };
-		521EF505AE3349139BDDC7B3 /* stat.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = stat.c; path = /Users/victorj/Projects/ish64/fs/stat.c; sourceTree = "<absolute>"; };
-		540BC6EF6EFD4E47849F1CA7 /* socket.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = socket.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c; sourceTree = "<absolute>"; };
-		579649FE97BE4336A4F87EC4 /* tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tls.c; path = /Users/victorj/Projects/ish64/kernel/tls.c; sourceTree = "<absolute>"; };
-		586DD80A37134418A9DB7F49 /* fake-migrate.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "fake-migrate.c"; path = "/Users/victorj/Projects/ish64/fs/fake-migrate.c"; sourceTree = "<absolute>"; };
-		58A274D6A70441AEBDA13B0F /* mbuf.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mbuf.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/mbuf.c; sourceTree = "<absolute>"; };
-		5B218EAFF4344B31BF741008 /* dir.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = dir.c; path = /Users/victorj/Projects/ish64/fs/dir.c; sourceTree = "<absolute>"; };
-		5CC3F0BAF3214338ADEF46C1 /* float80.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = float80.c; path = /Users/victorj/Projects/ish64/emu/float80.c; sourceTree = "<absolute>"; };
-		5F3EDD4760514329A3C726F5 /* pty.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pty.c; path = /Users/victorj/Projects/ish64/fs/pty.c; sourceTree = "<absolute>"; };
-		5FD223E13F5A4C0A996B96AE /* cksum.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cksum.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/cksum.c; sourceTree = "<absolute>"; };
-		62759A2F849B414383B3DD46 /* errno.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = errno.c; path = /Users/victorj/Projects/ish64/kernel/errno.c; sourceTree = "<absolute>"; };
-		62DF737FA6D74C18B95E04B1 /* inode.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = inode.c; path = /Users/victorj/Projects/ish64/fs/inode.c; sourceTree = "<absolute>"; };
-		6474D64BEC714ADC9F73143B /* memory.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = memory.c; path = /Users/victorj/Projects/ish64/kernel/memory.c; sourceTree = "<absolute>"; };
-		6478C3FD8AC849B8B84AB88D /* lock.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = lock.c; path = /Users/victorj/Projects/ish64/fs/lock.c; sourceTree = "<absolute>"; };
-		65DAD60CA8884D9C8D24F8EC /* tlb.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tlb.c; path = /Users/victorj/Projects/ish64/emu/tlb.c; sourceTree = "<absolute>"; };
-		6692A5B9AE39440E8BA4B7A2 /* poll.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = poll.c; path = /Users/victorj/Projects/ish64/kernel/poll.c; sourceTree = "<absolute>"; };
-		6A267D0AF7CD421A80247A04 /* sock.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sock.c; path = /Users/victorj/Projects/ish64/fs/sock.c; sourceTree = "<absolute>"; };
-		6A2AC0E8453244E198FBB186 /* fork.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fork.c; path = /Users/victorj/Projects/ish64/kernel/fork.c; sourceTree = "<absolute>"; };
-		6BAE0A87C10043C6BF050639 /* adhoc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = adhoc.c; path = /Users/victorj/Projects/ish64/fs/adhoc.c; sourceTree = "<absolute>"; };
-		6C2E7BD823964028AA8F1E2F /* ish64_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = ish64_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EAAD01A95AC445AAD38C37D /* bootp.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = bootp.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/bootp.c; sourceTree = "<absolute>"; };
-		6FF63639742B42A38A65D2AF /* misc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = misc.c; path = /Users/victorj/Projects/ish64/kernel/misc.c; sourceTree = "<absolute>"; };
-		7195DCDDF349465382A43E23 /* fifo.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fifo.c; path = /Users/victorj/Projects/ish64/util/fifo.c; sourceTree = "<absolute>"; };
-		7A0F144D1C244FE9964105AD /* tcp_subr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcp_subr.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_subr.c; sourceTree = "<absolute>"; };
-		7F704F7E16B24746B7579E11 /* sync.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sync.c; path = /Users/victorj/Projects/ish64/util/sync.c; sourceTree = "<absolute>"; };
-		8119A10D5ECC4BDBB1DEDD2B /* tcp_input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcp_input.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c; sourceTree = "<absolute>"; };
-		841BBEE13D95427A91EFE4AB /* task.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = task.c; path = /Users/victorj/Projects/ish64/kernel/task.c; sourceTree = "<absolute>"; };
-		865EBCB02C204C9A938C6FDA /* log.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = log.c; path = /Users/victorj/Projects/ish64/kernel/log.c; sourceTree = "<absolute>"; };
-		897D47D38CC74C2386D11224 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		8C61F25CA2E34625895FF348 /* sbuf.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sbuf.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/sbuf.c; sourceTree = "<absolute>"; };
-		926E5694024B40B3B005DEE0 /* float80-test.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "float80-test.c"; path = "/Users/victorj/Projects/ish64/emu/float80-test.c"; sourceTree = "<absolute>"; };
-		949BC26AF93C46DCA6B2D6D6 /* ip_icmp.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ip_icmp.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/ip_icmp.c; sourceTree = "<absolute>"; };
-		973C80690DBB430A8B2E746E /* mmx.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mmx.c; path = /Users/victorj/Projects/ish64/emu/mmx.c; sourceTree = "<absolute>"; };
-		996539C651BE4E0EBA46CD42 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		9E059229A1D341ECA651F278 /* ptrace.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ptrace.c; path = /Users/victorj/Projects/ish64/kernel/ptrace.c; sourceTree = "<absolute>"; };
-		9E636CCEB6434B799286DFCD /* main.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = main.m; sourceTree = SOURCE_ROOT; };
-		9EE768580C934C4CA64A7300 /* timer.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = timer.c; path = /Users/victorj/Projects/ish64/util/timer.c; sourceTree = "<absolute>"; };
-		9F11D600416D4A059471B245 /* tty.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tty.c; path = /Users/victorj/Projects/ish64/fs/tty.c; sourceTree = "<absolute>"; };
-		A25A43C9F3CE47A381981F90 /* entry.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = entry.c; path = /Users/victorj/Projects/ish64/fs/proc/entry.c; sourceTree = "<absolute>"; };
-		A5D3614DB55446C3B3838B68 /* fake-db.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "fake-db.c"; path = "/Users/victorj/Projects/ish64/fs/fake-db.c"; sourceTree = "<absolute>"; };
-		A7E85DFF72AC42C8ABD7BDC4 /* init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = /Users/victorj/Projects/ish64/kernel/init.c; sourceTree = "<absolute>"; };
-		A93E4E22E71140BCAA6A6C46 /* exec.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = exec.c; path = /Users/victorj/Projects/ish64/kernel/exec.c; sourceTree = "<absolute>"; };
-		ABA8DCD2E7F74F4DA63D4FC3 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		B0B96A31B09E4BB9B05E0473 /* ipc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ipc.c; path = /Users/victorj/Projects/ish64/kernel/ipc.c; sourceTree = "<absolute>"; };
-		B41782FC988E4C3BAB3A516A /* user.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = user.c; path = /Users/victorj/Projects/ish64/kernel/user.c; sourceTree = "<absolute>"; };
-		B7AA0B031D944BB7B84C463B /* tmp.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tmp.c; path = /Users/victorj/Projects/ish64/fs/tmp.c; sourceTree = "<absolute>"; };
-		B829F64B437842DF92050E5F /* proc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = proc.c; path = /Users/victorj/Projects/ish64/fs/proc.c; sourceTree = "<absolute>"; };
-		C366AC8390174470B690F4A6 /* futex.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = futex.c; path = /Users/victorj/Projects/ish64/kernel/futex.c; sourceTree = "<absolute>"; };
-		CCAD7E17E5B24E96B18276D2 /* fd.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fd.c; path = /Users/victorj/Projects/ish64/fs/fd.c; sourceTree = "<absolute>"; };
-		D235DE71901A43D3AEB6F3DB /* uname.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = uname.c; path = /Users/victorj/Projects/ish64/kernel/uname.c; sourceTree = "<absolute>"; };
-		D6A80B5940024B9A9DF71FA2 /* tcp_timer.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcp_timer.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_timer.c; sourceTree = "<absolute>"; };
-		D9699CBBEDAE4A61B2897DFE /* fs_info.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fs_info.c; path = /Users/victorj/Projects/ish64/kernel/fs_info.c; sourceTree = "<absolute>"; };
-		D9F0EB18F3E1406E81D78E9E /* path.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = path.c; path = /Users/victorj/Projects/ish64/fs/path.c; sourceTree = "<absolute>"; };
-		DAE057DF3C124E958B9276D5 /* backend_tinyemu.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = backend_tinyemu.c; path = /Users/victorj/Projects/ish64/emu/backend_tinyemu.c; sourceTree = "<absolute>"; };
-		E002F19398E64BF2A26054D2 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "build-xcode/CMakeFiles/ish64_ios.dir/Info.plist"; sourceTree = SOURCE_ROOT; };
-		E4D94ECCA1F348EDAC7397D8 /* eventfd.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = eventfd.c; path = /Users/victorj/Projects/ish64/kernel/eventfd.c; sourceTree = "<absolute>"; };
-		E9F3D23D3A064524872A6337 /* time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = time.c; path = /Users/victorj/Projects/ish64/kernel/time.c; sourceTree = "<absolute>"; };
-		EB4246186EEF497599EC9BB2 /* pid.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pid.c; path = /Users/victorj/Projects/ish64/fs/proc/pid.c; sourceTree = "<absolute>"; };
-		EBBA12A5C0E347DA9A5641C6 /* if.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = if.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/if.c; sourceTree = "<absolute>"; };
-		EE38FC4FCF0148258FE32BFB /* mem.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mem.c; path = /Users/victorj/Projects/ish64/fs/mem.c; sourceTree = "<absolute>"; };
-		F22399B61CAD49C2802C16CC /* poll.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = poll.c; path = /Users/victorj/Projects/ish64/fs/poll.c; sourceTree = "<absolute>"; };
-		FA63FBA3BAB148728CA687B8 /* tcp_output.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcp_output.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_output.c; sourceTree = "<absolute>"; };
-		FB715C17AADE4DA6A2CF66BB /* dev.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = dev.c; path = /Users/victorj/Projects/ish64/fs/dev.c; sourceTree = "<absolute>"; };
+		00E4A4CEC4054D88827075A4 /* exit.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = exit.c; path = /Users/victorj/Projects/ish64/kernel/exit.c; sourceTree = "<absolute>"; };
+		0648C60AF5C8489D8E72844B /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		093CCAB22BB64F6E94E7DF3F /* tcp_subr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcp_subr.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_subr.c; sourceTree = "<absolute>"; };
+		0B703464B995414FA9650162 /* fake-db.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "fake-db.c"; path = "/Users/victorj/Projects/ish64/fs/fake-db.c"; sourceTree = "<absolute>"; };
+		0FD54064B042405AABA90EE3 /* socket.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = socket.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/socket.c; sourceTree = "<absolute>"; };
+		1039496C0DF345E09F9AF5FA /* backend_tinyemu.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = backend_tinyemu.c; path = /Users/victorj/Projects/ish64/emu/backend_tinyemu.c; sourceTree = "<absolute>"; };
+		138A7FA2BE7E4167994D670B /* resource.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = resource.c; path = /Users/victorj/Projects/ish64/kernel/resource.c; sourceTree = "<absolute>"; };
+		15F1625BD5A14507B3E6E952 /* task.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = task.c; path = /Users/victorj/Projects/ish64/kernel/task.c; sourceTree = "<absolute>"; };
+		182D1EEC722D4D80AC9CA259 /* tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tls.c; path = /Users/victorj/Projects/ish64/kernel/tls.c; sourceTree = "<absolute>"; };
+		192CA8D308A548FDB15F7BDF /* fs.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fs.c; path = /Users/victorj/Projects/ish64/kernel/fs.c; sourceTree = "<absolute>"; };
+		19DAC9C6E49F4D73BEA3F983 /* lock.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = lock.c; path = /Users/victorj/Projects/ish64/fs/lock.c; sourceTree = "<absolute>"; };
+		1AB926A0738D4B83BAAA59D8 /* float80-test.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "float80-test.c"; path = "/Users/victorj/Projects/ish64/emu/float80-test.c"; sourceTree = "<absolute>"; };
+		1C1CFACC13984980AB594B1C /* pid.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pid.c; path = /Users/victorj/Projects/ish64/fs/proc/pid.c; sourceTree = "<absolute>"; };
+		1D6A99D5245247A6993C19F5 /* generic.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = generic.c; path = /Users/victorj/Projects/ish64/fs/generic.c; sourceTree = "<absolute>"; };
+		1F28CCCDEDA049C48CD6E39F /* exec.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = exec.c; path = /Users/victorj/Projects/ish64/kernel/exec.c; sourceTree = "<absolute>"; };
+		200612E31FEF47CCB52ED207 /* misc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = misc.c; path = /Users/victorj/Projects/ish64/kernel/misc.c; sourceTree = "<absolute>"; };
+		22181AF8EE78402183864B9A /* cksum.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cksum.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/cksum.c; sourceTree = "<absolute>"; };
+		2703529FAC6A433784E5A6A3 /* ipc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ipc.c; path = /Users/victorj/Projects/ish64/kernel/ipc.c; sourceTree = "<absolute>"; };
+		2A4E714CFF3A4D43B3A7C4D5 /* futex.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = futex.c; path = /Users/victorj/Projects/ish64/kernel/futex.c; sourceTree = "<absolute>"; };
+		2CC83B31F36542BC94FD2A57 /* mem.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mem.c; path = /Users/victorj/Projects/ish64/fs/mem.c; sourceTree = "<absolute>"; };
+		2FF8FE67004C4B4C97BBBC58 /* tty-real.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "tty-real.c"; path = "/Users/victorj/Projects/ish64/fs/tty-real.c"; sourceTree = "<absolute>"; };
+		314C6B60CCE64A668A4E0CD5 /* ish.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ish.c; path = /Users/victorj/Projects/ish64/fs/proc/ish.c; sourceTree = "<absolute>"; };
+		3196A4D6F1A045CDA07DE5BF /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		33DA6979AD41457B88055248 /* eventfd.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = eventfd.c; path = /Users/victorj/Projects/ish64/kernel/eventfd.c; sourceTree = "<absolute>"; };
+		3706681802E34AE68908226D /* fake-rebuild.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "fake-rebuild.c"; path = "/Users/victorj/Projects/ish64/fs/fake-rebuild.c"; sourceTree = "<absolute>"; };
+		384D1598C9E6437FA73467B3 /* sockrestart.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sockrestart.c; path = /Users/victorj/Projects/ish64/fs/sockrestart.c; sourceTree = "<absolute>"; };
+		3C4EA14EFD2C454B832BC005 /* memory.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = memory.c; path = /Users/victorj/Projects/ish64/kernel/memory.c; sourceTree = "<absolute>"; };
+		3CC7A83F6C37459A8099D335 /* adhoc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = adhoc.c; path = /Users/victorj/Projects/ish64/fs/adhoc.c; sourceTree = "<absolute>"; };
+		3D918493DD1542BDB0C1A5DB /* sock.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sock.c; path = /Users/victorj/Projects/ish64/fs/sock.c; sourceTree = "<absolute>"; };
+		4221A9AE6C91411A86CD8480 /* tcp_timer.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcp_timer.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_timer.c; sourceTree = "<absolute>"; };
+		476393B79C254EFD9DA9FF3A /* timer.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = timer.c; path = /Users/victorj/Projects/ish64/util/timer.c; sourceTree = "<absolute>"; };
+		49E788FA5BB9411D9112CD58 /* fifo.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fifo.c; path = /Users/victorj/Projects/ish64/util/fifo.c; sourceTree = "<absolute>"; };
+		4EFED943D3B242978472B25C /* poll.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = poll.c; path = /Users/victorj/Projects/ish64/fs/poll.c; sourceTree = "<absolute>"; };
+		532BEA0A8AF041D3A64C2CF1 /* user.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = user.c; path = /Users/victorj/Projects/ish64/kernel/user.c; sourceTree = "<absolute>"; };
+		554FBDCC70F24A009E0DDAE5 /* bootp.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = bootp.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/bootp.c; sourceTree = "<absolute>"; };
+		55CB76862CA3417F94195B85 /* calls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = calls.c; path = /Users/victorj/Projects/ish64/kernel/calls.c; sourceTree = "<absolute>"; };
+		5CA72EE250094FD0A3F64C31 /* if.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = if.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/if.c; sourceTree = "<absolute>"; };
+		602D3E86B5404D7D8D6985A9 /* group.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = group.c; path = /Users/victorj/Projects/ish64/kernel/group.c; sourceTree = "<absolute>"; };
+		62A3B4094B534000B15B86CE /* slirp.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = slirp.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/slirp.c; sourceTree = "<absolute>"; };
+		62ED05CE8AEA4325B6D30CB7 /* ptrace.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ptrace.c; path = /Users/victorj/Projects/ish64/kernel/ptrace.c; sourceTree = "<absolute>"; };
+		669CE00BE8684DB0A809EEBD /* mmap.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mmap.c; path = /Users/victorj/Projects/ish64/kernel/mmap.c; sourceTree = "<absolute>"; };
+		67CD5B0DFA47403E95589F13 /* mmx.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mmx.c; path = /Users/victorj/Projects/ish64/emu/mmx.c; sourceTree = "<absolute>"; };
+		698FE39F909841498A827F9E /* fake.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fake.c; path = /Users/victorj/Projects/ish64/fs/fake.c; sourceTree = "<absolute>"; };
+		6A4D6375FFC34D4F85502EE1 /* signal.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = signal.c; path = /Users/victorj/Projects/ish64/kernel/signal.c; sourceTree = "<absolute>"; };
+		6AD42A9EAF4F4B64A39FBB25 /* main.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = main.m; sourceTree = SOURCE_ROOT; };
+		73E15FE2968649918E247EE1 /* inode.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = inode.c; path = /Users/victorj/Projects/ish64/fs/inode.c; sourceTree = "<absolute>"; };
+		790E838B999541889A8EC436 /* fchdir.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fchdir.c; path = /Users/victorj/Projects/ish64/util/fchdir.c; sourceTree = "<absolute>"; };
+		7BC5CB801EB7479F8F693170 /* fake-migrate.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "fake-migrate.c"; path = "/Users/victorj/Projects/ish64/fs/fake-migrate.c"; sourceTree = "<absolute>"; };
+		81A2B2ACAD7148B790DC5A03 /* ip_input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ip_input.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/ip_input.c; sourceTree = "<absolute>"; };
+		84094CB74F2D498BAB1E82F5 /* uname.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = uname.c; path = /Users/victorj/Projects/ish64/kernel/uname.c; sourceTree = "<absolute>"; };
+		8885EDF1C0B84CF790E23C5F /* random.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = random.c; path = /Users/victorj/Projects/ish64/kernel/random.c; sourceTree = "<absolute>"; };
+		88CAF779317B42A0834AAF0B /* mbuf.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mbuf.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/mbuf.c; sourceTree = "<absolute>"; };
+		8A981394E6DE4D208C81226D /* entry.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = entry.c; path = /Users/victorj/Projects/ish64/fs/proc/entry.c; sourceTree = "<absolute>"; };
+		8D507AEA63164026AB7B212E /* dev.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = dev.c; path = /Users/victorj/Projects/ish64/fs/dev.c; sourceTree = "<absolute>"; };
+		90785F3A9FED45D386CC9EFA /* dir.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = dir.c; path = /Users/victorj/Projects/ish64/fs/dir.c; sourceTree = "<absolute>"; };
+		94A48E5F5B44412B9B736DC3 /* misc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = misc.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/misc.c; sourceTree = "<absolute>"; };
+		98A5BD9BE2A2414489822C63 /* mount.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mount.c; path = /Users/victorj/Projects/ish64/fs/mount.c; sourceTree = "<absolute>"; };
+		9B59A1C5F87A495D92CBFF1C /* root.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = root.c; path = /Users/victorj/Projects/ish64/fs/proc/root.c; sourceTree = "<absolute>"; };
+		9CE3497089B14CEF84D9DE2D /* init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = /Users/victorj/Projects/ish64/kernel/init.c; sourceTree = "<absolute>"; };
+		9F95E91E67B648318687C170 /* dyndev.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = dyndev.c; path = /Users/victorj/Projects/ish64/fs/dyndev.c; sourceTree = "<absolute>"; };
+		A424F03B9E654A0E9617F5E1 /* log.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = log.c; path = /Users/victorj/Projects/ish64/kernel/log.c; sourceTree = "<absolute>"; };
+		AF3DACD64E4D47B1B2FE487F /* sync.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sync.c; path = /Users/victorj/Projects/ish64/util/sync.c; sourceTree = "<absolute>"; };
+		B3DA18EC00994BD78D6CC2D1 /* float80.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = float80.c; path = /Users/victorj/Projects/ish64/emu/float80.c; sourceTree = "<absolute>"; };
+		B3DBFC2478E1466C84A81BF4 /* ip_icmp.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ip_icmp.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/ip_icmp.c; sourceTree = "<absolute>"; };
+		B665141859E445648ABD54AC /* fork.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fork.c; path = /Users/victorj/Projects/ish64/kernel/fork.c; sourceTree = "<absolute>"; };
+		B6D53A408CF7447A813FB34B /* path.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = path.c; path = /Users/victorj/Projects/ish64/fs/path.c; sourceTree = "<absolute>"; };
+		BA3A324EA12241A2AAD294E3 /* fd.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fd.c; path = /Users/victorj/Projects/ish64/fs/fd.c; sourceTree = "<absolute>"; };
+		BECB5B95FF89453F8E3D6E0A /* pty.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pty.c; path = /Users/victorj/Projects/ish64/fs/pty.c; sourceTree = "<absolute>"; };
+		C030E63243BE4F1890E47810 /* ip_output.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ip_output.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/ip_output.c; sourceTree = "<absolute>"; };
+		C0BB1DEC80C346939C2674E7 /* pipe.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pipe.c; path = /Users/victorj/Projects/ish64/fs/pipe.c; sourceTree = "<absolute>"; };
+		C0F1E6FC62D04767A584C863 /* udp.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = udp.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/udp.c; sourceTree = "<absolute>"; };
+		C2B3EAA307854FF9AA716F84 /* vec.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vec.c; path = /Users/victorj/Projects/ish64/emu/vec.c; sourceTree = "<absolute>"; };
+		C6F90695285A4570B0E4F0A8 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "build-xcode/CMakeFiles/ish64_ios.dir/Info.plist"; sourceTree = SOURCE_ROOT; };
+		C96D9C0C150A4AB2BFFEF761 /* errno.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = errno.c; path = /Users/victorj/Projects/ish64/kernel/errno.c; sourceTree = "<absolute>"; };
+		CA08FA1834544B8FA5AE2F7F /* stat.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = stat.c; path = /Users/victorj/Projects/ish64/fs/stat.c; sourceTree = "<absolute>"; };
+		CA7BF61C7F4840EBAC90BC48 /* tcp_output.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcp_output.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_output.c; sourceTree = "<absolute>"; };
+		CC98378755BD4A3687E452E0 /* sbuf.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sbuf.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/sbuf.c; sourceTree = "<absolute>"; };
+		CFF4D32A87CD4CCCB3097273 /* fpu.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fpu.c; path = /Users/victorj/Projects/ish64/emu/fpu.c; sourceTree = "<absolute>"; };
+		D187B910F5114507BCF8DEB4 /* fs_info.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fs_info.c; path = /Users/victorj/Projects/ish64/kernel/fs_info.c; sourceTree = "<absolute>"; };
+		D33CABB12B444B178EB7BF75 /* tlb.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tlb.c; path = /Users/victorj/Projects/ish64/emu/tlb.c; sourceTree = "<absolute>"; };
+		D53E4C28221E4F80B0FDEB3E /* tmp.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tmp.c; path = /Users/victorj/Projects/ish64/fs/tmp.c; sourceTree = "<absolute>"; };
+		D635467F90D14964AEFA9620 /* poll.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = poll.c; path = /Users/victorj/Projects/ish64/kernel/poll.c; sourceTree = "<absolute>"; };
+		D9A6EB5BE54345FAB82F09E5 /* tty.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tty.c; path = /Users/victorj/Projects/ish64/fs/tty.c; sourceTree = "<absolute>"; };
+		DAB99BE9194D4889B2A8264B /* ish64_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = ish64_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2E987713A7D45429C10BB5C /* real.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = real.c; path = /Users/victorj/Projects/ish64/fs/real.c; sourceTree = "<absolute>"; };
+		E5719D7BC52340B1AD5CEC0F /* libishcore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libishcore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E671DA5A7ADC4ACEA7AAE78D /* time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = time.c; path = /Users/victorj/Projects/ish64/kernel/time.c; sourceTree = "<absolute>"; };
+		E8BB6F37843A42A182A5AFE3 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		ECF131AEF3A341859B634398 /* getset.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = getset.c; path = /Users/victorj/Projects/ish64/kernel/getset.c; sourceTree = "<absolute>"; };
+		ED2F4F7958404240867EDC80 /* proc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = proc.c; path = /Users/victorj/Projects/ish64/fs/proc.c; sourceTree = "<absolute>"; };
+		F55BFB479EB74AED8BF0976E /* epoll.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = epoll.c; path = /Users/victorj/Projects/ish64/kernel/epoll.c; sourceTree = "<absolute>"; };
+		F969189E81D34E72A728B340 /* tcp_input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcp_input.c; path = /Users/victorj/Projects/ish64/emu/tinyemu/slirp/tcp_input.c; sourceTree = "<absolute>"; };
+		FBA4E52303D04D4391BEBC0F /* vdso_stub.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vdso_stub.c; path = /Users/victorj/Projects/ish64/kernel/vdso_stub.c; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5EE2B8E8B1A34727B56BE47B /* Frameworks */ = {
+		09B436AA391243518E7042F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F90139A8880B45B090931A95 /* Frameworks */ = {
+		350A1B0A6A2740C291F8E07E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,182 +283,179 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0409A24C64754E6187EAEADF /* Resources */ = {
+		24CAEA6289C74937A791A075 = {
 			isa = PBXGroup;
 			children = (
-				E002F19398E64BF2A26054D2 /* Info.plist */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		079322ACCA474D6B81AC2AEF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6C2E7BD823964028AA8F1E2F /* ish64_ios.app */,
-				4CA3366631D84BAABBA0AF2A /* libishcore.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		0D0085BC8F2D4A19819E120F /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				9E636CCEB6434B799286DFCD /* main.m */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		1D5CBFFD0A15495DA442E16D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		571CF2239B874394A738A9DD = {
-			isa = PBXGroup;
-			children = (
-				5822A43AFDE04B2E9293E5DB /* ishcore */,
-				79EB9D1149CE488EB5A8BCBA /* ish64_ios */,
-				9327BD12B2E94C0CB3CBBA02 /* ALL_BUILD */,
-				079322ACCA474D6B81AC2AEF /* Products */,
-				F35E5C84FCD34B07B248813D /* Frameworks */,
-				1D5CBFFD0A15495DA442E16D /* Resources */,
+				9BAA52AC83F04F748B330399 /* ishcore */,
+				9EA66B6C650D45C790AE03D3 /* ish64_ios */,
+				32F4CE2C748F46D89E42F4BF /* ALL_BUILD */,
+				DF87A689E69D4FB894F8B8E6 /* Products */,
+				B09CBF916B534E09B80B5969 /* Frameworks */,
+				5D65DEB5B65344009B23D1CF /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
-		5822A43AFDE04B2E9293E5DB /* ishcore */ = {
+		32F4CE2C748F46D89E42F4BF /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-				F5B9B8F3306247BB93492A2F /* Source Files */,
-				996539C651BE4E0EBA46CD42 /* CMakeLists.txt */,
-			);
-			name = ishcore;
-			sourceTree = "<group>";
-		};
-		79EB9D1149CE488EB5A8BCBA /* ish64_ios */ = {
-			isa = PBXGroup;
-			children = (
-				0D0085BC8F2D4A19819E120F /* Source Files */,
-				0409A24C64754E6187EAEADF /* Resources */,
-				897D47D38CC74C2386D11224 /* CMakeLists.txt */,
-			);
-			name = ish64_ios;
-			sourceTree = "<group>";
-		};
-		9327BD12B2E94C0CB3CBBA02 /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				FB7CB5AA8C484464A90EC2A0 /* CMake Rules */,
-				ABA8DCD2E7F74F4DA63D4FC3 /* CMakeLists.txt */,
+				F647C950F2B44814AD4F4CB5 /* CMake Rules */,
+				3196A4D6F1A045CDA07DE5BF /* CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		F35E5C84FCD34B07B248813D /* Frameworks */ = {
+		5806479C21E64739BB5F9420 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				1039496C0DF345E09F9AF5FA /* backend_tinyemu.c */,
+				1AB926A0738D4B83BAAA59D8 /* float80-test.c */,
+				B3DA18EC00994BD78D6CC2D1 /* float80.c */,
+				CFF4D32A87CD4CCCB3097273 /* fpu.c */,
+				67CD5B0DFA47403E95589F13 /* mmx.c */,
+				554FBDCC70F24A009E0DDAE5 /* bootp.c */,
+				22181AF8EE78402183864B9A /* cksum.c */,
+				5CA72EE250094FD0A3F64C31 /* if.c */,
+				B3DBFC2478E1466C84A81BF4 /* ip_icmp.c */,
+				81A2B2ACAD7148B790DC5A03 /* ip_input.c */,
+				C030E63243BE4F1890E47810 /* ip_output.c */,
+				88CAF779317B42A0834AAF0B /* mbuf.c */,
+				94A48E5F5B44412B9B736DC3 /* misc.c */,
+				CC98378755BD4A3687E452E0 /* sbuf.c */,
+				62A3B4094B534000B15B86CE /* slirp.c */,
+				0FD54064B042405AABA90EE3 /* socket.c */,
+				F969189E81D34E72A728B340 /* tcp_input.c */,
+				CA7BF61C7F4840EBAC90BC48 /* tcp_output.c */,
+				093CCAB22BB64F6E94E7DF3F /* tcp_subr.c */,
+				4221A9AE6C91411A86CD8480 /* tcp_timer.c */,
+				C0F1E6FC62D04767A584C863 /* udp.c */,
+				D33CABB12B444B178EB7BF75 /* tlb.c */,
+				C2B3EAA307854FF9AA716F84 /* vec.c */,
+				3CC7A83F6C37459A8099D335 /* adhoc.c */,
+				8D507AEA63164026AB7B212E /* dev.c */,
+				90785F3A9FED45D386CC9EFA /* dir.c */,
+				9F95E91E67B648318687C170 /* dyndev.c */,
+				0B703464B995414FA9650162 /* fake-db.c */,
+				7BC5CB801EB7479F8F693170 /* fake-migrate.c */,
+				3706681802E34AE68908226D /* fake-rebuild.c */,
+				698FE39F909841498A827F9E /* fake.c */,
+				BA3A324EA12241A2AAD294E3 /* fd.c */,
+				1D6A99D5245247A6993C19F5 /* generic.c */,
+				73E15FE2968649918E247EE1 /* inode.c */,
+				19DAC9C6E49F4D73BEA3F983 /* lock.c */,
+				2CC83B31F36542BC94FD2A57 /* mem.c */,
+				98A5BD9BE2A2414489822C63 /* mount.c */,
+				B6D53A408CF7447A813FB34B /* path.c */,
+				C0BB1DEC80C346939C2674E7 /* pipe.c */,
+				4EFED943D3B242978472B25C /* poll.c */,
+				ED2F4F7958404240867EDC80 /* proc.c */,
+				8A981394E6DE4D208C81226D /* entry.c */,
+				314C6B60CCE64A668A4E0CD5 /* ish.c */,
+				1C1CFACC13984980AB594B1C /* pid.c */,
+				9B59A1C5F87A495D92CBFF1C /* root.c */,
+				BECB5B95FF89453F8E3D6E0A /* pty.c */,
+				E2E987713A7D45429C10BB5C /* real.c */,
+				3D918493DD1542BDB0C1A5DB /* sock.c */,
+				384D1598C9E6437FA73467B3 /* sockrestart.c */,
+				CA08FA1834544B8FA5AE2F7F /* stat.c */,
+				D53E4C28221E4F80B0FDEB3E /* tmp.c */,
+				2FF8FE67004C4B4C97BBBC58 /* tty-real.c */,
+				D9A6EB5BE54345FAB82F09E5 /* tty.c */,
+				55CB76862CA3417F94195B85 /* calls.c */,
+				F55BFB479EB74AED8BF0976E /* epoll.c */,
+				C96D9C0C150A4AB2BFFEF761 /* errno.c */,
+				33DA6979AD41457B88055248 /* eventfd.c */,
+				1F28CCCDEDA049C48CD6E39F /* exec.c */,
+				00E4A4CEC4054D88827075A4 /* exit.c */,
+				B665141859E445648ABD54AC /* fork.c */,
+				192CA8D308A548FDB15F7BDF /* fs.c */,
+				D187B910F5114507BCF8DEB4 /* fs_info.c */,
+				2A4E714CFF3A4D43B3A7C4D5 /* futex.c */,
+				ECF131AEF3A341859B634398 /* getset.c */,
+				602D3E86B5404D7D8D6985A9 /* group.c */,
+				9CE3497089B14CEF84D9DE2D /* init.c */,
+				2703529FAC6A433784E5A6A3 /* ipc.c */,
+				A424F03B9E654A0E9617F5E1 /* log.c */,
+				3C4EA14EFD2C454B832BC005 /* memory.c */,
+				200612E31FEF47CCB52ED207 /* misc.c */,
+				669CE00BE8684DB0A809EEBD /* mmap.c */,
+				D635467F90D14964AEFA9620 /* poll.c */,
+				62ED05CE8AEA4325B6D30CB7 /* ptrace.c */,
+				8885EDF1C0B84CF790E23C5F /* random.c */,
+				138A7FA2BE7E4167994D670B /* resource.c */,
+				6A4D6375FFC34D4F85502EE1 /* signal.c */,
+				15F1625BD5A14507B3E6E952 /* task.c */,
+				E671DA5A7ADC4ACEA7AAE78D /* time.c */,
+				182D1EEC722D4D80AC9CA259 /* tls.c */,
+				84094CB74F2D498BAB1E82F5 /* uname.c */,
+				532BEA0A8AF041D3A64C2CF1 /* user.c */,
+				FBA4E52303D04D4391BEBC0F /* vdso_stub.c */,
+				790E838B999541889A8EC436 /* fchdir.c */,
+				49E788FA5BB9411D9112CD58 /* fifo.c */,
+				AF3DACD64E4D47B1B2FE487F /* sync.c */,
+				476393B79C254EFD9DA9FF3A /* timer.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		5D65DEB5B65344009B23D1CF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9BAA52AC83F04F748B330399 /* ishcore */ = {
+			isa = PBXGroup;
+			children = (
+				5806479C21E64739BB5F9420 /* Source Files */,
+				E8BB6F37843A42A182A5AFE3 /* CMakeLists.txt */,
+			);
+			name = ishcore;
+			sourceTree = "<group>";
+		};
+		9EA66B6C650D45C790AE03D3 /* ish64_ios */ = {
+			isa = PBXGroup;
+			children = (
+				F56EB36708B147E599B36CB5 /* Source Files */,
+				D6A2DC15A2DF478DAAD259D4 /* Resources */,
+				0648C60AF5C8489D8E72844B /* CMakeLists.txt */,
+			);
+			name = ish64_ios;
+			sourceTree = "<group>";
+		};
+		B09CBF916B534E09B80B5969 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F5B9B8F3306247BB93492A2F /* Source Files */ = {
+		D6A2DC15A2DF478DAAD259D4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DAE057DF3C124E958B9276D5 /* backend_tinyemu.c */,
-				926E5694024B40B3B005DEE0 /* float80-test.c */,
-				5CC3F0BAF3214338ADEF46C1 /* float80.c */,
-				23955B4A14E043FDADA1B4F7 /* fpu.c */,
-				973C80690DBB430A8B2E746E /* mmx.c */,
-				6EAAD01A95AC445AAD38C37D /* bootp.c */,
-				5FD223E13F5A4C0A996B96AE /* cksum.c */,
-				EBBA12A5C0E347DA9A5641C6 /* if.c */,
-				949BC26AF93C46DCA6B2D6D6 /* ip_icmp.c */,
-				1F257176EFCA46C397F4B32D /* ip_input.c */,
-				22E0EE88EA1D49B389B22DCE /* ip_output.c */,
-				58A274D6A70441AEBDA13B0F /* mbuf.c */,
-				097EFAF5124B416793CC7CD8 /* misc.c */,
-				8C61F25CA2E34625895FF348 /* sbuf.c */,
-				3344AD90EEC14BB59056B9BD /* slirp.c */,
-				540BC6EF6EFD4E47849F1CA7 /* socket.c */,
-				8119A10D5ECC4BDBB1DEDD2B /* tcp_input.c */,
-				FA63FBA3BAB148728CA687B8 /* tcp_output.c */,
-				7A0F144D1C244FE9964105AD /* tcp_subr.c */,
-				D6A80B5940024B9A9DF71FA2 /* tcp_timer.c */,
-				1B735B227AAB4197B9A314AD /* udp.c */,
-				65DAD60CA8884D9C8D24F8EC /* tlb.c */,
-				25CF67CBF7DD44D0B6B079B1 /* vec.c */,
-				6BAE0A87C10043C6BF050639 /* adhoc.c */,
-				FB715C17AADE4DA6A2CF66BB /* dev.c */,
-				5B218EAFF4344B31BF741008 /* dir.c */,
-				2B1DAED336744255A9AB00BA /* dyndev.c */,
-				A5D3614DB55446C3B3838B68 /* fake-db.c */,
-				586DD80A37134418A9DB7F49 /* fake-migrate.c */,
-				3CBF66EFBBB149C98426A21C /* fake-rebuild.c */,
-				221A5A626A534E88832000DA /* fake.c */,
-				CCAD7E17E5B24E96B18276D2 /* fd.c */,
-				479B96B01D81480CB31E0FBF /* generic.c */,
-				62DF737FA6D74C18B95E04B1 /* inode.c */,
-				6478C3FD8AC849B8B84AB88D /* lock.c */,
-				EE38FC4FCF0148258FE32BFB /* mem.c */,
-				07F7E56FBFA2426388CBA6B8 /* mount.c */,
-				D9F0EB18F3E1406E81D78E9E /* path.c */,
-				3A83FC87078144E19E2D9986 /* pipe.c */,
-				F22399B61CAD49C2802C16CC /* poll.c */,
-				B829F64B437842DF92050E5F /* proc.c */,
-				A25A43C9F3CE47A381981F90 /* entry.c */,
-				3D1FFB27F2514BFA96BAAF08 /* ish.c */,
-				EB4246186EEF497599EC9BB2 /* pid.c */,
-				283E3B04C9394F70955F288B /* root.c */,
-				5F3EDD4760514329A3C726F5 /* pty.c */,
-				3F55D00B48B748A3BEC2A50B /* real.c */,
-				6A267D0AF7CD421A80247A04 /* sock.c */,
-				13859B82DE9C41C8BBA78F68 /* sockrestart.c */,
-				521EF505AE3349139BDDC7B3 /* stat.c */,
-				B7AA0B031D944BB7B84C463B /* tmp.c */,
-				0CB61E4938B0418D822810C2 /* tty-real.c */,
-				9F11D600416D4A059471B245 /* tty.c */,
-				027FE35C8D1243108AB23854 /* calls.c */,
-				180BDDBBCECE4DB6B151A78C /* epoll.c */,
-				62759A2F849B414383B3DD46 /* errno.c */,
-				E4D94ECCA1F348EDAC7397D8 /* eventfd.c */,
-				A93E4E22E71140BCAA6A6C46 /* exec.c */,
-				349BEA04D6C04B5FBCC236C4 /* exit.c */,
-				6A2AC0E8453244E198FBB186 /* fork.c */,
-				283787699F2742D296F34E71 /* fs.c */,
-				D9699CBBEDAE4A61B2897DFE /* fs_info.c */,
-				C366AC8390174470B690F4A6 /* futex.c */,
-				320B907951654332909B9939 /* getset.c */,
-				062551F4055D466F937E3733 /* group.c */,
-				A7E85DFF72AC42C8ABD7BDC4 /* init.c */,
-				B0B96A31B09E4BB9B05E0473 /* ipc.c */,
-				865EBCB02C204C9A938C6FDA /* log.c */,
-				6474D64BEC714ADC9F73143B /* memory.c */,
-				6FF63639742B42A38A65D2AF /* misc.c */,
-				190F68C43A0F4DC18F49731F /* mmap.c */,
-				6692A5B9AE39440E8BA4B7A2 /* poll.c */,
-				9E059229A1D341ECA651F278 /* ptrace.c */,
-				48229F1535F040FB8293048C /* random.c */,
-				4FC25CCF834946B4A8214F1C /* resource.c */,
-				073739F0C8D44D8B91C9FA7C /* signal.c */,
-				841BBEE13D95427A91EFE4AB /* task.c */,
-				E9F3D23D3A064524872A6337 /* time.c */,
-				579649FE97BE4336A4F87EC4 /* tls.c */,
-				D235DE71901A43D3AEB6F3DB /* uname.c */,
-				B41782FC988E4C3BAB3A516A /* user.c */,
-				303929D9B7FE4C279ED9B6D9 /* vdso_stub.c */,
-				031666F1F0874E98A8841DA8 /* fchdir.c */,
-				7195DCDDF349465382A43E23 /* fifo.c */,
-				7F704F7E16B24746B7579E11 /* sync.c */,
-				9EE768580C934C4CA64A7300 /* timer.c */,
-				1563D7782ED7CA1A0076A4CF /* slirp.h */,
-				1563D7792ED7CA1C0076A4CF /* slirp 2.h */,
-				1563D77A2ED7CAF90076A4CF /* slirp 3.h */,
+				C6F90695285A4570B0E4F0A8 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DF87A689E69D4FB894F8B8E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAB99BE9194D4889B2A8264B /* ish64_ios.app */,
+				E5719D7BC52340B1AD5CEC0F /* libishcore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F56EB36708B147E599B36CB5 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AD42A9EAF4F4B64A39FBB25 /* main.m */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		FB7CB5AA8C484464A90EC2A0 /* CMake Rules */ = {
+		F647C950F2B44814AD4F4CB5 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -473,48 +467,48 @@
 /* Begin PBXNativeTarget section */
 		05642E34347F3263CE9C1150 /* ishcore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8CE3AC6FC1A34D2682DCC28D /* Build configuration list for PBXNativeTarget "ishcore" */;
+			buildConfigurationList = A4EA7CA556644BEF841873B7 /* Build configuration list for PBXNativeTarget "ishcore" */;
 			buildPhases = (
-				47724ECA0B5B4907882597DA /* Sources */,
-				F90139A8880B45B090931A95 /* Frameworks */,
+				69101249544549F48235A122 /* Sources */,
+				09B436AA391243518E7042F1 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3DFBD7EC3A4143C4A5E82926 /* PBXTargetDependency */,
+				9857484D73184572B544DE56 /* PBXTargetDependency */,
 			);
 			name = ishcore;
 			productName = ishcore;
-			productReference = 4CA3366631D84BAABBA0AF2A /* libishcore.a */;
+			productReference = E5719D7BC52340B1AD5CEC0F /* libishcore.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		6E975F6907B711E962AA1D87 /* ish64_ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 182A6E8061294D099F418EBB /* Build configuration list for PBXNativeTarget "ish64_ios" */;
+			buildConfigurationList = EE389942853D44AEA34E4156 /* Build configuration list for PBXNativeTarget "ish64_ios" */;
 			buildPhases = (
-				7E22AB7BA0AC453A8BAE6EC4 /* Sources */,
-				5EE2B8E8B1A34727B56BE47B /* Frameworks */,
+				849AB17092634FA1B2AEC557 /* Sources */,
+				350A1B0A6A2740C291F8E07E /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7E1F30347B9647D694890C55 /* PBXTargetDependency */,
-				BD308E83DFD848F6B2FB5A7E /* PBXTargetDependency */,
+				6ACE1276D0264F0BBB06B674 /* PBXTargetDependency */,
+				4DE216F7F23742BD94E6BD09 /* PBXTargetDependency */,
 			);
 			name = ish64_ios;
 			productName = ish64_ios;
-			productReference = 6C2E7BD823964028AA8F1E2F /* ish64_ios.app */;
+			productReference = DAB99BE9194D4889B2A8264B /* ish64_ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B0517170754F4722B264E685 /* Project object */ = {
+		0E08370096F84B83907A628A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 2600;
 			};
-			buildConfigurationList = D4330A164C834BF389768C93 /* Build configuration list for PBXProject "ish64_ios" */;
+			buildConfigurationList = C2451FD1793043E792523615 /* Build configuration list for PBXProject "ish64_ios" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -522,7 +516,7 @@
 				en,
 				Base,
 			);
-			mainGroup = 571CF2239B874394A738A9DD;
+			mainGroup = 24CAEA6289C74937A791A075;
 			projectDirPath = /Users/victorj/Projects/ish64/ios;
 			projectRoot = "";
 			targets = (
@@ -572,169 +566,144 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		47724ECA0B5B4907882597DA /* Sources */ = {
+		69101249544549F48235A122 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD26372BF2624CBCBC132C4C /* backend_tinyemu.c in Sources */,
-				9A6DAF7F66F94B7A9F6B0A71 /* float80-test.c in Sources */,
-				4A1D10A1AA184BCB856427E1 /* float80.c in Sources */,
-				59D5CB44F2C348088EB9444D /* fpu.c in Sources */,
-				89847886DEBD4391AAB986CE /* mmx.c in Sources */,
-				9603E22BA94A4765AC698948 /* bootp.c in Sources */,
-				B7381CD21DAA468195E04746 /* cksum.c in Sources */,
-				A0E7477C175E49B08FF004A4 /* if.c in Sources */,
-				F4711D7A51594CCABD4E9184 /* ip_icmp.c in Sources */,
-				090EB7C2758141D2B38B36E8 /* ip_input.c in Sources */,
-				0D96383501374E6682F91A97 /* ip_output.c in Sources */,
-				FF8C58AAD1D1458982E889D8 /* mbuf.c in Sources */,
-				623C68C0EE3D4171A996F713 /* misc.c in Sources */,
-				7520B16C42094BC884646B09 /* sbuf.c in Sources */,
-				1969A9096C06400D90895E1D /* slirp.c in Sources */,
-				46AC363209B2466BA973BFB1 /* socket.c in Sources */,
-				9FDAADD1B27E4E0EBF747240 /* tcp_input.c in Sources */,
-				2CC73F6D840E41D5A3F163A1 /* tcp_output.c in Sources */,
-				45A14FE7258442238A2F69A7 /* tcp_subr.c in Sources */,
-				FCB0540D90C242F7AEB59BE7 /* tcp_timer.c in Sources */,
-				D266B6D28A644AA29A238777 /* udp.c in Sources */,
-				E03EEC8F031B4904A3EFD97A /* tlb.c in Sources */,
-				7640F696598C4B159891BEAC /* vec.c in Sources */,
-				028DE8E3139E4B848E8F8D6E /* adhoc.c in Sources */,
-				DED45682CD3B4CC9882700F3 /* dev.c in Sources */,
-				AA21FA3D21BA4B47B65FB621 /* dir.c in Sources */,
-				5A5C3E99342540A487BCC39A /* dyndev.c in Sources */,
-				0DE94BC97E6F403F96813E45 /* fake-db.c in Sources */,
-				4B605418E6294E98B40D460A /* fake-migrate.c in Sources */,
-				687D87AEF80540A3B187C66C /* fake-rebuild.c in Sources */,
-				249EA56106CA4C2281C0B209 /* fake.c in Sources */,
-				6336DC99736645C0BA2CCD6B /* fd.c in Sources */,
-				AC1395A4D8F24D27879BCF0F /* generic.c in Sources */,
-				5AD8E32B807749019853D806 /* inode.c in Sources */,
-				1DD79094545F4EC7AF5B44AD /* lock.c in Sources */,
-				5E0E1AA2F3934262B7872BC1 /* mem.c in Sources */,
-				EC1D92A568704F85BA7F79A7 /* mount.c in Sources */,
-				A3D496615AD243059575C702 /* path.c in Sources */,
-				4089E36623A04B71BEC43E76 /* pipe.c in Sources */,
-				EAF663DC60C04114B5EEA82F /* poll.c in Sources */,
-				75E5FB423B2C42A8882FC28C /* proc.c in Sources */,
-				052204D69D864B2AACF178CB /* entry.c in Sources */,
-				2280F13F335F4C0792965C1A /* ish.c in Sources */,
-				EAECDC118E2841DABD186570 /* pid.c in Sources */,
-				799663B2FFE84B659C7E1AEC /* root.c in Sources */,
-				68B583930D604D3DBEDE8A5A /* pty.c in Sources */,
-				6EB8B4367C49438BA1B4B15E /* real.c in Sources */,
-				C1FFB3708F234FCA929C4911 /* sock.c in Sources */,
-				AA3106AF3C23462AAD6BA587 /* sockrestart.c in Sources */,
-				CFD6D560476B4DCFBBAF1FEB /* stat.c in Sources */,
-				EB851FD954F4433D8DC169E7 /* tmp.c in Sources */,
-				28E4C29325A84013958E64B3 /* tty-real.c in Sources */,
-				18ECB075E580405FA31CE9B8 /* tty.c in Sources */,
-				A841CD76E6284BBCB4A66C1B /* calls.c in Sources */,
-				845C47E49F604E57BC46F0AA /* epoll.c in Sources */,
-				EAD4E74E81204E9B81E7A66E /* errno.c in Sources */,
-				B0E94C6C9ACD4B8D9FBEA2E9 /* eventfd.c in Sources */,
-				AA6B8815A4C741C4B658147A /* exec.c in Sources */,
-				893CEE77E73A436F948ED1C7 /* exit.c in Sources */,
-				30D2EF9E81584A21B75F666C /* fork.c in Sources */,
-				A6DFBBE5C10049EFBA430D9C /* fs.c in Sources */,
-				8011B2A1BA2B457880C13937 /* fs_info.c in Sources */,
-				B505835E67BE47049936221F /* futex.c in Sources */,
-				37FE174AA8E341EBA941695F /* getset.c in Sources */,
-				B46800375D5748148BB555CD /* group.c in Sources */,
-				087381588C214E3A8E1F364B /* init.c in Sources */,
-				C32BBB24BE9D4B159839C438 /* ipc.c in Sources */,
-				A31BDB42ACAE443888C724A4 /* log.c in Sources */,
-				6B704367D96A4A488D120930 /* memory.c in Sources */,
-				AFA74182238E47D5A589AE73 /* misc.c in Sources */,
-				B963F8979754439CA3F2593F /* mmap.c in Sources */,
-				EA1E7C95CF2E41D389602F16 /* poll.c in Sources */,
-				522239EB1E8B4F528E840394 /* ptrace.c in Sources */,
-				B69A3AF7B2E543AEA3ACD89F /* random.c in Sources */,
-				3D16F09C3BAE44CE84FE84BF /* resource.c in Sources */,
-				9F9A02115BAA427891C68234 /* signal.c in Sources */,
-				22466CF076FF4726AA589C7E /* task.c in Sources */,
-				41F7A7B06DB3443C9234F8D2 /* time.c in Sources */,
-				869E8AF0FAA344159112DB4D /* tls.c in Sources */,
-				EB06155403714C709B118E8C /* uname.c in Sources */,
-				5204A4EB4B0B4AF6A86128E9 /* user.c in Sources */,
-				CA9BE7806A5344F59826AAE0 /* vdso_stub.c in Sources */,
-				E479DCE6654745A3B76FB246 /* fchdir.c in Sources */,
-				B4012FFCF8CF464DB687E194 /* fifo.c in Sources */,
-				2AC22367B21A456DBB764A48 /* sync.c in Sources */,
-				8B165F8AEA5141AF8A322A10 /* timer.c in Sources */,
+				959FEA86B8A047BA87E1CFD1 /* backend_tinyemu.c in Sources */,
+				AD49C5E2C87C476283DC52AF /* float80-test.c in Sources */,
+				E3ADAEBE0EC44AC8A4A6EAFB /* float80.c in Sources */,
+				B13B94B1ABE449A6A1431712 /* fpu.c in Sources */,
+				4897D6C668FF46C39C034EFF /* mmx.c in Sources */,
+				92CABCBF60B94E878C856BDB /* bootp.c in Sources */,
+				A120DBD3ADFD4F3C94E8C230 /* cksum.c in Sources */,
+				1C0E4C4D2BC0481BB04D57BE /* if.c in Sources */,
+				B061AA68572849829DFF5521 /* ip_icmp.c in Sources */,
+				66604C7AD5F246BCB03B9643 /* ip_input.c in Sources */,
+				24F7F3930D2D4296AB2A2F6B /* ip_output.c in Sources */,
+				5FF77D94E1DD415DA34D8602 /* mbuf.c in Sources */,
+				C78A67AC57FE42EDAF6A0420 /* misc.c in Sources */,
+				CFDD932795DB4F338177015D /* sbuf.c in Sources */,
+				6FB96DF2EE2A410785630091 /* slirp.c in Sources */,
+				586F0556E5CD4EC7A528355B /* socket.c in Sources */,
+				363545383DC84B73AB94B6F1 /* tcp_input.c in Sources */,
+				806621969EB34166B76E4D25 /* tcp_output.c in Sources */,
+				A98683EC038547F6821C3B5B /* tcp_subr.c in Sources */,
+				282C4D08C4434490B8849872 /* tcp_timer.c in Sources */,
+				246478E3B9C9400BA9B28B65 /* udp.c in Sources */,
+				2935F7A9E33E4953956DA051 /* tlb.c in Sources */,
+				734AD8DA178D438FA07F6875 /* vec.c in Sources */,
+				582B2E1C17884034B46F9FC1 /* adhoc.c in Sources */,
+				0896BF95FDA047898785EF7B /* dev.c in Sources */,
+				3065B3C0E4D446D19F015E37 /* dir.c in Sources */,
+				9DE5A836D7D843069B5804FD /* dyndev.c in Sources */,
+				F8A9508281604105A0719960 /* fake-db.c in Sources */,
+				49C22F55372245D9953EC936 /* fake-migrate.c in Sources */,
+				A54A97C2007046FC97DBE309 /* fake-rebuild.c in Sources */,
+				4B9D34389A564BFC82CE06BD /* fake.c in Sources */,
+				FB7054CD744143D3A9271022 /* fd.c in Sources */,
+				F15F5E3B4D604377A096B814 /* generic.c in Sources */,
+				5326959E451242FAB47E59F0 /* inode.c in Sources */,
+				477912442DB94FA1990B532F /* lock.c in Sources */,
+				FAAC65DA99C6459FB381F46D /* mem.c in Sources */,
+				1B831FDDA94D4A50ABC4DA32 /* mount.c in Sources */,
+				852FE27987EE49C5AD41087F /* path.c in Sources */,
+				2E33746136614D0D868EC53D /* pipe.c in Sources */,
+				24E1EE60B6FA4F9694E44E30 /* poll.c in Sources */,
+				62391BCAFD334A0BB9114993 /* proc.c in Sources */,
+				25D43DA72E0F4328811A7E0C /* entry.c in Sources */,
+				6578D685BBDA4D1C97831421 /* ish.c in Sources */,
+				F1033790C4E242C481D3F803 /* pid.c in Sources */,
+				0ED002B800F6448F98BF80C4 /* root.c in Sources */,
+				043E76A3061A40DD8A9C1590 /* pty.c in Sources */,
+				9213ADA4EAD246DCBB701D60 /* real.c in Sources */,
+				43F529809B96461B9BC368D9 /* sock.c in Sources */,
+				D262212DDB184FB8BFBB9969 /* sockrestart.c in Sources */,
+				70321FEA9C5D45449BC66C79 /* stat.c in Sources */,
+				5511C572572945ECA3E4FF5E /* tmp.c in Sources */,
+				52998851F68B44FF84458081 /* tty-real.c in Sources */,
+				2DD1ADF523F0425897B5D95B /* tty.c in Sources */,
+				E02A53DE626F4538AF478A1A /* calls.c in Sources */,
+				691C1888079044EFA7FA19BF /* epoll.c in Sources */,
+				A913FBBED84F435CABA2D19B /* errno.c in Sources */,
+				4E146D75EF3C4ADAB4704108 /* eventfd.c in Sources */,
+				422C76F4567648678D8CADB9 /* exec.c in Sources */,
+				DF7826DBCE2A43179C24CAD3 /* exit.c in Sources */,
+				CB1073B3F10F4599B8F3E7D0 /* fork.c in Sources */,
+				845AD0F4E31945F9AA97E8BB /* fs.c in Sources */,
+				16C8F41F8D6D48ED8B051CE3 /* fs_info.c in Sources */,
+				31BB318B7B094AA3BE348AF3 /* futex.c in Sources */,
+				68F741FFC8914481BBC1F2C7 /* getset.c in Sources */,
+				2D8670D2E6664CC4B8109B39 /* group.c in Sources */,
+				F3CD02D5F23047658A1F7D3F /* init.c in Sources */,
+				65A1FC70ACBA465183142905 /* ipc.c in Sources */,
+				55BFE27A57C549D0BFB39245 /* log.c in Sources */,
+				E2F00B036006475FA5AE83F9 /* memory.c in Sources */,
+				5D1618FA621841AF9CD9E2DA /* misc.c in Sources */,
+				212CAADAEF1E430A817A4A9A /* mmap.c in Sources */,
+				DDFB7B466FE347FFA0B1A8B5 /* poll.c in Sources */,
+				C7429CEFC3224725B8DA6ADC /* ptrace.c in Sources */,
+				C7F470F586EB48ABB510E7BC /* random.c in Sources */,
+				E8DCF512699944F19C646A95 /* resource.c in Sources */,
+				A96AAD2483DF4E76B9A3E938 /* signal.c in Sources */,
+				72AD2CA29BF342C3986BAEB7 /* task.c in Sources */,
+				2F684F4889F24C9F918B5CCA /* time.c in Sources */,
+				981FF1D501704B92A5AA0D38 /* tls.c in Sources */,
+				628E75C54C8C45FF99824445 /* uname.c in Sources */,
+				C7DC3328B6E4407691ADCC00 /* user.c in Sources */,
+				B8EF8C7C30994B0F950ACD86 /* vdso_stub.c in Sources */,
+				172718A6D1A34E208C5D8AF6 /* fchdir.c in Sources */,
+				14D4017CF3654E05B8CEE491 /* fifo.c in Sources */,
+				9A035F3EA8984D529AB92F30 /* sync.c in Sources */,
+				71C60E7AFF3E49ED98D51BEC /* timer.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7E22AB7BA0AC453A8BAE6EC4 /* Sources */ = {
+		849AB17092634FA1B2AEC557 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FF916317C3E4ED683299BA9 /* main.m in Sources */,
+				AE4976BB40E9490C931F6A1C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		221E77FB0AC549E7999431F4 /* PBXTargetDependency */ = {
+		0177F8D9C13D47158627CD57 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1AE011348B354AC708153261 /* ZERO_CHECK */;
-			targetProxy = E86E625B68C64FBA8127314F /* PBXContainerItemProxy */;
+			targetProxy = 25FF475B26984A318429C4AD /* PBXContainerItemProxy */;
 		};
-		3DFBD7EC3A4143C4A5E82926 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1AE011348B354AC708153261 /* ZERO_CHECK */;
-			targetProxy = 08D32C63C0D94E95B3078DAF /* PBXContainerItemProxy */;
-		};
-		7097C2B4266443EDB7CF5D71 /* PBXTargetDependency */ = {
+		1C13BA8CCB864A20B0213921 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6E975F6907B711E962AA1D87 /* ish64_ios */;
-			targetProxy = 161A48BB443046F08A15A2EB /* PBXContainerItemProxy */;
+			targetProxy = 0185BCA0059F44509AD1FFD8 /* PBXContainerItemProxy */;
 		};
-		7E1F30347B9647D694890C55 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 05642E34347F3263CE9C1150 /* ishcore */;
-			targetProxy = 16ED9328813B496D991104C1 /* PBXContainerItemProxy */;
-		};
-		BD308E83DFD848F6B2FB5A7E /* PBXTargetDependency */ = {
+		4DE216F7F23742BD94E6BD09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1AE011348B354AC708153261 /* ZERO_CHECK */;
-			targetProxy = 086BAB73C405443093B80FFC /* PBXContainerItemProxy */;
+			targetProxy = C408AA8E0E6A4AE4BE9BDA2A /* PBXContainerItemProxy */;
 		};
-		F46729A3D9A04307977BD3BB /* PBXTargetDependency */ = {
+		6ACE1276D0264F0BBB06B674 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 05642E34347F3263CE9C1150 /* ishcore */;
-			targetProxy = 7F32425A233E46EB80EC8207 /* PBXContainerItemProxy */;
+			targetProxy = 8D125429D513419E97B91BD7 /* PBXContainerItemProxy */;
+		};
+		9857484D73184572B544DE56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AE011348B354AC708153261 /* ZERO_CHECK */;
+			targetProxy = 3C72C5CEB6C940F7913BDC48 /* PBXContainerItemProxy */;
+		};
+		F0280CC317B14FC1B81E12C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05642E34347F3263CE9C1150 /* ishcore */;
+			targetProxy = 575C0C6DACD2432880B78ECB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0570532E8F5B4E1B80B40536 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = " $(inherited)";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = Release;
-		};
-		10DA66132D7944869272BFB2 /* Debug */ = {
+		1B5C110D48D44ACD840AB60A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -757,9 +726,9 @@
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
-			name = Debug;
+			name = Release;
 		};
-		13FC8480502244A2991AF614 /* Debug */ = {
+		1F7FA2F6B5A64150A55575BA /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -782,9 +751,9 @@
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
-			name = Debug;
+			name = RelWithDebInfo;
 		};
-		154BCD7A77D9480A898F5FB3 /* Release */ = {
+		21AAC916A0954EB6B273CC8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -829,432 +798,7 @@
 			};
 			name = Release;
 		};
-		1D17B68F48204111A6EAC12E /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = " $(inherited)";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = MinSizeRel;
-		};
-		2DBCD994CCF44EA3827A307D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				SDKROOT = iphoneos;
-				SYMROOT = "/Users/victorj/Projects/ish64/ios/build-xcode/build";
-			};
-			name = Debug;
-		};
-		355AD46BDC77401E8DCCCF78 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = " $(inherited)";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = Release;
-		};
-		6A7697374DDB463CA0CB0B8F /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/RelWithDebInfo${EFFECTIVE_PLATFORM_NAME}";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					/Users/victorj/Projects/ish64/ios/..,
-					/Users/victorj/Projects/ish64/ios/../include,
-					/Users/victorj/Projects/ish64/ios/../kernel,
-					/Users/victorj/Projects/ish64/ios/../fs,
-					/Users/victorj/Projects/ish64/ios/../emu,
-					/Users/victorj/Projects/ish64/ios/../util,
-					"$(inherited)",
-				);
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = (
-					"-I/usr/include",
-					"-I/opt/homebrew/opt/openssl@3/include",
-					"-DNDEBUG",
-					"$(inherited)",
-				);
-				OTHER_LIBTOOLFLAGS = "";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ishcore;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = RelWithDebInfo;
-		};
-		7477F218C80E4081849D0448 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = " $(inherited)";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = RelWithDebInfo;
-		};
-		7BCFBBB70FC946A0B0707C67 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/MinSizeRel${EFFECTIVE_PLATFORM_NAME}";
-				DEVELOPMENT_TEAM = 9XFS693LL9;
-				EXECUTABLE_PREFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					/Users/victorj/Projects/ish64/ios/..,
-					/Users/victorj/Projects/ish64/ios/../include,
-					/Users/victorj/Projects/ish64/ios/../kernel,
-					/Users/victorj/Projects/ish64/ios/../fs,
-					/Users/victorj/Projects/ish64/ios/../emu,
-					/Users/victorj/Projects/ish64/ios/../util,
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/ish64_ios.dir/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "com.victorj.ish64-ios\nish64";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = (
-					"-DNDEBUG",
-					"'-std=gnu17'",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = (
-					"-L/opt/homebrew/opt/libxcrypt/lib",
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"/Users/victorj/Projects/ish64/ios/build-xcode/MinSizeRel${EFFECTIVE_PLATFORM_NAME}/libishcore.a",
-					"-framework",
-					UIKit,
-					"-framework",
-					Foundation,
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.victorj.ish64-ios";
-				PRODUCT_NAME = ish64_ios;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ish64_ios.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = MinSizeRel;
-		};
-		8A697BDB15D9420F826F7C25 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/Debug${EFFECTIVE_PLATFORM_NAME}";
-				DEVELOPMENT_TEAM = 9XFS693LL9;
-				EXECUTABLE_PREFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					/Users/victorj/Projects/ish64/ios/..,
-					/Users/victorj/Projects/ish64/ios/../include,
-					/Users/victorj/Projects/ish64/ios/../kernel,
-					/Users/victorj/Projects/ish64/ios/../fs,
-					/Users/victorj/Projects/ish64/ios/../emu,
-					/Users/victorj/Projects/ish64/ios/../util,
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/ish64_ios.dir/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "com.victorj.ish64-ios\nish64";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = (
-					"'-std=gnu17'",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = (
-					"-L/opt/homebrew/opt/libxcrypt/lib",
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"/Users/victorj/Projects/ish64/ios/build-xcode/Debug${EFFECTIVE_PLATFORM_NAME}/libishcore.a",
-					"-framework",
-					UIKit,
-					"-framework",
-					Foundation,
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.victorj.ish64-ios";
-				PRODUCT_NAME = ish64_ios;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ish64_ios.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = Debug;
-		};
-		AD16DF7BA7FD4342854AF214 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = " $(inherited)";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = RelWithDebInfo;
-		};
-		CE5B7663073B4ABBBD962ACA /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/RelWithDebInfo${EFFECTIVE_PLATFORM_NAME}";
-				DEVELOPMENT_TEAM = 9XFS693LL9;
-				EXECUTABLE_PREFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					/Users/victorj/Projects/ish64/ios/..,
-					/Users/victorj/Projects/ish64/ios/../include,
-					/Users/victorj/Projects/ish64/ios/../kernel,
-					/Users/victorj/Projects/ish64/ios/../fs,
-					/Users/victorj/Projects/ish64/ios/../emu,
-					/Users/victorj/Projects/ish64/ios/../util,
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/ish64_ios.dir/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "com.victorj.ish64-ios\nish64";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = (
-					"-DNDEBUG",
-					"'-std=gnu17'",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = (
-					"-L/opt/homebrew/opt/libxcrypt/lib",
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"/Users/victorj/Projects/ish64/ios/build-xcode/RelWithDebInfo${EFFECTIVE_PLATFORM_NAME}/libishcore.a",
-					"-framework",
-					UIKit,
-					"-framework",
-					Foundation,
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.victorj.ish64-ios";
-				PRODUCT_NAME = ish64_ios;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ish64_ios.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = RelWithDebInfo;
-		};
-		CFDD26B0ABBE48649BE348D3 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = "/Users/victorj/Projects/ish64/ios/build-xcode/build";
-			};
-			name = RelWithDebInfo;
-		};
-		D4B16DCFD3874AE9AF8717EC /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/MinSizeRel${EFFECTIVE_PLATFORM_NAME}";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					/Users/victorj/Projects/ish64/ios/..,
-					/Users/victorj/Projects/ish64/ios/../include,
-					/Users/victorj/Projects/ish64/ios/../kernel,
-					/Users/victorj/Projects/ish64/ios/../fs,
-					/Users/victorj/Projects/ish64/ios/../emu,
-					/Users/victorj/Projects/ish64/ios/../util,
-					"$(inherited)",
-				);
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = (
-					"-I/usr/include",
-					"-I/opt/homebrew/opt/openssl@3/include",
-					"-DNDEBUG",
-					"$(inherited)",
-				);
-				OTHER_LIBTOOLFLAGS = "";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ishcore;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = MinSizeRel;
-		};
-		E2A661F0997144F99D4F27B6 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = "/Users/victorj/Projects/ish64/ios/build-xcode/build";
-			};
-			name = MinSizeRel;
-		};
-		E83D6B3BA0F9458B80B02B07 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = " $(inherited)";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = MinSizeRel;
-		};
-		E9D39AF099AF4B8BA112560F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = "/Users/victorj/Projects/ish64/ios/build-xcode/build";
-			};
-			name = Release;
-		};
-		F97F57B426D84D6E9808E45D /* Release */ = {
+		30CAB1546083482BB45E418B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1263,6 +807,7 @@
 				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/Release${EFFECTIVE_PLATFORM_NAME}";
 				DEVELOPMENT_TEAM = 9XFS693LL9;
 				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
@@ -1281,8 +826,6 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/ish64_ios.dir/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "com.victorj.ish64-ios\nish64";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INSTALL_PATH = "";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -1291,7 +834,7 @@
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
-					"-L/opt/homebrew/opt/libxcrypt/lib",
+					"-L/opt/homebrew/opt/libxml2/lib",
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
 					"/Users/victorj/Projects/ish64/ios/build-xcode/Release${EFFECTIVE_PLATFORM_NAME}/libishcore.a",
@@ -1301,17 +844,293 @@
 					Foundation,
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.victorj.ish64-ios";
+				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ish64_ios;
 				SECTORDER_FLAGS = "";
 				TARGET_TEMP_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ish64_ios.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				"TARGET_TEMP_DIR[arch=*]" = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ish64_ios.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
 			name = Release;
 		};
-		FE446D229EDC46ABAF4C3C02 /* Debug */ = {
+		3DB0457A4563458AA928BCA4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/RelWithDebInfo${EFFECTIVE_PLATFORM_NAME}";
+				DEVELOPMENT_TEAM = 9XFS693LL9;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/victorj/Projects/ish64/ios/..,
+					/Users/victorj/Projects/ish64/ios/../include,
+					/Users/victorj/Projects/ish64/ios/../kernel,
+					/Users/victorj/Projects/ish64/ios/../fs,
+					/Users/victorj/Projects/ish64/ios/../emu,
+					/Users/victorj/Projects/ish64/ios/../util,
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/ish64_ios.dir/Info.plist";
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu17'",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-L/opt/homebrew/opt/libxml2/lib",
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/victorj/Projects/ish64/ios/build-xcode/RelWithDebInfo${EFFECTIVE_PLATFORM_NAME}/libishcore.a",
+					"-framework",
+					UIKit,
+					"-framework",
+					Foundation,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ish64_ios;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ish64_ios.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		4791C60E950F4BF2AC9A304B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/RelWithDebInfo${EFFECTIVE_PLATFORM_NAME}";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/victorj/Projects/ish64/ios/..,
+					/Users/victorj/Projects/ish64/ios/../include,
+					/Users/victorj/Projects/ish64/ios/../kernel,
+					/Users/victorj/Projects/ish64/ios/../fs,
+					/Users/victorj/Projects/ish64/ios/../emu,
+					/Users/victorj/Projects/ish64/ios/../util,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-I/usr/include",
+					"-I/opt/homebrew/opt/openssl@3/include",
+					"-DNDEBUG",
+					"$(inherited)",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ishcore;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		4EA441B8E449443FA8EB0BDF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/victorj/Projects/ish64/ios/build-xcode/build";
+			};
+			name = RelWithDebInfo;
+		};
+		55ED9B1E943D4103B0110D79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		6A4E6B3089E44919A6F0F79D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/MinSizeRel${EFFECTIVE_PLATFORM_NAME}";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/victorj/Projects/ish64/ios/..,
+					/Users/victorj/Projects/ish64/ios/../include,
+					/Users/victorj/Projects/ish64/ios/../kernel,
+					/Users/victorj/Projects/ish64/ios/../fs,
+					/Users/victorj/Projects/ish64/ios/../emu,
+					/Users/victorj/Projects/ish64/ios/../util,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-I/usr/include",
+					"-I/opt/homebrew/opt/openssl@3/include",
+					"-DNDEBUG",
+					"$(inherited)",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ishcore;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ishcore.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		748379EB7BA241EFAA8E2F19 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/victorj/Projects/ish64/ios/build-xcode/build";
+			};
+			name = MinSizeRel;
+		};
+		8DDF25B3EC904ABAB2548AC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		9A1A725E60F947DC895E134F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		9B969616BA914A1CB4654FF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SYMROOT = "/Users/victorj/Projects/ish64/ios/build-xcode/build";
+			};
+			name = Debug;
+		};
+		A28A41B3CBA34CF8A95C62C8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		A4AB515242B04B7D831785AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1355,65 +1174,235 @@
 			};
 			name = Debug;
 		};
+		AB7CA5990DEF4F11B9776261 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/MinSizeRel${EFFECTIVE_PLATFORM_NAME}";
+				DEVELOPMENT_TEAM = 9XFS693LL9;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/victorj/Projects/ish64/ios/..,
+					/Users/victorj/Projects/ish64/ios/../include,
+					/Users/victorj/Projects/ish64/ios/../kernel,
+					/Users/victorj/Projects/ish64/ios/../fs,
+					/Users/victorj/Projects/ish64/ios/../emu,
+					/Users/victorj/Projects/ish64/ios/../util,
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/ish64_ios.dir/Info.plist";
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu17'",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-L/opt/homebrew/opt/libxml2/lib",
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/victorj/Projects/ish64/ios/build-xcode/MinSizeRel${EFFECTIVE_PLATFORM_NAME}/libishcore.a",
+					"-framework",
+					UIKit,
+					"-framework",
+					Foundation,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ish64_ios;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ish64_ios.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		AE1EF8C546364C6B9848745C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		D67A291CE10A445BB47195C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/victorj/Projects/ish64/ios/build-xcode/build";
+			};
+			name = Release;
+		};
+		E87B29983D784474A78AA6CF /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		EDF4AD0A87544F29B8C58DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/Debug${EFFECTIVE_PLATFORM_NAME}";
+				DEVELOPMENT_TEAM = 9XFS693LL9;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/victorj/Projects/ish64/ios/..,
+					/Users/victorj/Projects/ish64/ios/../include,
+					/Users/victorj/Projects/ish64/ios/../kernel,
+					/Users/victorj/Projects/ish64/ios/../fs,
+					/Users/victorj/Projects/ish64/ios/../emu,
+					/Users/victorj/Projects/ish64/ios/../util,
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "/Users/victorj/Projects/ish64/ios/build-xcode/CMakeFiles/ish64_ios.dir/Info.plist";
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"'-std=gnu17'",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-L/opt/homebrew/opt/libxml2/lib",
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/victorj/Projects/ish64/ios/build-xcode/Debug${EFFECTIVE_PLATFORM_NAME}/libishcore.a",
+					"-framework",
+					UIKit,
+					"-framework",
+					Foundation,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ish64_ios;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/victorj/Projects/ish64/ios/build-xcode/build/ish64_ios.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		182A6E8061294D099F418EBB /* Build configuration list for PBXNativeTarget "ish64_ios" */ = {
+		20D7BCBC021647E09ECDC68A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8A697BDB15D9420F826F7C25 /* Debug */,
-				F97F57B426D84D6E9808E45D /* Release */,
-				7BCFBBB70FC946A0B0707C67 /* MinSizeRel */,
-				CE5B7663073B4ABBBD962ACA /* RelWithDebInfo */,
+				9A1A725E60F947DC895E134F /* Debug */,
+				8DDF25B3EC904ABAB2548AC0 /* Release */,
+				E87B29983D784474A78AA6CF /* MinSizeRel */,
+				1F7FA2F6B5A64150A55575BA /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		31B7F71E3E4C412885AD5B01 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		58EEC9E24FD3401BA253DB26 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				10DA66132D7944869272BFB2 /* Debug */,
-				355AD46BDC77401E8DCCCF78 /* Release */,
-				1D17B68F48204111A6EAC12E /* MinSizeRel */,
-				AD16DF7BA7FD4342854AF214 /* RelWithDebInfo */,
+				55ED9B1E943D4103B0110D79 /* Debug */,
+				1B5C110D48D44ACD840AB60A /* Release */,
+				AE1EF8C546364C6B9848745C /* MinSizeRel */,
+				A28A41B3CBA34CF8A95C62C8 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		8CE3AC6FC1A34D2682DCC28D /* Build configuration list for PBXNativeTarget "ishcore" */ = {
+		A4EA7CA556644BEF841873B7 /* Build configuration list for PBXNativeTarget "ishcore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE446D229EDC46ABAF4C3C02 /* Debug */,
-				154BCD7A77D9480A898F5FB3 /* Release */,
-				D4B16DCFD3874AE9AF8717EC /* MinSizeRel */,
-				6A7697374DDB463CA0CB0B8F /* RelWithDebInfo */,
+				A4AB515242B04B7D831785AE /* Debug */,
+				21AAC916A0954EB6B273CC8F /* Release */,
+				6A4E6B3089E44919A6F0F79D /* MinSizeRel */,
+				4791C60E950F4BF2AC9A304B /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D4330A164C834BF389768C93 /* Build configuration list for PBXProject "ish64_ios" */ = {
+		C2451FD1793043E792523615 /* Build configuration list for PBXProject "ish64_ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2DBCD994CCF44EA3827A307D /* Debug */,
-				E9D39AF099AF4B8BA112560F /* Release */,
-				E2A661F0997144F99D4F27B6 /* MinSizeRel */,
-				CFDD26B0ABBE48649BE348D3 /* RelWithDebInfo */,
+				9B969616BA914A1CB4654FF7 /* Debug */,
+				D67A291CE10A445BB47195C4 /* Release */,
+				748379EB7BA241EFAA8E2F19 /* MinSizeRel */,
+				4EA441B8E449443FA8EB0BDF /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D9F441802ACB48E3829F1888 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		EE389942853D44AEA34E4156 /* Build configuration list for PBXNativeTarget "ish64_ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13FC8480502244A2991AF614 /* Debug */,
-				0570532E8F5B4E1B80B40536 /* Release */,
-				E83D6B3BA0F9458B80B02B07 /* MinSizeRel */,
-				7477F218C80E4081849D0448 /* RelWithDebInfo */,
+				EDF4AD0A87544F29B8C58DA3 /* Debug */,
+				30CAB1546083482BB45E418B /* Release */,
+				AB7CA5990DEF4F11B9776261 /* MinSizeRel */,
+				3DB0457A4563458AA928BCA4 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B0517170754F4722B264E685 /* Project object */;
+	rootObject = 0E08370096F84B83907A628A /* Project object */;
 }

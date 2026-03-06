@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <errno.h>
+#ifndef errno
+extern int errno;
+#endif
 
 // sockrestart.c – ensure errno/strerror are declared
 #include <string.h>

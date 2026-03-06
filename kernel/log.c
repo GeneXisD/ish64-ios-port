@@ -66,7 +66,7 @@ static int do_syslog(int type, addr_t buf_addr, int_t len) {
             res = syslog_read(buf_addr, len, FIFO_LAST | FIFO_PEEK);
             if (res < 0)
                 return res;
-            fallthrough;
+            ISH_FALLTHROUGH;
         case SYSLOG_ACTION_CLEAR_:
             log_max_since_clear = 0;
             return 0;

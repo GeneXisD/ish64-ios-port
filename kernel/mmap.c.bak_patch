@@ -1,0 +1,9 @@
+#include <string.h>
+#include "debug.h"
+#include "kernel/calls.h"
+#include "kernel/errno.h"
+#include "kernel/task.h"
+#include "fs/fd.h"
+#include "kernel/memory.h"
+#include "kernel/mm.h"
+#include "util/sync.h"
