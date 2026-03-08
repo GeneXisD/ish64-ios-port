@@ -39,3 +39,4 @@ DerivedData/
 # Xcode user data
 iSH.xcodeproj/xcuserdata/
 *.xcuserdata/
+.DS_Store
