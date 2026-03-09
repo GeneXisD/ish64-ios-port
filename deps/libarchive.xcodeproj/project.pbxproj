@@ -108,7 +108,6 @@
 		BB10E594248DA6F5009C7A74 /* archive_read_support_format_warc.c in Sources */ = {isa = PBXBuildFile; fileRef = BB10E3CD248DA6F0009C7A74 /* archive_read_support_format_warc.c */; };
 		BB10E595248DA6F5009C7A74 /* archive_write_open_file.c in Sources */ = {isa = PBXBuildFile; fileRef = BB10E3CF248DA6F0009C7A74 /* archive_write_open_file.c */; };
 		BB10E596248DA6F5009C7A74 /* archive_write_add_filter_gzip.c in Sources */ = {isa = PBXBuildFile; fileRef = BB10E3D1248DA6F0009C7A74 /* archive_write_add_filter_gzip.c */; };
-		BB10E597248DA6F5009C7A74 /* archive_getdate.c in Sources */ = {isa = PBXBuildFile; fileRef = BB10E3D2248DA6F0009C7A74 /* archive_getdate.c */; };
 		BB10E599248DA6F5009C7A74 /* archive_check_magic.c in Sources */ = {isa = PBXBuildFile; fileRef = BB10E3D4248DA6F0009C7A74 /* archive_check_magic.c */; };
 		BB10E59B248DA6F5009C7A74 /* archive_write_disk_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = BB10E3D6248DA6F0009C7A74 /* archive_write_disk_posix.c */; };
 		BB10E59C248DA6F5009C7A74 /* archive_write_add_filter_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = BB10E3D7248DA6F0009C7A74 /* archive_write_add_filter_compress.c */; };
@@ -613,7 +612,6 @@
 				BB10E573248DA6F4009C7A74 /* archive_write_disk_windows.c in Sources */,
 				BB10E557248DA6F4009C7A74 /* archive_read_support_filter_xz.c in Sources */,
 				BB10E427248DA6F1009C7A74 /* archive_options.c in Sources */,
-				BB10E597248DA6F5009C7A74 /* archive_getdate.c in Sources */,
 				BB10E5A2248DA6F5009C7A74 /* archive_write_add_filter_b64encode.c in Sources */,
 				BB10E40A248DA6F1009C7A74 /* archive_write_disk_set_standard_lookup.c in Sources */,
 				BB10E595248DA6F5009C7A74 /* archive_write_open_file.c in Sources */,

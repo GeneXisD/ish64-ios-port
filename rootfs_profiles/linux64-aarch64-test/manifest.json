@@ -1,0 +1,7 @@
+{
+  "name": "Linux64 ARM Test",
+  "arch": "aarch64",
+  "abi": "linux",
+  "backend": "linux64-aarch64",
+  "init": "/bin/sh"
+}

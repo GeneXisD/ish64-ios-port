@@ -1,42 +1,16 @@
 # macOS
 .DS_Store
 
-# build outputs
-build/
-build-xcode/
-ios/build-xcode/
-CMakeFiles/
-CMakeCache.txt
-Makefile
-cmake_install.cmake
-
-# compiled objects
-*.o
-*.d
-*.a
-*.so
-*.dylib
-
-# patch backups
-*.bak_patch
-
-# rescue folders
-deps/_rescue/
-
-# Xcode user data
-*.xcuserdata
-*.xcworkspace
+# Xcode
+xcuserdata/
 DerivedData/
 
-# logs
+# backups
+*.bak.*
+*.orig
+
+# local logs or temp
 *.log
 
-# archives
-*.tgz
-*.tar
-*.zip
-
-# Xcode user data
-iSH.xcodeproj/xcuserdata/
-*.xcuserdata/
-.DS_Store
+# local test files
+ish.txt

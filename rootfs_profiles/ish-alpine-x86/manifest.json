@@ -1,0 +1,7 @@
+{
+  "name": "iSH Alpine",
+  "arch": "x86",
+  "abi": "linux",
+  "backend": "ish-x86",
+  "init": "/bin/sh"
+}
