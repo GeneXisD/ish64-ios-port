@@ -32,3 +32,4 @@ XCBuildData/
 # local generated build dirs
 deps/build/
 ios/build-xcode/build/
+ios/build-xcode/
