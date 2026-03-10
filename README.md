@@ -1,3 +1,5 @@
+[![Build](https://github.com/GeneXisD/ish64-ios-port/actions/workflows/build.yml/badge.svg)](https://github.com/GeneXisD/ish64-ios-port/actions)
+
 # ish64 iOS Port
 
 Experimental work toward a 64-bit architecture build of the iSH Linux userspace emulator for iOS.
