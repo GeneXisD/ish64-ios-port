@@ -1,4 +1,4 @@
-[![Build](https://github.com/GeneXisD/ish64-ios-port/actions/workflows/build.yml/badge.svg)](https://github.com/GeneXisD/ish64-ios-port/actions)
+[![Build](https://github.com/GeneXisD/ish64-ios-port/actions/workflows/ci.yml/badge.svg)](https://github.com/GeneXisD/ish64-ios-port/actions)
 
 English | [한국어](README_KO.md) | [日本語](README_JP.md) | [中文](README_ZH.md)
 
