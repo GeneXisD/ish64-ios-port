@@ -1,0 +1,43 @@
+name: ish64 Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          brew update
+          brew install meson ninja python@3.12
+
+      - name: Setup Python
+        run: |
+          python3 --version
+          meson --version
+          ninja --version
+
+      - name: Reset dependencies
+        run: |
+          git submodule update --init --recursive || true
+
+      - name: Build project
+        run: |
+          chmod +x scripts/dev-build.sh
+          ./scripts/dev-build.sh
+
+      - name: Upload build logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: ish64-build-logs
+          path: |
+            build
+            *.log

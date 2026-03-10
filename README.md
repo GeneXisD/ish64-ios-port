@@ -1,61 +1,21 @@
 [![Build](https://github.com/GeneXisD/ish64-ios-port/actions/workflows/build.yml/badge.svg)](https://github.com/GeneXisD/ish64-ios-port/actions)
 
-# ish64 iOS Port
+English | [한국어](README_KO.md) | [日本語](README_JP.md) | [中文](README_ZH.md)
 
-Experimental work toward a 64-bit architecture build of the iSH Linux userspace emulator for iOS.
+# ish64
 
-## Current Status
+Experimental fork of the iSH emulator focused on build reproducibility and contributor onboarding.
 
-- Repository stabilized
-- Clean main branch
-- Rescue snapshot preserved
-- Feature branches enabled
+## Quick start
 
-Current focus:
+```bash
+./scripts/dev-build.sh
+```
 
-• reproducible build  
-• dependency cleanup  
-• runtime milestone  
-• contributor onboarding  
-
-## Project Goal
-
-Develop and experiment with a 64-bit architecture path for iSH while remaining compatible with upstream.
-
-Upstream:
-https://github.com/ish-app/ish
-
-## Repo Structure
-
-deps/ – external dependencies  
-ios/ – iOS integration  
-iSH.xcodeproj – Xcode project  
-
-## Branch Model
-
-main → stable baseline  
-feature/* → development  
-rescue/* → recovery snapshots  
-experiment/* → prototypes  
-
-## Getting Started
-
-Clone:
-
-git clone git@github.com:GeneXisD/ish64-ios-port.git  
-cd ish64-ios-port  
-
-Create a branch:
-
-git checkout -b feature/my-work
-
-Push:
-
-git push --set-upstream origin feature/my-work
-
-## Help Wanted
-
-Build validation  
-Dependency cleanup  
-Runtime milestone definition  
-Documentation
+## Documentation
+- BUILDING.md
+- CONTRIBUTING.md
+- CHANGELOG.md
+- CREDITS.md
+- ERROR_TRACKING.md
+- ROADMAP.md
