@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
-
-set -e
+set -euo pipefail
 
 echo "[ish64] Cleaning build environment..."
-
 rm -rf ~/Library/Developer/Xcode/DerivedData/iSH*
 rm -rf ios/build-xcode
 rm -rf build
 
-echo "[ish64] Starting full rebuild..."
+./scripts/bootstrap-deps.sh
+./scripts/check-pbx-missing-files.py
 
+echo "[ish64] Starting full rebuild..."
 xcodebuild \
--project iSH.xcodeproj \
--scheme iSH \
--configuration Debug \
--destination 'platform=iOS Simulator,name=iPhone 16' \
-CODE_SIGNING_ALLOWED=NO \
-clean build
+  -project iSH.xcodeproj \
+  -scheme iSH \
+  -configuration Debug \
+  -destination 'platform=iOS Simulator,name=iPhone 16' \
+  CODE_SIGNING_ALLOWED=NO \
+  clean build
 
 echo "[ish64] Clean build finished."
