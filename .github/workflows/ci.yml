@@ -33,6 +33,7 @@ jobs:
           meson --version
           ninja --version
           xcodebuild -version
+          xcrun simctl list devices available
 
       - name: Ensure scripts are executable
         run: |
@@ -68,12 +69,18 @@ jobs:
             -configuration Debug \
             -destination 'platform=iOS Simulator,name=iPhone 15' \
             CODE_SIGNING_ALLOWED=NO \
-            clean build
+            clean build | tee xcodebuild.log
 
-      - name: Upload logs on failure
-        if: failure()
+      - name: Collect build products
+        if: always()
+        run: |
+          mkdir -p ci-artifacts
+          find ~/Library/Developer/Xcode/DerivedData -type f -name "*.app" -exec cp -R {} ci-artifacts/ \; || true
+          cp xcodebuild.log ci-artifacts/ || true
+
+      - name: Upload build artifacts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ish64-ci-logs
-          path: |
-            ~/Library/Developer/Xcode/DerivedData
+          name: ish64-build-artifacts
+          path: ci-artifacts
