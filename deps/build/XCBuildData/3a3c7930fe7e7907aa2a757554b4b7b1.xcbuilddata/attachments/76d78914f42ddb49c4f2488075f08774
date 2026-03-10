@@ -1,5 +1,0 @@
- extern const unsigned char iSHVersionString[];
- extern const double iSHVersionNumber;
-
- const unsigned char iSHVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:iSH  PROJECT:iSH-797" "\n";
- const double iSHVersionNumber __attribute__ ((used)) = (double)797.;

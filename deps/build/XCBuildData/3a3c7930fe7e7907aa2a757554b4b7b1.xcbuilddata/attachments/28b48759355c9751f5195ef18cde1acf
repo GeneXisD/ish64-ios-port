@@ -1,4 +1,0 @@
-#!/bin/sh -e
-cd $SRCROOT/deps/libapps
-./hterm/bin/mkdist
-

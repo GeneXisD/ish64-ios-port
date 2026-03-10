@@ -14,3 +14,21 @@ DerivedData/
 
 # local test files
 ish.txt
+
+# macOS
+.DS_Store
+
+# Xcode / build outputs
+build/
+DerivedData/
+*.xcbuilddata/
+XCBuildData/
+*.o
+*.dia
+*.db
+*.d
+*.resp
+
+# local generated build dirs
+deps/build/
+ios/build-xcode/build/

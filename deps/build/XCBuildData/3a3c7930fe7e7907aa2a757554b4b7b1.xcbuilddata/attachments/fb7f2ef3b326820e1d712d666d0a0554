@@ -1,5 +1,0 @@
- extern const unsigned char iSHFileProviderVersionString[];
- extern const double iSHFileProviderVersionNumber;
-
- const unsigned char iSHFileProviderVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:iSHFileProvider  PROJECT:iSH-797" "\n";
- const double iSHFileProviderVersionNumber __attribute__ ((used)) = (double)797.;
