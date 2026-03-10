@@ -1,0 +1,16 @@
+Target dependency graph (8 targets)
+Target 'iSH' in project 'iSH'
+➜ Explicit dependency on target 'iSH pre' in project 'iSH'
+➜ Explicit dependency on target 'libiSHApp' in project 'iSH'
+➜ Explicit dependency on target 'libarchive' in project 'libarchive'
+➜ Explicit dependency on target 'libish' in project 'iSH'
+➜ Explicit dependency on target 'iSHFileProvider' in project 'iSH'
+Target 'iSHFileProvider' in project 'iSH' (no dependencies)
+Target 'libish' in project 'iSH'
+➜ Explicit dependency on target 'Ninja' in project 'iSH'
+Target 'Ninja' in project 'iSH'
+➜ Explicit dependency on target 'Meson' in project 'iSH'
+Target 'Meson' in project 'iSH' (no dependencies)
+Target 'libarchive' in project 'libarchive' (no dependencies)
+Target 'libiSHApp' in project 'iSH' (no dependencies)
+Target 'iSH pre' in project 'iSH' (no dependencies)

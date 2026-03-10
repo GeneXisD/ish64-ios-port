@@ -1,0 +1,3 @@
+#!/bin/sh
+curl -L "https://$ROOTFS_URL" -o "$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/root.tar.gz"
+
