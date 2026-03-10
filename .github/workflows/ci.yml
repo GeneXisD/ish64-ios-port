@@ -26,6 +26,9 @@ jobs:
       - name: Clean derived data
         run: |
           rm -rf ~/Library/Developer/Xcode/DerivedData/* || true
+- name: Install dependencies
+  run: |
+    brew install meson ninja python || true
 
       - name: Build iSH64
         run: |
