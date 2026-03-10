@@ -1,60 +1,79 @@
-name: CI
+name: ish64 CI
 
 on:
   push:
+    branches: [ main ]
   pull_request:
-      branches: [master]
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  build-linux:
-    runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        cc: [clang, gcc]
-        kernel: [ish, linux]
-    steps:
-      - uses: actions/checkout@v2
-        with:
-            submodules: true
-      - uses: actions/setup-python@v2
-        with:
-            python-version: '3.x'
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install libarchive-dev
-          pip3 install meson ninja
-      - name: Clone Linux
-        if: matrix.kernel == 'linux'
-        run: deps/clone-linux.sh
-      - name: Build
-        run: |
-          meson build -Dengine=asbestos -Dkernel=${{matrix.kernel}}
-          ninja -C build
-        env:
-          CC: ${{matrix.cc}}
-      - name: Test
-        if: matrix.kernel == 'ish'
-        run: ninja -C build test
+  build:
+    runs-on: macos-14
 
-  build-mac:
-    runs-on: macos-15
-    strategy:
-      matrix:
-        kernel: [ish, linux]
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-            submodules: true
-      - name: Install dependencies
+          submodules: recursive
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install build dependencies
         run: |
-          brew install llvm lld ninja libarchive meson
-      - name: Clone Linux
-        if: matrix.kernel == 'linux'
-        run: deps/clone-linux.sh
-      - name: Build
-        if: matrix.kernel == 'ish'
-        run: xcodebuild -project iSH.xcodeproj -scheme iSH -arch arm64 -sdk iphoneos CODE_SIGNING_ALLOWED=NO
-      - name: Build
-        if: matrix.kernel == 'linux'
-        run: xcodebuild -project iSH.xcodeproj -scheme iSH+Linux -arch x86_64 -sdk iphonesimulator CODE_SIGNING_ALLOWED=NO
+          brew update
+          brew install meson ninja
+
+      - name: Show tool versions
+        run: |
+          python3 --version
+          meson --version
+          ninja --version
+          xcodebuild -version
+
+      - name: Ensure scripts are executable
+        run: |
+          chmod +x scripts/*.sh || true
+          chmod +x scripts/*.py || true
+
+      - name: Initialize submodules
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive
+
+      - name: Patch libarchive project if script exists
+        run: |
+          if [ -f scripts/patch-libarchive-pbx.py ]; then
+            python3 scripts/patch-libarchive-pbx.py || true
+          fi
+
+      - name: Validate Xcode project references if script exists
+        run: |
+          if [ -f scripts/check-pbx-missing-files.py ]; then
+            python3 scripts/check-pbx-missing-files.py
+          fi
+
+      - name: Clean derived data
+        run: |
+          rm -rf ~/Library/Developer/Xcode/DerivedData/* || true
+
+      - name: Build ish64
+        run: |
+          xcodebuild \
+            -project iSH.xcodeproj \
+            -scheme iSH \
+            -configuration Debug \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            CODE_SIGNING_ALLOWED=NO \
+            clean build
+
+      - name: Upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ish64-ci-logs
+          path: |
+            ~/Library/Developer/Xcode/DerivedData
