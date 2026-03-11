@@ -57,3 +57,16 @@ Victor Jose Corral
 Cybersecurity Researcher | Systems Developer
 
 GitHub: https://github.com/GeneXisD
+
+## License
+
+This project is based on upstream open-source software and retains all original
+license notices where applicable.
+
+Additional modifications for the ish64 project are documented in `LICENSE-ISH64`.
+
+See also:
+- `LICENSE`
+- `LICENSE-ISH64`
+- `NOTICE`
+- `docs/THIRD_PARTY_LICENSES.md`
