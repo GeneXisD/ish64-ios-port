@@ -54,9 +54,7 @@
 		</dict>
 	</dict>
 	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-	</array>
+	<array/>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
