@@ -5,14 +5,12 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  build:
-
-    runs-on: [self-hosted, macOS]
-
+  prep:
+    runs-on: [self-hosted, macOS, ARM64]
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -22,15 +20,29 @@ jobs:
         run: |
           uname -a
           xcodebuild -version
+          python3 --version || true
+          brew --version || true
+          meson --version || true
+          ninja --version || true
 
-      - name: Clean derived data
+  build-debug:
+    runs-on: [self-hosted, macOS, ARM64]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install dependencies
         run: |
-          rm -rf ~/Library/Developer/Xcode/DerivedData/* || true
-- name: Install dependencies
-  run: |
-    brew install meson ninja python || true
+          brew install meson ninja python@3.12 || true
 
-      - name: Build iSH64
+      - name: Clean build state
+        run: |
+          rm -rf ~/Library/Developer/Xcode/DerivedData/iSH*
+          rm -rf build meson-build out dist
+
+      - name: Build Debug
         run: |
           xcodebuild \
             -project iSH.xcodeproj \
@@ -38,18 +50,85 @@ jobs:
             -configuration Debug \
             -destination 'platform=iOS Simulator,name=iPhone 15' \
             CODE_SIGNING_ALLOWED=NO \
-            clean build | tee xcodebuild.log
+            clean build 2>&1 | tee xcodebuild-debug.log
 
-      - name: Collect build products
+      - name: Collect Debug artifacts
         if: always()
         run: |
-          mkdir -p ci-artifacts
-          find ~/Library/Developer/Xcode/DerivedData -type f -name "*.app" -exec cp -R {} ci-artifacts/ \; || true
-          cp xcodebuild.log ci-artifacts/ || true
+          mkdir -p ci-artifacts-debug
+          cp xcodebuild-debug.log ci-artifacts-debug/ || true
+          find ~/Library/Developer/Xcode/DerivedData -type d -name "*.app" -exec cp -R {} ci-artifacts-debug/ \; || true
 
-      - name: Upload build artifacts
+      - name: Upload Debug artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ish64-build-artifacts
-          path: ci-artifacts
+          name: ish64-debug-artifacts
+          path: ci-artifacts-debug
+
+  build-release:
+    runs-on: [self-hosted, macOS, ARM64]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install dependencies
+        run: |
+          brew install meson ninja python@3.12 || true
+
+      - name: Clean build state
+        run: |
+          rm -rf ~/Library/Developer/Xcode/DerivedData/iSH*
+          rm -rf build meson-build out dist
+
+      - name: Build Release
+        run: |
+          xcodebuild \
+            -project iSH.xcodeproj \
+            -scheme iSH \
+            -configuration Release \
+            -destination 'platform=iOS Simulator,name=iPhone 15' \
+            CODE_SIGNING_ALLOWED=NO \
+            clean build 2>&1 | tee xcodebuild-release.log
+
+      - name: Collect Release artifacts
+        if: always()
+        run: |
+          mkdir -p ci-artifacts-release
+          cp xcodebuild-release.log ci-artifacts-release/ || true
+          find ~/Library/Developer/Xcode/DerivedData -type d -name "*.app" -exec cp -R {} ci-artifacts-release/ \; || true
+
+      - name: Upload Release artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ish64-release-artifacts
+          path: ci-artifacts-release
+
+  lint-config:
+    runs-on: [self-hosted, macOS, ARM64]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Check pbx missing files
+        run: |
+          chmod +x scripts/check-pbx-missing-files.py || true
+          python3 scripts/check-pbx-missing-files.py || true
+
+      - name: Save config checks
+        if: always()
+        run: |
+          mkdir -p ci-artifacts-config
+          python3 scripts/check-pbx-missing-files.py > ci-artifacts-config/pbx-check.txt 2>&1 || true
+
+      - name: Upload config check artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ish64-config-checks
+          path: ci-artifacts-config
