@@ -20,8 +20,10 @@
                 ubfx w10, _tmp, \size-2, 1
                 lsl _tmp, _tmp, 1
                 eor w10, w10, w9
-                strb w9, [_cpu, CPU_cf]
-                strb w10, [_cpu, CPU_of]
+    add x9, _cpu, #CPU_cf
+    strb w9, [x9]
+    add x9, _cpu, #CPU_of
+    strb w10, [x9]
             .endif
             .ifc \type,shr
                 ubfx w10, _tmp, \size-1, 1
@@ -29,8 +31,10 @@
                 lsr _tmp, _tmp, w8
                 and w9, _tmp, 1
                 lsr _tmp, _tmp, 1
-                strb w9, [_cpu, CPU_cf]
-                strb w10, [_cpu, CPU_of]
+    add x9, _cpu, #CPU_cf
+    strb w9, [x9]
+    add x9, _cpu, #CPU_of
+    strb w10, [x9]
             .endif
             .ifc \type,sar
                 # lazy ass copy paste job
@@ -41,8 +45,10 @@
                 asr _tmp, _tmp, w8
                 and w9, _tmp, 1
                 asr _tmp, _tmp, 1
-                strb w9, [_cpu, CPU_cf]
-                strb wzr, [_cpu, CPU_of]
+    add x9, _cpu, #CPU_cf
+    strb w9, [x9]
+    add x9, _cpu, #CPU_of
+    strb wzr, [x9]
             .endif
 
             # regrets
@@ -75,20 +81,25 @@
                     ubfx w10, _tmp, \size-2, 1
                 .endif
                 eor w10, w10, w9
-                strb w9, [_cpu, CPU_cf]
-                strb w10, [_cpu, CPU_of]
+    add x9, _cpu, #CPU_cf
+    strb w9, [x9]
+    add x9, _cpu, #CPU_of
+    strb w10, [x9]
             .endifin
 
             # aaaaaaaaaaaaaa
             .ifin(\type, rcl,rcr)
                 .ifc \type,rcr
                     ubfx w9, _tmp, \size-1, 1
-                    ldrb w10, [_cpu, CPU_cf]
+    add x9, _cpu, #CPU_cf
+    ldrb w10, [x9]
                     eor w9, w9, w10
-                    strb w9, [_cpu, CPU_of]
+    add x9, _cpu, #CPU_of
+    strb w9, [x9]
                 .endif
 
-                ldrb w9, [_cpu, CPU_cf]
+    add x9, _cpu, #CPU_cf
+    ldrb w9, [x9]
                 lsl x9, x9, \size
                 orr _xtmp, _xtmp, x9
                 # so ok we mask the shift count, not too hard
@@ -114,11 +125,13 @@
                 .endif
                 orr _xtmp, x8, x9
                 ubfx x9, _xtmp, \size, 1
-                strb w9, [_cpu, CPU_cf]
+    add x9, _cpu, #CPU_cf
+    strb w9, [x9]
                 .ifc \type,rcl
                     ubfx w10, _tmp, \size-1, 1
                     eor w10, w10, w9
-                    strb w10, [_cpu, CPU_of]
+    add x9, _cpu, #CPU_of
+    strb w10, [x9]
                 .endif
             .endifin
 
@@ -169,7 +182,8 @@
                 lsr w9, \reg, w9
             .endif
             orr _tmp, w8, w9
-            strb w10, [_cpu, CPU_cf]
+    add x9, _cpu, #CPU_cf
+    strb w10, [x9]
             setf_zsp
         1:
             .ifc \arg,imm
@@ -196,7 +210,8 @@
         and _tmp, _tmp, \size-1
         lsr w8, w8, _tmp
         and w8, w8, 1
-        strb w8, [_cpu, CPU_cf]
+    add x9, _cpu, #CPU_cf
+    strb w8, [x9]
     .else
         mov w9, 1
         and _tmp, _tmp, \size-1
@@ -210,7 +225,8 @@
             bic \arg, \arg, w9
         .endif N .endif N .endif
         cset w9, ne
-        strb w9, [_cpu, CPU_cf]
+    add x9, _cpu, #CPU_cf
+    strb w9, [x9]
     .endif
 .endm
 
@@ -282,7 +298,8 @@
         cset w9, ne
         stlxr w10, w8, [_xaddr]
         cbnz w10, 1b
-        strb w9, [_cpu, CPU_cf]
+    add x9, _cpu, #CPU_cf
+    strb w9, [x9]
         write_done \size, atomic_\op\size\()_mem
         gret 1
         write_bullshit \size, atomic_\op\size\()_mem

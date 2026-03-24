@@ -119,12 +119,16 @@
     ubfx xdx, x9, 32, 32
 
     # set flags (but only zf)
-    ldr w8, [_cpu, CPU_flags_res]
-    ldr w9, [_cpu, CPU_eflags]
+    add x9, _cpu, #CPU_flags_res
+    ldr w8, [x9]
+    add x9, _cpu, #CPU_eflags
+    ldr w9, [x9]
     and w8, w8, ~ZF_RES
     bfi w9, w12, 6, 1
-    str w8, [_cpu, CPU_flags_res]
-    str w9, [_cpu, CPU_eflags]
+    add x9, _cpu, #CPU_flags_res
+    str w8, [x9]
+    add x9, _cpu, #CPU_eflags
+    str w9, [x9]
     gret 1
     write_bullshit 64, atomic_cmpxchg8b
 
@@ -149,12 +153,16 @@
     ubfx xax, x9, 0, 32
     ubfx xdx, x9, 32, 32
 
-    ldr w8, [_cpu, CPU_flags_res]
-    ldr w9, [_cpu, CPU_eflags]
+    add x9, _cpu, #CPU_flags_res
+    ldr w8, [x9]
+    add x9, _cpu, #CPU_eflags
+    ldr w9, [x9]
     and w8, w8, ~ZF_RES
     bfi w9, w11, 6, 1
-    str w8, [_cpu, CPU_flags_res]
-    str w9, [_cpu, CPU_eflags]
+    add x9, _cpu, #CPU_flags_res
+    str w8, [x9]
+    add x9, _cpu, #CPU_eflags
+    str w9, [x9]
     gret 1
     write_bullshit 64, cmpxchg8b
 

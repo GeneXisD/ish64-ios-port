@@ -21,12 +21,14 @@ NAME(fiber_enter):
 fiber_ret_chain:
     cmp _ip, 0
     b.lt fiber_ret
-    ldr x8, [_cpu, CPU_poked_ptr]
+    add x9, _cpu, #CPU_poked_ptr
+    ldr x8, [x9]
     ldrb w8, [x8]
     cmp w8, 0
     b.ne poke
     sub x8, _ip, FIBER_BLOCK_code
-    str x8, [_cpu, LOCAL_last_block]
+    add x9, _cpu, #LOCAL_last_block
+    str x8, [x9]
     gret
 
 poke:
@@ -55,9 +57,11 @@ fiber_exit:
 .gadget interrupt
     ldr _tmp, [_ip]
     ldr w8, [_ip, 16]
-    str w8, [_cpu, CPU_segfault_addr]
+    add x9, _cpu, #CPU_segfault_addr
+    str w8, [x9]
     ldr eip, [_ip, 8]
-    strb wzr, [_cpu, CPU_segfault_was_write]
+    add x9, _cpu, #CPU_segfault_was_write
+    strb wzr, [x9]
     b fiber_exit
 
 .gadget exit

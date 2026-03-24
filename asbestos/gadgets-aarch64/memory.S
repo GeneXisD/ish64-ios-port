@@ -59,7 +59,8 @@ NAME(si_gadgets):
 .popsection
 
 .gadget seg_gs
-    ldr w8, [_cpu, CPU_tls_ptr]
+    add x9, _cpu, #CPU_tls_ptr
+    ldr w8, [x9]
     add _addr, _addr, w8
     gret
 
@@ -86,13 +87,15 @@ handle_\type\()_miss:
 .global segfault_\type
 segfault_\type:
     ldr _addr, [_tlb, -TLB_entries+TLB_segfault_addr]
-    str _addr, [_cpu, CPU_segfault_addr]
+    add x9, _cpu, #CPU_segfault_addr
+    str _addr, [x9]
     .ifc \type,read
         mov w0, 0
     .else
         mov w0, 1
     .endif
-    strb w0, [_cpu, CPU_segfault_was_write]
+    add x9, _cpu, #CPU_segfault_was_write
+    strb w0, [x9]
     ldr x0, [_ip]
     mov eip, w0
     sub w8, esp, 4
@@ -114,7 +117,8 @@ crosspage_load:
     mov x19, x0
     restore_c
     cbz x19, segfault_read
-    str _addr, [_cpu, LOCAL_value_addr]
+    add x9, _cpu, #LOCAL_value_addr
+    str _addr, [x9]
     add _xaddr, _cpu, LOCAL_value
     ret
 
@@ -123,7 +127,8 @@ crosspage_store:
     save_c
     sub x0, _tlb, TLB_entries
     add x2, _cpu, LOCAL_value
-    ldr w1, [_cpu, LOCAL_value_addr]
+    add x9, _cpu, #LOCAL_value_addr
+    ldr w1, [x9]
     mov x3, x19
     bl NAME(__tlb_write_cross_page)
     mov x19, x0
