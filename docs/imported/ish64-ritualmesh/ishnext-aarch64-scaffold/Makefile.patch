@@ -1,0 +1,6 @@
+Apply this hunk to your Makefile (adds loader/entry.c):
+
+--- a/Makefile
++++ b/Makefile
+@@
+   loader/elf64.c    loader/auxv.c +  loader/entry.c    loader/vdso_shim.S 

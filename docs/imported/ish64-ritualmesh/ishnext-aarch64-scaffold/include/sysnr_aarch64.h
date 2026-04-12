@@ -1,0 +1,28 @@
+#pragma once
+// Minimal subset of Linux AArch64 syscall numbers (extend as needed)
+enum {
+  __NR_read      = 63,
+  __NR_write     = 64,
+  __NR_openat    = 56,
+  __NR_close     = 57,
+  __NR_fstat     = 80,
+  __NR_lseek     = 62,
+  __NR_mmap      = 222,
+  __NR_mprotect  = 226,
+  __NR_brk       = 214,
+  __NR_exit      = 93,
+  __NR_clone     = 220,
+  __NR_futex     = 98,
+  __NR_rt_sigaction = 134,
+  __NR_rt_sigprocmask = 135,
+  __NR_getpid    = 172,
+  __NR_gettid    = 178,
+  __NR_nanosleep = 101,
+  __NR_clock_gettime = 113,
+  __NR_gettimeofday = 169,
+  __NR_epoll_create1 = 20,
+  __NR_epoll_ctl = 21,
+  __NR_epoll_pwait = 22,
+  __NR_wait4     = 260,
+  __NR_execve    = 221,
+};
