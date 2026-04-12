@@ -19,8 +19,8 @@ struct dev_ops *char_devs[256] = {
     [DYN_DEV_MAJOR] = &dyn_dev_char,
 };
 
-int dev_open(int major, int minor, int type, struct fd *fd) {
-    struct dev_ops *dev = (type == DEV_BLOCK ? block_devs : char_devs)[major];
+int dev_open(int major, int minor, enum dev_kind kind, struct fd *fd) {
+    struct dev_ops *dev; if (kind == DEV_BLOCK) dev = block_devs[major]; else dev = char_devs[major];
     if (dev == NULL)
         return _ENXIO;
     fd->ops = &dev->fd;

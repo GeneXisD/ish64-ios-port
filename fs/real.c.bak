@@ -1,34 +1,43 @@
 #define _GNU_SOURCE
 
 #ifndef _POSIX_C_SOURCE
-#define _POSIX_C_SOURCE 200112L
+#define _POSIX_C_SOURCE 200809L
 #endif
 
 #include "util/posix_compat.h"
-#include <string.h>
-#include <unistd.h>
-#include <fcntl.h>
+
+#include <assert.h>
+#include <dirent.h>
 #include <errno.h>
-#ifndef HAVE_DECL_OPENAT
-extern int openat(int dirfd, const char *pathname, int flags, ...);
-#endif
+#include <fcntl.h>
+#include <poll.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/file.h>
+#include <sys/ioctl.h>
+#include <sys/mman.h>
+#include <sys/param.h>
+#include <sys/stat.h>
+#include <sys/statvfs.h>
+#include <sys/types.h>
+#include <sys/xattr.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+
 #ifdef __APPLE__
 #ifndef F_GETPATH
 #define F_GETPATH 50
 #endif
 #endif
-#include <dirent.h>
-#include <sys/stat.h>
-#include <sys/ioctl.h>
-#include <termios.h>
-#include <sys/mman.h>
-#include <sys/xattr.h>
-#include <sys/file.h>
-#include <sys/statvfs.h>
-#include "emu/tinyemu/cutils.h"
+
+#ifndef HAVE_DECL_OPENAT
+extern int openat(int dirfd, const char *pathname, int flags, ...);
+#endif
 
 #ifndef HAVE_DECL_NFDS_T
-#include <sys/types.h>
 typedef unsigned long int nfds_t;
 #endif
 
@@ -46,50 +55,98 @@ extern int poll(struct pollfd *fds, nfds_t nfds, int timeout);
 
 #include "debug.h"
 #include "kernel/errno.h"
-#include "kernel/calls.h"
 #include "kernel/fs.h"
 #include "fs/dev.h"
 #include "fs/real.h"
 #include "fs/tty.h"
 #include "util/fchdir.h"
+#include "emu/tinyemu/cutils.h"
 
 static int getpath(int fd, char *buf) {
 #if defined(__linux__)
-    char proc_fd[20];
+    char proc_fd[32];
     sprintf(proc_fd, "/proc/self/fd/%d", fd);
     ssize_t size = readlink(proc_fd, buf, MAX_PATH - 1);
     if (size >= 0)
         buf[size] = '\0';
-    return size;
+    return (int) size;
 #elif defined(__APPLE__)
     return fcntl(fd, F_GETPATH, buf);
+#else
+    (void) fd;
+    (void) buf;
+    return -1;
 #endif
 }
 
 static int open_flags_real_from_fake(int flags) {
     int real_flags = 0;
-    if (flags & O_RDONLY_) real_flags |= O_RDONLY;
-    if (flags & O_WRONLY_) real_flags |= O_WRONLY;
-    if (flags & O_RDWR_) real_flags |= O_RDWR;
-    if (flags & O_CREAT_) real_flags |= O_CREAT;
-    if (flags & O_EXCL_) real_flags |= O_EXCL;
-    if (flags & O_TRUNC_) real_flags |= O_TRUNC;
-    if (flags & O_APPEND_) real_flags |= O_APPEND;
+    if (flags & O_RDONLY_)   real_flags |= O_RDONLY;
+    if (flags & O_WRONLY_)   real_flags |= O_WRONLY;
+    if (flags & O_RDWR_)     real_flags |= O_RDWR;
+    if (flags & O_CREAT_)    real_flags |= O_CREAT;
+    if (flags & O_EXCL_)     real_flags |= O_EXCL;
+    if (flags & O_TRUNC_)    real_flags |= O_TRUNC;
+    if (flags & O_APPEND_)   real_flags |= O_APPEND;
     if (flags & O_NONBLOCK_) real_flags |= O_NONBLOCK;
     return real_flags;
 }
 
 static int open_flags_fake_from_real(int flags) {
     int fake_flags = 0;
-    if (flags & O_RDONLY) fake_flags |= O_RDONLY_;
-    if (flags & O_WRONLY) fake_flags |= O_WRONLY_;
-    if (flags & O_RDWR) fake_flags |= O_RDWR_;
-    if (flags & O_CREAT) fake_flags |= O_CREAT_;
-    if (flags & O_EXCL) fake_flags |= O_EXCL_;
-    if (flags & O_TRUNC) fake_flags |= O_TRUNC_;
-    if (flags & O_APPEND) fake_flags |= O_APPEND_;
-    if (flags & O_NONBLOCK) fake_flags |= O_NONBLOCK_;
+    if ((flags & O_ACCMODE) == O_RDONLY) fake_flags |= O_RDONLY_;
+    if ((flags & O_ACCMODE) == O_WRONLY) fake_flags |= O_WRONLY_;
+    if ((flags & O_ACCMODE) == O_RDWR)   fake_flags |= O_RDWR_;
+    if (flags & O_CREAT)                 fake_flags |= O_CREAT_;
+    if (flags & O_EXCL)                  fake_flags |= O_EXCL_;
+    if (flags & O_TRUNC)                 fake_flags |= O_TRUNC_;
+    if (flags & O_APPEND)                fake_flags |= O_APPEND_;
+    if (flags & O_NONBLOCK)              fake_flags |= O_NONBLOCK_;
     return fake_flags;
+}
+
+static DIR *ish_fdopendir_fallback(int dirfd) {
+#if defined(__linux__)
+    char pathbuf[64];
+    snprintf(pathbuf, sizeof(pathbuf), "/proc/self/fd/%d", dirfd);
+    return opendir(pathbuf);
+#elif defined(__APPLE__)
+    char pathbuf[64];
+    snprintf(pathbuf, sizeof(pathbuf), "/dev/fd/%d", dirfd);
+    return opendir(pathbuf);
+#else
+    char pathbuf[64];
+    snprintf(pathbuf, sizeof(pathbuf), "/dev/fd/%d", dirfd);
+    return opendir(pathbuf);
+#endif
+}
+
+/* copy host struct stat into project statbuf */
+static void copy_stat(struct statbuf *fake_stat, const struct stat *real_stat) {
+    fake_stat->dev     = dev_fake_from_real(real_stat->st_dev);
+    fake_stat->inode   = real_stat->st_ino;
+    fake_stat->mode    = real_stat->st_mode;
+    fake_stat->nlink   = real_stat->st_nlink;
+    fake_stat->uid     = real_stat->st_uid;
+    fake_stat->gid     = real_stat->st_gid;
+    fake_stat->rdev    = dev_fake_from_real(real_stat->st_rdev);
+    fake_stat->size    = real_stat->st_size;
+    fake_stat->blksize = real_stat->st_blksize;
+    fake_stat->blocks  = real_stat->st_blocks;
+
+#if defined(st_atim) || defined(__APPLE__) || defined(__linux__) || defined(__unix__) || defined(__CYGWIN__)
+    fake_stat->atime      = real_stat->st_atim.tv_sec;
+    fake_stat->mtime      = real_stat->st_mtim.tv_sec;
+    fake_stat->atime_nsec = (int64_t) real_stat->st_atim.tv_nsec;
+    fake_stat->mtime_nsec = (int64_t) real_stat->st_mtim.tv_nsec;
+    fake_stat->ctime_nsec = (int64_t) real_stat->st_ctim.tv_nsec;
+#else
+    fake_stat->atime      = real_stat->st_atime;
+    fake_stat->mtime      = real_stat->st_mtime;
+    fake_stat->atime_nsec = 0;
+    fake_stat->mtime_nsec = 0;
+    fake_stat->ctime_nsec = 0;
+#endif
 }
 
 struct fd *realfs_open(struct mount *mount, const char *path, int flags, int mode) {
@@ -97,6 +154,7 @@ struct fd *realfs_open(struct mount *mount, const char *path, int flags, int mod
     int fd_no = openat(mount->root_fd, fix_path(path), real_flags, mode);
     if (fd_no < 0)
         return ERR_PTR(errno_map());
+
     struct fd *fd = fd_create(&realfs_fdops);
     fd->real_fd = fd_no;
     fd->dir = NULL;
@@ -106,58 +164,31 @@ struct fd *realfs_open(struct mount *mount, const char *path, int flags, int mod
 int realfs_close(struct fd *fd) {
     if (fd->dir != NULL)
         closedir(fd->dir);
+
     int err = close(fd->real_fd);
     if (err < 0)
         return errno_map();
     return 0;
 }
-/* required near the top of the file */
-#include <sys/stat.h>
-#include <time.h>
-#include <stdint.h>   /* for int64_t */
-#include <errno.h>
-#include <string.h>
-
-/* copy_stat: copy fields from host struct stat into project statbuf */
-static void copy_stat(struct statbuf *fake_stat, struct stat *real_stat) {
-    fake_stat->dev      = dev_fake_from_real(real_stat->st_dev);
-    fake_stat->inode    = real_stat->st_ino;
-    fake_stat->mode     = real_stat->st_mode;
-    fake_stat->nlink    = real_stat->st_nlink;
-    fake_stat->uid      = real_stat->st_uid;
-    fake_stat->gid      = real_stat->st_gid;
-    fake_stat->rdev     = dev_fake_from_real(real_stat->st_rdev);
-    fake_stat->size     = real_stat->st_size;
-    fake_stat->blksize  = real_stat->st_blksize;
-    fake_stat->blocks   = real_stat->st_blocks;
-
-#if defined(__APPLE__) || defined(__MACH__)
-    /* macOS / iOS */
-    fake_stat->atime      = real_stat->st_atimespec.tv_sec;
-    fake_stat->mtime      = real_stat->st_mtimespec.tv_sec;
-    fake_stat->atime_nsec = (int64_t)real_stat->st_atimespec.tv_nsec;
-    fake_stat->mtime_nsec = (int64_t)real_stat->st_mtimespec.tv_nsec;
-
-#elif defined(__linux__) || defined(__unix__) || defined(__CYGWIN__)
-    /* Linux / POSIX */
-    fake_stat->atime      = real_stat->st_atim.tv_sec;
-    fake_stat->mtime      = real_stat->st_mtim.tv_sec;
-    fake_stat->atime_nsec = (int64_t)real_stat->st_atim.tv_nsec;
-    fake_stat->mtime_nsec = (int64_t)real_stat->st_mtim.tv_nsec;
-
-#else
-    /* Fallback: seconds only */
-    fake_stat->atime      = real_stat->st_atime;
-    fake_stat->mtime      = real_stat->st_mtime;
-    fake_stat->atime_nsec = 0;
-    fake_stat->mtime_nsec = 0;
-#endif
-}
 
 int realfs_stat(struct mount *mount, const char *path, struct statbuf *fake_stat) {
     struct stat real_stat;
-    if (fstatat(mount->root_fd, fix_path(path), &real_stat, AT_SYMLINK_NOFOLLOW) < 0)
-        return errno_map();
+    const char *fixed = fix_path(path);
+
+    int tfd = openat(mount->root_fd, fixed, O_RDONLY);
+    if (tfd >= 0) {
+        if (fstat(tfd, &real_stat) < 0) {
+            close(tfd);
+            return errno_map();
+        }
+        close(tfd);
+    } else {
+        char fullpath[MAX_PATH];
+        snprintf(fullpath, sizeof(fullpath), "%s/%s", mount->source, fixed);
+        if (lstat(fullpath, &real_stat) < 0)
+            return errno_map();
+    }
+
     copy_stat(fake_stat, &real_stat);
     return 0;
 }
@@ -201,8 +232,7 @@ ssize_t realfs_pwrite(struct fd *fd, const void *buf, size_t bufsize, off_t off)
 void realfs_opendir(struct fd *fd) {
     if (fd->dir == NULL) {
         int dirfd = dup(fd->real_fd);
-        fd->dir = fdopendir(dirfd);
-        // this should never get called on a non-directory
+        fd->dir = ish_fdopendir_fallback(dirfd);
         assert(fd->dir != NULL);
     }
 }
@@ -210,13 +240,14 @@ void realfs_opendir(struct fd *fd) {
 int realfs_readdir(struct fd *fd, struct dir_entry *entry) {
     realfs_opendir(fd);
     errno = 0;
+
     struct dirent *dirent = readdir(fd->dir);
     if (dirent == NULL) {
         if (errno != 0)
             return errno_map();
-        else
-            return 0;
+        return 0;
     }
+
     entry->inode = dirent->d_ino;
     strcpy(entry->name, dirent->d_name);
     return 1;
@@ -234,7 +265,7 @@ void realfs_seekdir(struct fd *fd, unsigned long ptr) {
 
 off_t realfs_lseek(struct fd *fd, off_t offset, int whence) {
     if (fd->dir != NULL && whence == LSEEK_SET) {
-        realfs_seekdir(fd, offset);
+        realfs_seekdir(fd, (unsigned long) offset);
         return offset;
     }
 
@@ -246,6 +277,7 @@ off_t realfs_lseek(struct fd *fd, off_t offset, int whence) {
         whence = SEEK_END;
     else
         return _EINVAL;
+
     off_t res = lseek(fd->real_fd, offset, whence);
     if (res < 0)
         return errno_map();
@@ -254,35 +286,30 @@ off_t realfs_lseek(struct fd *fd, off_t offset, int whence) {
 
 int realfs_poll(struct fd *fd) {
     struct pollfd p = {.fd = fd->real_fd, .events = POLLPRI};
-    // prevent POLLNVAL
+
     int flags = fcntl(fd->real_fd, F_GETFL, 0);
     if ((flags & O_ACCMODE) != O_WRONLY)
         p.events |= POLLIN;
     if ((flags & O_ACCMODE) != O_RDONLY)
         p.events |= POLLOUT;
+
     if (poll(&p, 1, 0) <= 0)
         return 0;
 
 #if defined(__APPLE__)
-    // this is the "WTF is apple smoking" section
-
-    // https://github.com/apple/darwin-xnu/blob/a449c6a3b8014d9406c2ddbdc81795da24aa7443/bsd/kern/sys_generic.c#L1856
     if (p.revents & POLLHUP)
         p.revents |= POLLOUT;
-    // apparently you can sometimes get POLLPRI on a pipe??? please ignore how much of a mess this condition is
+
     if (is_adhoc_fd(fd) && S_ISFIFO(fd->stat.mode))
         p.revents &= ~POLLPRI;
 
     if (p.revents & POLLNVAL) {
-        printk("pollnval %d flags %d events %d revents %d\n", fd->real_fd, flags, p.events, p.revents);
-        // Seriously, fuck Darwin. I just want to poll on POLLIN|POLLOUT|POLLPRI.
-        // But if there's almost any kind of error, you just get POLLNVAL back,
-        // and no information about the bits that are in fact set. So ask for each
-        // separately and ignore a POLLNVAL.
-        // This is no longer atomic but I don't really know what to do about that.
+        printk("pollnval %d flags %d events %d revents %d\n",
+               fd->real_fd, flags, p.events, p.revents);
+
         int events = 0;
         static const int pollbits[] = {POLLIN, POLLOUT, POLLPRI};
-        for (unsigned i = 0; i < sizeof(pollbits)/sizeof(pollbits[0]); i++) {
+        for (unsigned i = 0; i < sizeof(pollbits) / sizeof(pollbits[0]); i++) {
             p.events = pollbits[i];
             if (poll(&p, 1, 0) > 0 && !(p.revents & POLLNVAL))
                 events |= p.revents;
@@ -296,17 +323,20 @@ int realfs_poll(struct fd *fd) {
     return p.revents;
 }
 
-int realfs_mmap(struct fd *fd, struct mem *mem, page_t start, pages_t pages, off_t offset, int prot, int flags) {
+int realfs_mmap(struct fd *fd, struct mem *mem, page_t start, pages_t pages,
+                off_t offset, int prot, int flags) {
     int mmap_flags = 0;
     if (flags & MMAP_PRIVATE) mmap_flags |= MAP_PRIVATE;
-    if (flags & MMAP_SHARED) mmap_flags |= MAP_SHARED;
+    if (flags & MMAP_SHARED)  mmap_flags |= MAP_SHARED;
+
     int mmap_prot = PROT_READ;
     if (prot & P_WRITE) mmap_prot |= PROT_WRITE;
 
     off_t real_offset = (offset / real_page_size) * real_page_size;
     off_t correction = offset - real_offset;
+
     char *memory = mmap(NULL, (pages * PAGE_SIZE) + correction,
-            mmap_prot, mmap_flags, fd->real_fd, real_offset);
+                        mmap_prot, mmap_flags, fd->real_fd, real_offset);
     return pt_map(mem, start, pages, memory, correction, prot);
 }
 
@@ -321,6 +351,7 @@ int realfs_getpath(struct fd *fd, char *buf) {
     int err = getpath(fd->real_fd, buf);
     if (err < 0)
         return err;
+
     if (strcmp(fd->mount->source, "/") != 0 || strcmp(buf, "/") == 0) {
         size_t source_len = strlen(fd->mount->source);
         memmove(buf, buf + source_len, MAX_PATH - source_len);
@@ -332,14 +363,14 @@ int realfs_link(struct mount *mount, const char *src, const char *dst) {
     int res = linkat(mount->root_fd, fix_path(src), mount->root_fd, fix_path(dst), 0);
     if (res < 0)
         return errno_map();
-    return res;
+    return 0;
 }
 
 int realfs_unlink(struct mount *mount, const char *path) {
     int res = unlinkat(mount->root_fd, fix_path(path), 0);
     if (res < 0)
         return errno_map();
-    return res;
+    return 0;
 }
 
 int realfs_rmdir(struct mount *mount, const char *path) {
@@ -353,14 +384,14 @@ int realfs_rename(struct mount *mount, const char *src, const char *dst) {
     int err = renameat(mount->root_fd, fix_path(src), mount->root_fd, fix_path(dst));
     if (err < 0)
         return errno_map();
-    return err;
+    return 0;
 }
 
 int realfs_symlink(struct mount *mount, const char *target, const char *link) {
     int err = symlinkat(target, mount->root_fd, link);
     if (err < 0)
         return errno_map();
-    return err;
+    return 0;
 }
 
 int realfs_mknod(struct mount *mount, const char *path, mode_t_ mode, dev_t_ UNUSED(dev)) {
@@ -370,12 +401,13 @@ int realfs_mknod(struct mount *mount, const char *path, mode_t_ mode, dev_t_ UNU
         err = mkfifo(fix_path(path), mode & ~S_IFMT);
         unlock_fchdir();
     } else if (S_ISREG(mode)) {
-        err = openat(mount->root_fd, fix_path(path), O_CREAT|O_EXCL|O_RDONLY, mode & ~S_IFMT);
+        err = openat(mount->root_fd, fix_path(path), O_CREAT | O_EXCL | O_RDONLY, mode & ~S_IFMT);
         if (err >= 0)
             err = close(err);
     } else {
         return _EPERM;
     }
+
     if (err < 0)
         return errno_map();
     return err;
@@ -385,6 +417,7 @@ int realfs_truncate(struct mount *mount, const char *path, off_t_ size) {
     int fd = openat(mount->root_fd, fix_path(path), O_RDWR);
     if (fd < 0)
         return errno_map();
+
     int err = 0;
     if (ftruncate(fd, size) < 0)
         err = errno_map();
@@ -396,6 +429,7 @@ int realfs_setattr(struct mount *mount, const char *path, struct attr attr) {
     path = fix_path(path);
     int root = mount->root_fd;
     int err;
+
     switch (attr.type) {
         case attr_uid:
             err = fchownat(root, path, attr.uid, -1, 0);
@@ -411,14 +445,16 @@ int realfs_setattr(struct mount *mount, const char *path, struct attr attr) {
         default:
             TODO("other attrs");
     }
+
     if (err < 0)
         return errno_map();
-    return err;
+    return 0;
 }
 
 int realfs_fsetattr(struct fd *fd, struct attr attr) {
     int real_fd = fd->real_fd;
     int err;
+
     switch (attr.type) {
         case attr_uid:
             err = fchown(real_fd, attr.uid, -1);
@@ -432,11 +468,13 @@ int realfs_fsetattr(struct fd *fd, struct attr attr) {
         case attr_size:
             err = ftruncate(real_fd, attr.size);
             break;
-        default: abort();
+        default:
+            abort();
     }
+
     if (err < 0)
         return errno_map();
-    return err;
+    return 0;
 }
 
 int realfs_utime(struct mount *mount, const char *path, struct timespec atime, struct timespec mtime) {
@@ -466,14 +504,14 @@ int realfs_flock(struct fd *fd, int operation) {
 int realfs_statfs(struct mount *mount, struct statfsbuf *stat) {
     struct statvfs vfs = {};
     fstatvfs(mount->root_fd, &vfs);
-    stat->bsize = vfs.f_bsize;
-    stat->blocks = vfs.f_blocks;
-    stat->bfree = vfs.f_bfree;
-    stat->bavail = vfs.f_bavail;
-    stat->files = vfs.f_files;
-    stat->ffree = vfs.f_ffree;
+    stat->bsize   = vfs.f_bsize;
+    stat->blocks  = vfs.f_blocks;
+    stat->bfree   = vfs.f_bfree;
+    stat->bavail  = vfs.f_bavail;
+    stat->files   = vfs.f_files;
+    stat->ffree   = vfs.f_ffree;
     stat->namelen = vfs.f_namemax;
-    stat->frsize = vfs.f_frsize;
+    stat->frsize  = vfs.f_frsize;
     return 0;
 }
 
@@ -481,6 +519,7 @@ int realfs_mount(struct mount *mount) {
     char *source_realpath = realpath(mount->source, NULL);
     if (source_realpath == NULL)
         return errno_map();
+
     free((void *) mount->source);
     mount->source = source_realpath;
 
@@ -520,6 +559,7 @@ ssize_t realfs_ioctl_size(int cmd) {
 int realfs_ioctl(struct fd *fd, int cmd, void *arg) {
     int err;
     size_t nread;
+
     switch (cmd) {
         case FIONREAD_:
             err = ioctl(fd->real_fd, FIONREAD, &nread);
@@ -528,6 +568,7 @@ int realfs_ioctl(struct fd *fd, int cmd, void *arg) {
             *(dword_t *) arg = nread;
             return 0;
     }
+
     return _ENOTTY;
 }
 

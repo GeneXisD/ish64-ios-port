@@ -1,0 +1,32 @@
+diff --git a/asbestos/gadgets-aarch64/bits.S b/asbestos/gadgets-aarch64/bits.S
+index 1234567..89abcde 100644
+--- a/asbestos/gadgets-aarch64/bits.S
++++ b/asbestos/gadgets-aarch64/bits.S
+@@
+-    add x9, _cpu, #CPU_cf
+-    ldr w8, [x9]
++    adrp x9, _cpu
++    add  x9, x9, :lo12:CPU_cf
++    ldr  w8, [x9]
+@@
+-    add x8, _cpu, LOCAL_value
++    adrp x8, _cpu
++    add  x8, x8, :lo12:LOCAL_value
+
+diff --git a/asbestos/gadgets-aarch64/control.S b/asbestos/gadgets-aarch64/control.S
+index 6fad18a..8202fbe 100644
+--- a/asbestos/gadgets-aarch64/control.S
++++ b/asbestos/gadgets-aarch64/control.S
+@@
+-    add x9, _cpu, #CPU_flags_res
+-    ldr w8, [x9]
++    adrp x9, _cpu
++    add  x9, x9, :lo12:CPU_flags_res
++    ldr  w8, [x9]
+@@
+-    add x9, _cpu, #CPU_eflags
+-    ldr w8, [x9]
++    adrp x9, _cpu
++    add  x9, x9, :lo12:CPU_eflags
++    ldr  w8, [x9]
+

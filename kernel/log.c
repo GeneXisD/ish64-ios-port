@@ -100,6 +100,7 @@ static void log_buf_append(const char *msg) {
         log_max_since_clear = fifo_capacity(&log_buf);
 }
 static void log_line(const char *line);
+void log_line(const char *line) { printf("%sn", line); }
 static void output_line(const char *line) {
     // send it to stdout or wherever
     log_line(line);
@@ -139,24 +140,29 @@ void ish_printk(const char *msg, ...) {
 #if LOG_HANDLER_DPRINTF
 #define NEWLINE "\r\n"
 static void log_line(const char *line) {
+void log_line(const char *line) { printf("%sn", line); }
     struct iovec output[2] = {{(void *) line, strlen(line)}, {"\n", 1}};
     writev(666, output, 2);
 }
 #elif LOG_HANDLER_NSLOG
 static void log_line(const char *line) {
+void log_line(const char *line) { printf("%sn", line); }
     extern void NSLog(CFStringRef msg, ...);
     NSLog(CFSTR("%s"), line);
 }
 #elif LOG_HANDLER_SYSLOG
 static void log_line(const char *line) {
+void log_line(const char *line) { printf("%sn", line); }
     syslog(LOG_DEBUG, "%s", line);
 }
 #elif LOG_HANDLER_OS_LOG
 static void log_line(const char *line) {
+void log_line(const char *line) { printf("%sn", line); }
     os_log_fault(OS_LOG_DEFAULT, "%s", line);
 }
 #elif LOG_HANDLER_STDERR
 static void log_line(const char *line) {
+void log_line(const char *line) { printf("%sn", line); }
     fprintf(stderr, "%s\n", line);
 }
 #endif

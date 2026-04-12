@@ -1,0 +1,53 @@
+diff --git a/asbestos/frame.h b/asbestos/frame.h
+index a19aef7f..fe720bf8 100644
+--- a/asbestos/frame.h
++++ b/asbestos/frame.h
+@@ -1,15 +1,24 @@
+-#include <stdatomic.h>
+-#include "emu/cpu.h"
+-
+-// keep in sync with asm
+-#define FIBER_RETURN_CACHE_SIZE 4096
+-#define FIBER_RETURN_CACHE_HASH(x) ((x) & 0xFFF0) >> 4)
+-
+-struct fiber_frame {
+-    struct cpu_state cpu;
+-    void *bp;
+-    addr_t value_addr;
+-    uint64_t value[2]; // buffer for crosspage crap
+-    struct fiber_block *last_block;
+-    long ret_cache[FIBER_RETURN_CACHE_SIZE]; // a map of ip to pointer-to-call-gadget-arguments
++#ifndef FIBER_BLOCK_H
++#define FIBER_BLOCK_H
++
++#include "list.h"
++
++#define FIBER_BLOCK_INITIAL_CAPACITY 256
++
++struct fiber_block {
++    unsigned long *code;
++    size_t size;
++    size_t capacity;
++    unsigned long addr;
++    unsigned long end_addr;
++
++    unsigned long **jump_ip;
++    unsigned long *old_jump_ip;
++
++    list_t *jumps_from;
++    list_t *jumps_from_links;
++
++    struct fiber_block *next;
+ };
++
++#endif
+diff --git a/asbestos/gen.c b/asbestos/gen.c
+index 56d2e934..be232e0c 100644
+--- a/asbestos/gen.c
++++ b/asbestos/gen.c
+@@ -1,3 +1,5 @@
++#include "frame.h"
++#include "list.h"
+ #include <assert.h>
+ #include <stdint.h>
+ #include "asbestos/gen.h"

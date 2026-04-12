@@ -172,7 +172,7 @@ int pt_unmap_always(struct mem *mem, page_t start, pages_t pages) {
         if (pt == NULL)
             continue;
 
-        asbestos_invalidate_page(mem->mmu.asbestos, page);
+        asbestos_invalidate_page(mem->mmu.asbestos, (void*)(uintptr_t)page);
 
         struct data *data = pt->data;
         mem_pt_del(mem, page);
@@ -298,7 +298,7 @@ void *mem_ptr(struct mem *mem, addr_t addr, int type) {
             entry->flags |= P_WRITE | P_COW;
         }
 
-        asbestos_invalidate_page(mem->mmu.asbestos, page);
+        asbestos_invalidate_page(mem->mmu.asbestos, (void*)(uintptr_t)page);
 
         if (entry->flags & P_COW) {
             void *data = (char *)entry->data->data + entry->offset;
